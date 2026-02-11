@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — SnapSize</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:       #0d0f14;
+    --ink-mid:   #3a3d4a;
+    --ink-soft:  #6b6f80;
+    --paper:     #f8f6f1;
+    --paper-mid: #eeeae2;
+    --accent:    #1a6cff;
+    --accent-2:  #ff5a1f;
+    --rule:      #dbd6cc;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans:  'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ──────────────────────────────────────── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(248,246,241,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    animation: slideDown .6s ease both;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--ink);
+  }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--paper); font-size: 18px;
+  }
+  .logo-text { font-family: var(--serif); font-size: 1.25rem; letter-spacing: -.01em; }
+  .doc-badge {
+    font-size: .75rem; font-weight: 500;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--paper-mid); border: 1px solid var(--rule);
+    padding: 4px 12px; border-radius: 100px;
+  }
+
+  /* ── HERO ────────────────────────────────────────── */
+  .hero {
+    padding: 80px 40px 60px;
+    max-width: 780px; margin: 0 auto;
+    animation: fadeUp .8s .1s ease both;
+  }
+  .hero-eyebrow {
+    font-size: .75rem; font-weight: 600;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--accent-2); margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1; letter-spacing: -.02em;
+    color: var(--ink); margin-bottom: 20px;
+  }
+  .hero h1 em { font-style: italic; color: var(--accent-2); }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: .85rem; color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding-top: 20px; margin-top: 20px;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta strong { color: var(--ink-mid); }
+
+  /* ── LAYOUT ──────────────────────────────────────── */
+  .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 40px 100px; }
+
+  /* ── QUICK NAV ───────────────────────────────────── */
+  .quick-nav {
+    background: var(--paper-mid); border: 1px solid var(--rule);
+    border-radius: 12px; padding: 24px 28px; margin-bottom: 60px;
+    animation: fadeUp .8s .2s ease both;
+  }
+  .quick-nav-title {
+    font-size: .7rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--ink-soft); margin-bottom: 14px;
+  }
+  .quick-nav ol { list-style: none; columns: 2; gap: 8px; }
+  .quick-nav li { margin-bottom: 6px; }
+  .quick-nav a {
+    font-size: .9rem; color: var(--ink-mid); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: color .2s;
+  }
+  .quick-nav a::before {
+    content: ''; width: 4px; height: 4px;
+    background: var(--accent-2); border-radius: 50%; flex-shrink: 0;
+  }
+  .quick-nav a:hover { color: var(--accent-2); }
+
+  /* ── SECTIONS ────────────────────────────────────── */
+  .section { margin-bottom: 56px; animation: fadeUp .7s ease both; }
+  .section-number {
+    font-size: .7rem; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--accent-2); margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: var(--serif); font-size: 1.75rem;
+    line-height: 1.2; letter-spacing: -.01em;
+    margin-bottom: 20px; color: var(--ink);
+  }
+  .section p {
+    color: var(--ink-mid); margin-bottom: 16px; font-size: .95rem;
+  }
+  .section ul, .section ol { margin: 12px 0 16px; padding-left: 0; list-style: none; }
+  .section ul li, .section ol li {
+    position: relative; padding-left: 20px;
+    margin-bottom: 10px; color: var(--ink-mid); font-size: .95rem;
+  }
+  .section ul li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--accent-2); font-size: .8rem; top: 2px;
+  }
+  .section ol { counter-reset: ol-counter; }
+  .section ol li { counter-increment: ol-counter; }
+  .section ol li::before {
+    content: counter(ol-counter) '.'; position: absolute; left: 0;
+    color: var(--accent-2); font-weight: 700; font-size: .85rem; top: 1px;
+  }
+  .section::after {
+    content: ''; display: block; width: 48px; height: 2px;
+    background: var(--rule); margin-top: 40px;
+  }
+  .section:last-of-type::after { display: none; }
+
+  /* ── CALLOUT BOXES ───────────────────────────────── */
+  .callout {
+    border-left: 3px solid var(--accent-2);
+    background: color-mix(in srgb, var(--accent-2) 6%, var(--paper));
+    border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0;
+  }
+  .callout p { margin: 0; font-size: .9rem; color: var(--ink-mid); }
+  .callout strong { color: var(--ink); }
+
+  .callout-blue {
+    border-color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, var(--paper));
+  }
+
+  /* ── TIER TABLE ──────────────────────────────────── */
+  .tier-table {
+    width: 100%; border-collapse: collapse;
+    margin: 20px 0; font-size: .9rem;
+    border-radius: 12px; overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .tier-table th {
+    background: var(--ink); color: var(--paper);
+    padding: 12px 16px; text-align: left;
+    font-weight: 600; font-size: .8rem;
+    letter-spacing: .05em; text-transform: uppercase;
+  }
+  .tier-table th:first-child { width: 45%; }
+  .tier-table td {
+    padding: 11px 16px; border-bottom: 1px solid var(--rule);
+    color: var(--ink-mid); vertical-align: top;
+  }
+  .tier-table tr:last-child td { border-bottom: none; }
+  .tier-table tr:nth-child(even) td { background: var(--paper-mid); }
+  .tier-table td:first-child { font-weight: 500; color: var(--ink); }
+  .badge-free {
+    display: inline-block;
+    background: var(--paper-mid); border: 1px solid var(--rule);
+    color: var(--ink-mid); font-size: .72rem; font-weight: 600;
+    letter-spacing: .05em; padding: 2px 8px; border-radius: 4px;
+  }
+  .badge-pro {
+    display: inline-block;
+    background: var(--ink); color: var(--paper);
+    font-size: .72rem; font-weight: 700;
+    letter-spacing: .05em; padding: 2px 8px; border-radius: 4px;
+  }
+
+  /* ── CONTACT CARD ────────────────────────────────── */
+  .contact-card {
+    background: var(--ink); color: var(--paper);
+    border-radius: 16px; padding: 32px 36px; margin-top: 60px;
+  }
+  .contact-card h3 {
+    font-family: var(--serif); font-size: 1.5rem;
+    margin-bottom: 12px; letter-spacing: -.01em;
+  }
+  .contact-card p { color: rgba(248,246,241,.65); font-size: .9rem; margin-bottom: 20px; }
+  .contact-card a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent-2); color: #fff; text-decoration: none;
+    padding: 10px 20px; border-radius: 8px;
+    font-weight: 600; font-size: .9rem; transition: opacity .2s;
+  }
+  .contact-card a:hover { opacity: .85; }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--rule); padding: 28px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; font-size: .8rem; color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* ── ANIMATIONS ──────────────────────────────────── */
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { transform: translateY(24px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  .section:nth-child(1)  { animation-delay: .0s; }
+  .section:nth-child(2)  { animation-delay: .05s; }
+  .section:nth-child(3)  { animation-delay: .1s; }
+  .section:nth-child(4)  { animation-delay: .15s; }
+  .section:nth-child(5)  { animation-delay: .2s; }
+  .section:nth-child(6)  { animation-delay: .25s; }
+  .section:nth-child(7)  { animation-delay: .3s; }
+  .section:nth-child(8)  { animation-delay: .35s; }
+  .section:nth-child(9)  { animation-delay: .4s; }
+  .section:nth-child(10) { animation-delay: .45s; }
+  .section:nth-child(11) { animation-delay: .5s; }
+  .section:nth-child(12) { animation-delay: .55s; }
+  .section:nth-child(13) { animation-delay: .6s; }
+
+  @media (max-width: 600px) {
+    header { padding: 14px 20px; }
+    .hero  { padding: 48px 20px 36px; }
+    .page-wrap { padding: 0 20px 80px; }
+    .quick-nav ol { columns: 1; }
+    .tier-table { font-size: .82rem; }
+    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────── -->
+<header>
+  <a class="logo" href="#">
+    <div class="logo-mark">S</div>
+    <span class="logo-text">SnapSize</span>
+  </a>
+  <span class="doc-badge">Terms &amp; Conditions</span>
+</header>
+
+<!-- ── HERO ──────────────────────────────────────── -->
+<div class="hero">
+  <p class="hero-eyebrow">Legal Document</p>
+  <h1>Fair rules, <em>clearly stated.</em></h1>
+  <div class="hero-meta">
+    <span>📅 <strong>Effective date:</strong> January 1, 2025</span>
+    <span>✏️ <strong>Last updated:</strong> January 1, 2025</span>
+    <span>📱 <strong>App:</strong> SnapSize: Batch Photo Compress</span>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────── -->
+<div class="page-wrap">
+
+  <!-- Quick Nav -->
+  <nav class="quick-nav" aria-label="Page contents">
+    <p class="quick-nav-title">Contents</p>
+    <ol>
+      <li><a href="#t1">Acceptance of Terms</a></li>
+      <li><a href="#t2">Description of the App</a></li>
+      <li><a href="#t3">Free &amp; Pro Tiers</a></li>
+      <li><a href="#t4">In-App Purchases</a></li>
+      <li><a href="#t5">Offline Usage Policy</a></li>
+      <li><a href="#t6">Advertising</a></li>
+      <li><a href="#t7">Acceptable Use</a></li>
+      <li><a href="#t8">Intellectual Property</a></li>
+      <li><a href="#t9">Disclaimer of Warranties</a></li>
+      <li><a href="#t10">Limitation of Liability</a></li>
+      <li><a href="#t11">Termination</a></li>
+      <li><a href="#t12">Governing Law</a></li>
+      <li><a href="#t13">Contact</a></li>
+    </ol>
+  </nav>
+
+  <!-- Intro callout -->
+  <div class="callout callout-blue" style="margin-bottom:48px">
+    <p><strong>Please read these terms carefully.</strong> By downloading or using SnapSize, you agree to be bound by these Terms &amp; Conditions. If you do not agree, please do not use the app.</p>
+  </div>
+
+  <!-- ── SECTION 1 ── -->
+  <section class="section" id="t1">
+    <p class="section-number">01</p>
+    <h2>Acceptance of Terms</h2>
+    <p>These Terms &amp; Conditions ("Terms") constitute a legally binding agreement between you ("User," "you," or "your") and the developer of SnapSize ("we," "us," or "our") governing your use of the SnapSize: Batch Photo Compress application ("App") available on Google Play.</p>
+    <p>By installing, accessing, or using the App, you acknowledge that you have read, understood, and agree to be bound by these Terms, together with our Privacy Policy, which is incorporated herein by reference.</p>
+    <p>If you are using the App on behalf of an organisation, you represent that you have the authority to bind that organisation to these Terms.</p>
+    <p>These Terms apply to all versions of the App, including any updates or new features released over time.</p>
+  </section>
+
+  <!-- ── SECTION 2 ── -->
+  <section class="section" id="t2">
+    <p class="section-number">02</p>
+    <h2>Description of the App</h2>
+    <p>SnapSize is an Android photo processing application that provides the following core features entirely on-device:</p>
+    <ul>
+      <li><strong>Compress:</strong> Reduce photo file size by adjusting JPEG/WebP quality (1–100%) using four presets — Maximum Savings (~90% reduction), Balanced (~70% reduction), High Quality (~40% reduction), and Custom — with dynamic size estimation before processing.</li>
+      <li><strong>Resize:</strong> Change photo pixel dimensions by percentage (Small: 60%, Large: 95%) or by entering custom width and height values, with optional aspect-ratio locking.</li>
+      <li><strong>Crop:</strong> Manual gesture-based cropping (pinch, zoom, drag) via an interactive crop canvas, or automatic center-crop to a preset aspect ratio (1:1, 4:3, 16:9, 3:2, 2:3, 9:16, Free).</li>
+      <li><strong>Convert:</strong> Change the output format of a photo between JPEG (lossy), WebP (modern/smaller), and PNG (lossless with transparency support).</li>
+      <li><strong>Batch processing:</strong> Select and process up to 10 photos simultaneously (free tier, online) or up to 100 photos (Pro tier).</li>
+      <li><strong>Recent Files:</strong> A history of past compressions showing original size, compressed size, reduction percentage, and thumbnail, with the ability to re-share or view results.</li>
+      <li><strong>Before &amp; After comparison:</strong> Side-by-side visual comparison of original and compressed photos on the Result screen.</li>
+    </ul>
+    <p>The App requires an Android device running Android 7.0 (API 24) or higher. Features and performance may vary based on device hardware.</p>
+  </section>
+
+  <!-- ── SECTION 3 ── -->
+  <section class="section" id="t3">
+    <p class="section-number">03</p>
+    <h2>Free &amp; Pro Tiers</h2>
+    <p>SnapSize is available in two tiers:</p>
+
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th><span class="badge-free">FREE</span></th>
+          <th><span class="badge-pro">PRO</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Compress photos</td>
+          <td>✓ Unlimited (online)</td>
+          <td>✓ Unlimited</td>
+        </tr>
+        <tr>
+          <td>Resize photos</td>
+          <td>✓ Unlimited (online)</td>
+          <td>✓ Unlimited</td>
+        </tr>
+        <tr>
+          <td>Crop photos</td>
+          <td>✓ Unlimited (online)</td>
+          <td>✓ Unlimited</td>
+        </tr>
+        <tr>
+          <td>Convert format</td>
+          <td>✓ Unlimited (online)</td>
+          <td>✓ Unlimited</td>
+        </tr>
+        <tr>
+          <td>Batch processing</td>
+          <td>Up to 10 photos (online)</td>
+          <td>Up to 100 photos</td>
+        </tr>
+        <tr>
+          <td>Offline processing</td>
+          <td>1 photo / 24h grace: 3 photos</td>
+          <td>✓ Unrestricted</td>
+        </tr>
+        <tr>
+          <td>Advertisements</td>
+          <td>Banner, interstitial &amp; native ads</td>
+          <td>✓ Ad-free forever</td>
+        </tr>
+        <tr>
+          <td>Priority support</td>
+          <td>—</td>
+          <td>✓ Included</td>
+        </tr>
+        <tr>
+          <td>Payment</td>
+          <td>Free</td>
+          <td>One-time purchase (no subscription)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── SECTION 4 ── -->
+  <section class="section" id="t4">
+    <p class="section-number">04</p>
+    <h2>In-App Purchases</h2>
+    <p>SnapSize Pro is available as a one-time, lifetime purchase through Google Play Billing (product ID: <code>pro_version_lifetime</code>). This is <strong>not</strong> a subscription — you pay once and own Pro access permanently.</p>
+
+    <p><strong>Purchase process:</strong></p>
+    <ul>
+      <li>Tap "Upgrade Now" on the Premium screen within the app.</li>
+      <li>Google Play presents the purchase confirmation dialog with the current price.</li>
+      <li>Upon successful payment, Pro features are immediately activated.</li>
+    </ul>
+
+    <p><strong>Restoration:</strong> If you reinstall the app or switch to a new device using the same Google account, you may restore your purchase at any time via Settings → Restore Purchases.</p>
+
+    <p><strong>Pricing:</strong> The price of SnapSize Pro is set by the developer and may vary by region and over time. The price displayed in the app at the time of purchase is final.</p>
+
+    <p><strong>Refunds:</strong></p>
+    <ul>
+      <li>All purchases are processed by Google Play. Refund requests must be submitted to Google Play support within the applicable refund window (generally 48 hours for apps).</li>
+      <li>We cannot process refunds directly. For refund requests, visit: <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">support.google.com/googleplay/answer/2479637</a></li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <p><strong>Note:</strong> Pro access is tied to your Google Play account, not to a specific device. You may use SnapSize Pro on any Android device signed into the same Google account.</p>
+    </div>
+  </section>
+
+  <!-- ── SECTION 5 ── -->
+  <section class="section" id="t5">
+    <p class="section-number">05</p>
+    <h2>Offline Usage Policy</h2>
+    <p>SnapSize includes an offline access management system designed to maintain fair usage and support the app's continued development. This system applies only to free-tier users; Pro users have unrestricted offline access.</p>
+
+    <p><strong>Free tier offline rules:</strong></p>
+    <ul>
+      <li><strong>Online:</strong> Batch processing is available for up to 10 photos per batch with no restrictions.</li>
+      <li><strong>Offline (standard):</strong> Only 1 photo may be processed per batch when offline.</li>
+      <li><strong>Grace period:</strong> Upon first going offline, a 24-hour grace period is granted allowing up to 3 photos per batch. This grace period is intended for genuine offline scenarios (airplane travel, poor network coverage).</li>
+      <li><strong>Grace period expiry:</strong> After 24 hours offline, the single-photo limit applies until an internet connection is re-established.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Rationale:</strong> The offline restriction exists because advertisements — which fund the free tier — cannot be served without an internet connection. This policy is not intended to penalise genuine offline users; it is designed to prevent systematic evasion of ad delivery.</p>
+    </div>
+
+    <p>You agree not to use technical means (e.g., network blocking, VPNs, or modified app builds) to circumvent the offline detection system while continuing to use the free tier. Such behaviour may result in service suspension.</p>
+  </section>
+
+  <!-- ── SECTION 6 ── -->
+  <section class="section" id="t6">
+    <p class="section-number">06</p>
+    <h2>Advertising</h2>
+    <p>SnapSize is supported by advertising revenue from Google AdMob. By using the free tier of SnapSize, you agree to the display of advertisements, which may include:</p>
+    <ul>
+      <li><strong>Banner ads:</strong> displayed persistently at the bottom of certain screens.</li>
+      <li><strong>Interstitial ads:</strong> full-screen ads shown after a compression or file-view action completes, subject to frequency caps (maximum 3 interstitials per session for compressions, maximum 2 per session for file views).</li>
+      <li><strong>Native ads:</strong> ads integrated into the app's interface in a card format on the Home screen and Result screen.</li>
+      <li><strong>House ads:</strong> informational cards shown when you are offline, promoting SnapSize Pro.</li>
+    </ul>
+    <p>You agree not to engage in fraudulent interaction with advertisements (e.g., clicking ads repeatedly with no genuine interest). Such behaviour violates Google AdMob's policies and these Terms.</p>
+    <p>Purchasing SnapSize Pro permanently removes all third-party advertisements.</p>
+  </section>
+
+  <!-- ── SECTION 7 ── -->
+  <section class="section" id="t7">
+    <p class="section-number">07</p>
+    <h2>Acceptable Use</h2>
+    <p>You agree to use SnapSize only for lawful purposes and in accordance with these Terms. You must not:</p>
+    <ul>
+      <li>Use the App to process, distribute, or share photos that depict illegal content, including but not limited to child sexual abuse material (CSAM), non-consensual intimate imagery, or content that violates applicable law.</li>
+      <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App.</li>
+      <li>Modify, adapt, or create derivative works of the App.</li>
+      <li>Remove or alter any copyright, trademark, or other proprietary notices in the App.</li>
+      <li>Use automated tools, bots, or scripts to interact with the App.</li>
+      <li>Attempt to circumvent, disable, or interfere with security-related features of the App or features that prevent or restrict use or copying of any content.</li>
+      <li>Use the App in any manner that could damage, disable, overburden, or impair the App or interfere with any other party's use of the App.</li>
+      <li>Circumvent advertisement delivery through VPNs, network blocking, modified builds, or other technical means while using the free tier.</li>
+    </ul>
+    <p>You are solely responsible for the photos you process using SnapSize and for ensuring you have the right to process, modify, and share them.</p>
+  </section>
+
+  <!-- ── SECTION 8 ── -->
+  <section class="section" id="t8">
+    <p class="section-number">08</p>
+    <h2>Intellectual Property</h2>
+    <p><strong>App ownership:</strong> SnapSize and all content within it — including but not limited to the name "SnapSize," the app design, user interface, graphics, code, and text — are owned by or licensed to the developer and are protected by applicable intellectual property laws.</p>
+
+    <p><strong>Your licence:</strong> Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable licence to download and use SnapSize on your Android devices solely for your personal, non-commercial use.</p>
+
+    <p><strong>Your photos:</strong> You retain full ownership of all photos you process through SnapSize. We claim no ownership over, and do not access, your photos except as necessary to provide the App's on-device processing functions.</p>
+
+    <p><strong>Open-source components:</strong> SnapSize includes open-source libraries (including android-image-cropper by canhub, Coil, Room, Hilt, Jetpack Compose). These components are used under their respective licences and do not affect your rights to the App's overall output.</p>
+
+    <p><strong>Feedback:</strong> If you submit feedback, suggestions, or ideas about SnapSize to us (e.g., via email), you grant us a non-exclusive, worldwide, royalty-free licence to use such feedback for any purpose, including improving the App, without obligation or compensation to you.</p>
+  </section>
+
+  <!-- ── SECTION 9 ── -->
+  <section class="section" id="t9">
+    <p class="section-number">09</p>
+    <h2>Disclaimer of Warranties</h2>
+    <p>SnapSize is provided on an <strong>"as is" and "as available"</strong> basis, without warranties of any kind, either express or implied.</p>
+
+    <p>To the fullest extent permitted by applicable law, we disclaim all warranties, including but not limited to:</p>
+    <ul>
+      <li>Implied warranties of merchantability and fitness for a particular purpose.</li>
+      <li>Any warranty that the App will be uninterrupted, error-free, or free of viruses or other harmful components.</li>
+      <li>Any warranty regarding the accuracy or reliability of results produced by the App's compression, resize, crop, or conversion algorithms.</li>
+      <li>Any warranty that photos processed by the App will meet your quality expectations.</li>
+    </ul>
+
+    <div class="callout">
+      <p><strong>Important:</strong> Always keep a backup of your original photos before processing. While SnapSize does not delete your originals unless you explicitly use the "Delete Original" function, we recommend maintaining backups as a general best practice.</p>
+    </div>
+
+    <p>Some jurisdictions do not allow the exclusion of implied warranties. In such cases, the above exclusions apply to the extent permitted by law.</p>
+  </section>
+
+  <!-- ── SECTION 10 ── -->
+  <section class="section" id="t10">
+    <p class="section-number">10</p>
+    <h2>Limitation of Liability</h2>
+    <p>To the fullest extent permitted by applicable law, in no event shall the developer of SnapSize be liable for:</p>
+    <ul>
+      <li>Any indirect, incidental, special, consequential, or punitive damages.</li>
+      <li>Loss of data, photos, or profits arising from use of or inability to use the App.</li>
+      <li>Any damages resulting from photo corruption, compression artefacts, or unintended quality degradation.</li>
+      <li>Any damages resulting from unauthorised access to or alteration of your photos.</li>
+      <li>Any claims arising from third-party content displayed through advertisements.</li>
+    </ul>
+    <p>Our total aggregate liability for any claims arising from these Terms or your use of the App shall not exceed the amount you paid for SnapSize Pro (or zero if you are a free-tier user).</p>
+    <p>Some jurisdictions do not allow limitations on liability for certain types of damages. In such jurisdictions, our liability is limited to the greatest extent permitted by law.</p>
+  </section>
+
+  <!-- ── SECTION 11 ── -->
+  <section class="section" id="t11">
+    <p class="section-number">11</p>
+    <h2>Termination</h2>
+    <p>These Terms remain in effect as long as you use SnapSize.</p>
+    <p><strong>Your right to terminate:</strong> You may stop using SnapSize at any time by uninstalling the app from your device. Uninstalling the app removes all locally stored SnapSize data from your device.</p>
+    <p><strong>Our right to terminate:</strong> We reserve the right to suspend or terminate your access to SnapSize (including Pro features) if we determine, in our sole discretion, that you have:</p>
+    <ul>
+      <li>Violated these Terms in a material way.</li>
+      <li>Engaged in fraudulent activity, including ad click fraud.</li>
+      <li>Attempted to circumvent the App's licensing or offline detection systems through technical means.</li>
+      <li>Used the App to process illegal content.</li>
+    </ul>
+    <p>Upon termination, all licences granted to you under these Terms immediately cease. Sections 8, 9, 10, and 12 survive termination.</p>
+    <p>In the event of our termination of your Pro access due to Terms violations, no refund will be issued. In the event of discontinuation of the App by us, Pro users will receive reasonable prior notice.</p>
+  </section>
+
+  <!-- ── SECTION 12 ── -->
+  <section class="section" id="t12">
+    <p class="section-number">12</p>
+    <h2>Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms shall be governed by and construed in accordance with applicable law. In the event of any dispute arising from these Terms or your use of SnapSize, we encourage you to contact us first to resolve the matter informally.</p>
+    <p>If informal resolution is not possible, disputes shall be subject to the exclusive jurisdiction of the courts of the developer's place of residence, unless applicable consumer protection law in your jurisdiction mandates otherwise.</p>
+    <p><strong>Google Play terms:</strong> Your use of SnapSize is also subject to Google Play's Terms of Service, which govern app distribution and purchases. In the event of any conflict between these Terms and Google Play's Terms of Service regarding purchases or app distribution, Google Play's Terms shall govern.</p>
+    <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.</p>
+  </section>
+
+  <!-- ── SECTION 13 ── -->
+  <section class="section" id="t13">
+    <p class="section-number">13</p>
+    <h2>Changes to These Terms</h2>
+    <p>We reserve the right to modify these Terms at any time. When we make material changes, we will update the "Last updated" date at the top of this document and notify you through an in-app update notice.</p>
+    <p>Your continued use of SnapSize after the effective date of revised Terms constitutes your acceptance of the changes. If you do not agree to the new Terms, you must stop using the App.</p>
+    <p>Contact us</p>
+  </section>
+
+  <!-- Contact Card -->
+  <div class="contact-card">
+    <h3>Questions about these Terms?</h3>
+    <p>We'll get back to you within 48 hours.</p>
+    <a href="mailto:mehmetpetek28@gmail.com">✉️ mehmetpetek28@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <span>© 2025 SnapSize. All rights reserved.</span>
+  <span>
+    <a href="snapsize-privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="snapsize-terms-and-conditions.html">Terms &amp; Conditions</a>
+  </span>
+</footer>
+
+</body>
+</html>

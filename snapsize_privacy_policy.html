@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — SnapSize</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:       #0d0f14;
+    --ink-mid:   #3a3d4a;
+    --ink-soft:  #6b6f80;
+    --paper:     #f8f6f1;
+    --paper-mid: #eeeae2;
+    --accent:    #1a6cff;
+    --accent-2:  #ff5a1f;
+    --rule:      #dbd6cc;
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans:  'DM Sans', system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ──────────────────────────────────────── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(248,246,241,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    animation: slideDown .6s ease both;
+  }
+
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--ink);
+  }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--paper); font-size: 18px; line-height: 1;
+  }
+  .logo-text {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    letter-spacing: -.01em;
+  }
+  .doc-badge {
+    font-family: var(--sans);
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--paper-mid);
+    border: 1px solid var(--rule);
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+
+  /* ── HERO ────────────────────────────────────────── */
+  .hero {
+    padding: 80px 40px 60px;
+    max-width: 780px;
+    margin: 0 auto;
+    animation: fadeUp .8s .1s ease both;
+  }
+  .hero-eyebrow {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: .85rem;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .hero-meta span { display: flex; align-items: center; gap: 6px; }
+  .hero-meta strong { color: var(--ink-mid); }
+
+  /* ── LAYOUT ──────────────────────────────────────── */
+  .page-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
+  }
+
+  /* ── QUICK NAV ───────────────────────────────────── */
+  .quick-nav {
+    background: var(--paper-mid);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 60px;
+    animation: fadeUp .8s .2s ease both;
+  }
+  .quick-nav-title {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .quick-nav ol {
+    list-style: none;
+    columns: 2;
+    gap: 8px;
+  }
+  .quick-nav li { margin-bottom: 6px; }
+  .quick-nav a {
+    font-size: .9rem;
+    color: var(--ink-mid);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 6px;
+    transition: color .2s;
+  }
+  .quick-nav a::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .quick-nav a:hover { color: var(--accent); }
+
+  /* ── SECTIONS ────────────────────────────────────── */
+  .section {
+    margin-bottom: 56px;
+    animation: fadeUp .7s ease both;
+  }
+  .section-number {
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .section h2 {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    margin-bottom: 20px;
+    color: var(--ink);
+  }
+  .section p {
+    color: var(--ink-mid);
+    margin-bottom: 16px;
+    font-size: .95rem;
+  }
+  .section ul, .section ol {
+    margin: 12px 0 16px 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .section ul li, .section ol li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--ink-mid);
+    font-size: .95rem;
+  }
+  .section ul li::before {
+    content: '→';
+    position: absolute; left: 0;
+    color: var(--accent); font-size: .8rem;
+    top: 2px;
+  }
+  .section ol { counter-reset: ol-counter; }
+  .section ol li { counter-increment: ol-counter; }
+  .section ol li::before {
+    content: counter(ol-counter) '.';
+    position: absolute; left: 0;
+    color: var(--accent); font-weight: 700;
+    font-size: .85rem; top: 1px;
+  }
+
+  /* Divider rule */
+  .section::after {
+    content: '';
+    display: block;
+    width: 48px; height: 2px;
+    background: var(--rule);
+    margin-top: 40px;
+  }
+  .section:last-of-type::after { display: none; }
+
+  /* ── CALLOUT BOXES ───────────────────────────────── */
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 6%, var(--paper));
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 20px 0;
+  }
+  .callout p { margin: 0; font-size: .9rem; color: var(--ink-mid); }
+  .callout strong { color: var(--ink); }
+
+  .callout-warn {
+    border-color: var(--accent-2);
+    background: color-mix(in srgb, var(--accent-2) 6%, var(--paper));
+  }
+
+  /* ── CONTACT CARD ────────────────────────────────── */
+  .contact-card {
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-top: 60px;
+  }
+  .contact-card h3 {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    letter-spacing: -.01em;
+  }
+  .contact-card p { color: rgba(248,246,241,.65); font-size: .9rem; margin-bottom: 20px; }
+  .contact-card a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600; font-size: .9rem;
+    transition: opacity .2s;
+  }
+  .contact-card a:hover { opacity: .85; }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 28px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+    font-size: .8rem;
+    color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+
+  /* ── ANIMATIONS ──────────────────────────────────── */
+  @keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+  @keyframes fadeUp {
+    from { transform: translateY(24px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+
+  /* Scroll-triggered stagger */
+  .section:nth-child(1)  { animation-delay: .0s; }
+  .section:nth-child(2)  { animation-delay: .05s; }
+  .section:nth-child(3)  { animation-delay: .1s; }
+  .section:nth-child(4)  { animation-delay: .15s; }
+  .section:nth-child(5)  { animation-delay: .2s; }
+  .section:nth-child(6)  { animation-delay: .25s; }
+  .section:nth-child(7)  { animation-delay: .3s; }
+  .section:nth-child(8)  { animation-delay: .35s; }
+  .section:nth-child(9)  { animation-delay: .4s; }
+  .section:nth-child(10) { animation-delay: .45s; }
+  .section:nth-child(11) { animation-delay: .5s; }
+
+  @media (max-width: 600px) {
+    header { padding: 14px 20px; }
+    .hero  { padding: 48px 20px 36px; }
+    .page-wrap { padding: 0 20px 80px; }
+    .quick-nav ol { columns: 1; }
+    footer { padding: 20px; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────── -->
+<header>
+  <a class="logo" href="#">
+    <div class="logo-mark">S</div>
+    <span class="logo-text">SnapSize</span>
+  </a>
+  <span class="doc-badge">Privacy Policy</span>
+</header>
+
+<!-- ── HERO ──────────────────────────────────────── -->
+<div class="hero">
+  <p class="hero-eyebrow">Legal Document</p>
+  <h1>Your privacy, <em>protected.</em></h1>
+  <div class="hero-meta">
+    <span>📅 <strong>Effective date:</strong> January 1, 2025</span>
+    <span>✏️ <strong>Last updated:</strong> January 1, 2025</span>
+    <span>📱 <strong>App:</strong> SnapSize: Batch Photo Compress</span>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ───────────────────────────────── -->
+<div class="page-wrap">
+
+  <!-- Quick Nav -->
+  <nav class="quick-nav" aria-label="Page contents">
+    <p class="quick-nav-title">Contents</p>
+    <ol>
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use Information</a></li>
+      <li><a href="#s3">Photo Access &amp; Processing</a></li>
+      <li><a href="#s4">Third-Party Services</a></li>
+      <li><a href="#s5">Advertising (Google AdMob)</a></li>
+      <li><a href="#s6">In-App Purchases</a></li>
+      <li><a href="#s7">Data Storage &amp; Security</a></li>
+      <li><a href="#s8">Children's Privacy</a></li>
+      <li><a href="#s9">Your Rights</a></li>
+      <li><a href="#s10">Changes to This Policy</a></li>
+      <li><a href="#s11">Contact Us</a></li>
+    </ol>
+  </nav>
+
+  <!-- Intro callout -->
+  <div class="callout" style="margin-bottom:48px">
+    <p><strong>The short version:</strong> SnapSize processes your photos entirely on your device. We do not upload, store, or sell your photos to any server or third party. Your images stay on your phone.</p>
+  </div>
+
+  <!-- ── SECTION 1 ── -->
+  <section class="section" id="s1">
+    <p class="section-number">01</p>
+    <h2>Information We Collect</h2>
+    <p>SnapSize is designed with a minimal data footprint. Here is exactly what we collect and why:</p>
+
+    <p><strong>Information you provide directly:</strong></p>
+    <ul>
+      <li>None — we do not require account creation, login, email address, or any personal registration to use SnapSize.</li>
+    </ul>
+
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li><strong>Compression history (local only):</strong> We store a local database on your device containing metadata about your compressed images — original file size, compressed file size, compression percentage, timestamp, and output format. This data never leaves your device.</li>
+      <li><strong>App preferences:</strong> Settings such as your chosen theme (light/dark/system), default compression quality, and default output format are stored locally using Android SharedPreferences.</li>
+      <li><strong>Onboarding status:</strong> A local flag indicating whether you have completed the onboarding flow.</li>
+      <li><strong>Purchase status:</strong> A local flag (via Google Play Billing) indicating whether you have purchased SnapSize Pro. This is managed by Google Play and verified on-device.</li>
+      <li><strong>Offline usage data:</strong> We track a grace period counter and last-online timestamp locally to manage offline batch access limits. This data is stored only on your device.</li>
+      <li><strong>Crash &amp; diagnostic data:</strong> Google's AdMob SDK may collect anonymised crash and performance data as part of its standard operation. See Section 5 for details.</li>
+    </ul>
+  </section>
+
+  <!-- ── SECTION 2 ── -->
+  <section class="section" id="s2">
+    <p class="section-number">02</p>
+    <h2>How We Use Information</h2>
+    <p>We use the information described above solely to provide and improve the SnapSize experience:</p>
+    <ul>
+      <li>To display your compression history in the Recent Files section of the app.</li>
+      <li>To remember your preferred settings so the app works exactly as you left it.</li>
+      <li>To enforce fair-use limits for offline batch processing (limiting free users to 1 photo offline, with a 24-hour grace period allowing up to 3 photos).</li>
+      <li>To verify your Pro purchase status and unlock ad-free, unlimited-batch features.</li>
+      <li>To serve relevant advertisements to free users (via Google AdMob — see Section 5).</li>
+    </ul>
+    <p>We do not sell, rent, or trade any data to third parties. We do not build user profiles. We do not use your data for marketing purposes outside of the app's own upgrade prompts.</p>
+  </section>
+
+  <!-- ── SECTION 3 ── -->
+  <section class="section" id="s3">
+    <p class="section-number">03</p>
+    <h2>Photo Access &amp; Processing</h2>
+    <p>SnapSize's core function is compressing, resizing, cropping, and converting your photos. Here is precisely how photo access works:</p>
+
+    <div class="callout">
+      <p><strong>All photo processing happens 100% on your device.</strong> Your original photos and compressed outputs are never uploaded to any server — ours or anyone else's.</p>
+    </div>
+
+    <p><strong>Permissions requested:</strong></p>
+    <ul>
+      <li><strong>READ_MEDIA_IMAGES (Android 13+) / READ_EXTERNAL_STORAGE (Android 12 and below):</strong> Required to let you select photos from your gallery. We read photo data only when you actively select a file. We do not background-scan or monitor your gallery.</li>
+      <li><strong>INTERNET:</strong> Required for Google AdMob to serve advertisements and for Google Play Billing to process purchases. Not used to upload your photos.</li>
+      <li><strong>ACCESS_NETWORK_STATE:</strong> Used to detect whether your device is online or offline, which determines batch processing limits for free users.</li>
+    </ul>
+
+    <p><strong>What happens to your photos:</strong></p>
+    <ul>
+      <li>You select a photo (or up to 10 photos in batch) using Android's system photo picker.</li>
+      <li>The photo is read into device memory, processed (compressed / resized / cropped / converted), and the output is saved to your device's <code>Pictures/SnapSize</code> folder.</li>
+      <li>A metadata record (file sizes, timestamp, format) is saved to the local Room database on your device.</li>
+      <li>The original photo is not modified or deleted unless you explicitly use the "Delete Original" function.</li>
+      <li>Compressed photos can be shared to other apps using Android's standard share sheet. SnapSize uses a FileProvider to make the file temporarily accessible for sharing — it is not uploaded anywhere.</li>
+    </ul>
+  </section>
+
+  <!-- ── SECTION 4 ── -->
+  <section class="section" id="s4">
+    <p class="section-number">04</p>
+    <h2>Third-Party Services</h2>
+    <p>SnapSize integrates the following third-party services. Each has its own privacy practices:</p>
+
+    <p><strong>Google AdMob</strong> — used to display banner, interstitial, and native advertisements to free users. AdMob may collect device identifiers and usage data to serve personalised ads. See Section 5 for full details.</p>
+
+    <p><strong>Google Play Billing</strong> — used to process the one-time SnapSize Pro purchase (<code>pro_version_lifetime</code>). Google handles all payment processing. We do not receive or store your payment card details. Google's Privacy Policy applies to this transaction.</p>
+
+    <p><strong>Android CropImage Library (canhub/cropper)</strong> — an open-source Android library used for the manual gesture-crop feature. This library operates entirely on-device and does not transmit any data.</p>
+
+    <p><strong>Coil (image loading library)</strong> — an open-source Android library used to display photo thumbnails within the app. Operates entirely on-device.</p>
+
+    <p>We do not integrate any analytics SDK (e.g., Firebase Analytics, Mixpanel) beyond what AdMob provides as part of its standard initialisation.</p>
+  </section>
+
+  <!-- ── SECTION 5 ── -->
+  <section class="section" id="s5">
+    <p class="section-number">05</p>
+    <h2>Advertising (Google AdMob)</h2>
+    <p>Free users of SnapSize see advertisements served by Google AdMob. Advertisements include banner ads, full-screen interstitial ads (shown after compression is complete), and native ads displayed within the app's interface.</p>
+
+    <p><strong>What AdMob may collect:</strong></p>
+    <ul>
+      <li>Advertising ID (Android AAID) — a resettable, anonymous device identifier used to serve relevant ads and measure ad performance.</li>
+      <li>Device information — model, operating system version, language, time zone.</li>
+      <li>IP address — used to estimate general location for ad targeting (country/region level).</li>
+      <li>App interaction data — which screens were viewed, how long the app was used.</li>
+    </ul>
+
+    <div class="callout callout-warn">
+      <p><strong>Ad personalisation:</strong> AdMob may serve personalised advertisements based on your interests as inferred from your device usage. You can opt out of personalised ads at any time via your device's Google Settings → Ads → "Opt out of Ads Personalisation".</p>
+    </div>
+
+    <p><strong>How to remove ads:</strong> Purchasing SnapSize Pro removes all advertisements permanently. Pro users are never shown ads.</p>
+
+    <p>Google's Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a><br>
+    Google AdMob Partner Terms: <a href="https://www.google.com/admob/terms.html" target="_blank" rel="noopener">google.com/admob/terms.html</a></p>
+  </section>
+
+  <!-- ── SECTION 6 ── -->
+  <section class="section" id="s6">
+    <p class="section-number">06</p>
+    <h2>In-App Purchases</h2>
+    <p>SnapSize offers a single one-time purchase: <strong>SnapSize Pro</strong> (product ID: <code>pro_version_lifetime</code>). This is a lifetime purchase — no subscription, no recurring charges.</p>
+
+    <p>Purchasing SnapSize Pro unlocks:</p>
+    <ul>
+      <li>Permanent removal of all advertisements.</li>
+      <li>Unlimited batch photo processing (up to 100 photos per batch).</li>
+      <li>Unrestricted offline usage.</li>
+      <li>Priority support.</li>
+    </ul>
+
+    <p>All purchases are processed exclusively by Google Play. We do not handle, store, or have access to your payment details. Your purchase is associated with your Google Play account and can be restored at any time using the "Restore Purchases" option in the app's Settings screen.</p>
+
+    <p>Refund requests must be directed to Google Play support in accordance with their refund policy.</p>
+  </section>
+
+  <!-- ── SECTION 7 ── -->
+  <section class="section" id="s7">
+    <p class="section-number">07</p>
+    <h2>Data Storage &amp; Security</h2>
+    <p><strong>Where data is stored:</strong> All data generated by SnapSize — your compression history, preferences, offline usage counters — is stored locally on your Android device. We do not operate servers that store your personal data.</p>
+
+    <p><strong>How long data is retained:</strong></p>
+    <ul>
+      <li>Compression history is stored until you clear it manually via Settings → Clear History, or until you uninstall the app.</li>
+      <li>App preferences are cleared when you uninstall the app.</li>
+      <li>Compressed photo files are stored in your <code>Pictures/SnapSize</code> folder and persist until you delete them manually.</li>
+    </ul>
+
+    <p><strong>Security measures:</strong> Data stored on your device is protected by Android's standard application sandbox — other apps cannot access SnapSize's private data. We do not transmit any personal data over the network, eliminating the risk of network-level interception of your photos or usage data.</p>
+
+    <p><strong>Backup:</strong> SnapSize participates in Android's backup system for app preferences (not including photo files). This means your settings may be restored when reinstalling the app on the same Google account. Photo files in your <code>Pictures/SnapSize</code> folder are subject to your device's own backup settings (e.g., Google Photos auto-backup).</p>
+  </section>
+
+  <!-- ── SECTION 8 ── -->
+  <section class="section" id="s8">
+    <p class="section-number">08</p>
+    <h2>Children's Privacy</h2>
+    <p>SnapSize is not directed at children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children.</p>
+    <p>If you are a parent or guardian and believe your child has used SnapSize in a way that may have resulted in data collection, please contact us at the address below and we will take appropriate steps.</p>
+    <p>Google AdMob is configured to comply with child-directed treatment policies where required by applicable law.</p>
+  </section>
+
+  <!-- ── SECTION 9 ── -->
+  <section class="section" id="s9">
+    <p class="section-number">09</p>
+    <h2>Your Rights</h2>
+    <p>Depending on your location, you may have the following rights regarding your data:</p>
+    <ul>
+      <li><strong>Access:</strong> You may request a description of what data we hold about you. Given that all SnapSize data is stored locally on your device, you already have direct access to it.</li>
+      <li><strong>Deletion:</strong> You may delete your compression history at any time via Settings → Clear History. Uninstalling the app removes all locally stored SnapSize data from your device.</li>
+      <li><strong>Opt-out of ad personalisation:</strong> You may opt out of personalised advertising via your device's Google Settings → Ads.</li>
+      <li><strong>Reset advertising ID:</strong> You may reset your Android Advertising ID at any time via device Settings → Google → Ads → Reset advertising ID.</li>
+      <li><strong>GDPR (EU/EEA users):</strong> If you are located in the European Union or European Economic Area, you have additional rights under the General Data Protection Regulation, including the right to data portability and the right to lodge a complaint with a supervisory authority. Because SnapSize does not collect personal data beyond what AdMob collects (governed by Google's own GDPR compliance), your primary contact for data subject requests related to advertising data is Google.</li>
+      <li><strong>CCPA (California users):</strong> SnapSize does not sell your personal information. You have the right to know what personal information is collected and to request deletion.</li>
+    </ul>
+  </section>
+
+  <!-- ── SECTION 10 ── -->
+  <section class="section" id="s10">
+    <p class="section-number">10</p>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect changes in the app's features, applicable law, or our practices. When we make material changes, we will update the "Last updated" date at the top of this document.</p>
+    <p>Significant changes will be notified through an in-app update notice (displayed on the Splash Screen when a new app version is available). Continued use of SnapSize after such notification constitutes your acceptance of the updated policy.</p>
+    <p>We encourage you to review this policy periodically. The current version is always accessible via Settings → Privacy Policy within the app, and at the URL where this document is hosted.</p>
+  </section>
+
+  <!-- ── SECTION 11 ── -->
+  <section class="section" id="s11">
+    <p class="section-number">11</p>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or SnapSize's data practices, please contact us:</p>
+  </section>
+
+  <!-- Contact Card -->
+  <div class="contact-card">
+    <h3>Get in touch</h3>
+    <p>Questions about your privacy? We'll respond within 48 hours.</p>
+    <a href="mailto:mehmetpetek28@gmail.com">✉️ mehmetpetek28@gmail.com</a>
+  </div>
+
+</div>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <span>© 2025 SnapSize. All rights reserved.</span>
+  <span>
+    <a href="snapsize-privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="snapsize-terms-and-conditions.html">Terms &amp; Conditions</a>
+  </span>
+</footer>
+
+</body>
+</html>
