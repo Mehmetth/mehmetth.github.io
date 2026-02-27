@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy — SnapSize by Durusoft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0a0f;--bg2:#111118;--bg3:#16161f;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.12);
+  --purple:#9b6dff;--purple-dim:rgba(155,109,255,0.12);--purple-glow:rgba(155,109,255,0.25);
+  --gold:#f5c842;--green:#34d399;
+  --text:#e8e6f0;--text-dim:#8b89a0;--text-dimmer:#4a4860;
+  --max:740px;--r:14px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--bg);color:var(--text);font-size:16px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#bar{position:fixed;top:0;left:0;z-index:999;height:2px;width:0;background:linear-gradient(90deg,var(--purple),var(--gold));transition:width .08s linear}
+body::before{content:'';position:fixed;top:-40%;left:-20%;width:70vw;height:70vw;background:radial-gradient(ellipse,rgba(155,109,255,0.06) 0%,transparent 65%);pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;bottom:-30%;right:-10%;width:50vw;height:50vw;background:radial-gradient(ellipse,rgba(245,200,66,0.04) 0%,transparent 65%);pointer-events:none;z-index:0}
+
+header{position:sticky;top:0;z-index:100;background:rgba(10,10,15,0.82);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border-bottom:1px solid var(--border)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-icon{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#7b2fbe,#5b4fcf);display:grid;place-items:center;box-shadow:0 0 20px rgba(123,47,190,0.4);flex-shrink:0}
+.logo-icon svg{width:18px;height:18px;fill:#fff}
+.logo-text{font-family:'Playfair Display',serif;font-size:17px;color:var(--text);letter-spacing:-0.2px}
+.tag{font-size:11px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--purple);background:var(--purple-dim);border:1px solid rgba(155,109,255,0.2);padding:4px 10px;border-radius:999px}
+
+.hero{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:72px 24px 56px}
+.hero-label{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--purple);margin-bottom:24px}
+.hero-label::after{content:'';display:block;width:40px;height:1px;background:var(--purple);opacity:.5}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,58px);line-height:1.08;letter-spacing:-1.5px;color:var(--text);margin-bottom:24px}
+.hero h1 span{font-style:italic;background:linear-gradient(135deg,var(--purple),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-lead{font-size:17px;font-weight:300;color:var(--text-dim);max-width:500px;margin-bottom:36px;line-height:1.7}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:flex;align-items:center;gap:6px;background:var(--bg3);border:1px solid var(--border2);padding:7px 13px;border-radius:999px;font-size:12px;color:var(--text-dim)}
+.chip svg{width:12px;height:12px;stroke:var(--purple);fill:none;stroke-width:2;flex-shrink:0}
+
+.promises{position:relative;z-index:1;max-width:var(--max);margin:0 auto 64px;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+@media(max-width:560px){.promises{grid-template-columns:1fr}}
+.promise{background:var(--bg2);padding:24px 22px;transition:background .2s}
+.promise:hover{background:var(--bg3)}
+.p-icon{width:34px;height:34px;border-radius:9px;background:var(--purple-dim);border:1px solid rgba(155,109,255,0.15);display:grid;place-items:center;margin-bottom:14px}
+.p-icon svg{width:16px;height:16px;stroke:var(--purple);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.promise h3{font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px}
+.promise p{font-size:13px;color:var(--text-dim);line-height:1.55}
+
+.toc-wrap{position:relative;z-index:1;max-width:var(--max);margin:0 auto 60px;padding:0 24px}
+.toc{background:var(--bg2);border:1px solid var(--border2);border-radius:var(--r);padding:28px}
+.toc-head{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-dimmer);margin-bottom:18px}
+.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:3px 28px}
+@media(max-width:480px){.toc ol{grid-template-columns:1fr}}
+.toc a{text-decoration:none;display:flex;align-items:center;gap:10px;padding:5px 0;font-size:14px;color:var(--text-dim);border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.toc a:hover{color:var(--purple);border-color:var(--purple-dim)}
+.toc-n{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--text-dimmer);min-width:22px}
+
+.content{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 24px 100px}
+.sec{margin-bottom:64px;scroll-margin-top:80px}
+.sec-head{display:flex;align-items:center;gap:14px;padding-bottom:18px;margin-bottom:26px;border-bottom:1px solid var(--border)}
+.sec-num{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--purple);background:var(--purple-dim);border:1px solid rgba(155,109,255,0.2);padding:4px 8px;border-radius:6px;flex-shrink:0}
+.sec h2{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:-.3px;color:var(--text)}
+.sec p{font-size:15px;color:var(--text-dim);margin-bottom:16px;font-weight:300}
+.sec p:last-child{margin-bottom:0}
+.sec ul{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.sec li{font-size:15px;color:var(--text-dim);display:flex;align-items:flex-start;gap:12px;font-weight:300}
+.sec li::before{content:'';display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--purple);margin-top:10px;flex-shrink:0}
+strong{color:var(--text);font-weight:700}
+a.ext{color:var(--purple);text-decoration:none;border-bottom:1px solid var(--purple-dim);transition:border-color .15s}
+a.ext:hover{border-color:var(--purple)}
+code{font-size:13px;background:var(--bg3);padding:1px 7px;border-radius:5px;border:1px solid var(--border2);color:var(--purple)}
+
+.callout{background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.2);border-left:3px solid var(--green);border-radius:var(--r);padding:18px 20px;margin-bottom:18px}
+.callout-title{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--green);margin-bottom:6px}
+.callout p{font-size:14px;color:rgba(52,211,153,0.8);margin-bottom:0}
+.infobox{background:var(--purple-dim);border:1px solid rgba(155,109,255,0.2);border-radius:var(--r);padding:16px 20px;margin-bottom:16px}
+.infobox p{font-size:14px;color:var(--text-dim);margin-bottom:0}
+
+.tbl{width:100%;border-collapse:collapse;margin-bottom:18px;font-size:14px}
+.tbl th{text-align:left;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-dimmer);padding:10px 14px;border-bottom:1px solid var(--border2);background:var(--bg3)}
+.tbl td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text-dim);vertical-align:top;font-weight:300}
+.tbl tr:hover td{background:var(--bg3)}
+.badge-n{display:inline-block;background:rgba(239,68,68,.12);color:#f87171;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+.badge-y{display:inline-block;background:rgba(52,211,153,.12);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px}
+
+.contact{background:linear-gradient(135deg,rgba(123,47,190,0.3),rgba(91,79,207,0.3));border:1px solid rgba(155,109,255,0.25);border-radius:var(--r);padding:32px;position:relative;overflow:hidden}
+.contact::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(155,109,255,0.3),transparent);pointer-events:none}
+.contact h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--text);margin-bottom:8px}
+.contact p{font-size:14px;color:var(--text-dim);margin-bottom:20px;font-weight:300}
+.contact a{display:inline-flex;align-items:center;gap:8px;background:var(--purple);color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:11px 22px;border-radius:999px;transition:transform .15s,box-shadow .15s;box-shadow:0 0 24px rgba(155,109,255,0.35)}
+.contact a:hover{transform:translateY(-1px);box-shadow:0 4px 28px rgba(155,109,255,0.5)}
+
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:32px 24px;text-align:center}
+footer p{font-size:13px;color:var(--text-dimmer)}
+footer a{color:var(--text-dim);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+footer a:hover{border-color:var(--text-dim)}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <span class="logo-text">SnapSize</span>
+    </a>
+    <span class="tag">Privacy Policy</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-label">Durusoft · Legal</div>
+  <h1>Your photos stay<br><span>on your device.</span></h1>
+  <p class="hero-lead">SnapSize works entirely offline. No cloud, no accounts, no tracking — your images are processed locally and never transmitted to any server.</p>
+  <div class="hero-chips">
+    <span class="chip"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Effective January 2025</span>
+    <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>iOS 16+</span>
+    <span class="chip"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>English</span>
+  </div>
+</section>
+
+<div class="promises">
+  <div class="promise">
+    <div class="p-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+    <h3>Zero uploads</h3>
+    <p>All processing on your device. Nothing sent to our servers.</p>
+  </div>
+  <div class="promise">
+    <div class="p-icon"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+    <h3>No account</h3>
+    <p>No sign-up, no email required. Use instantly, anonymously.</p>
+  </div>
+  <div class="promise">
+    <div class="p-icon"><svg viewBox="0 0 24 24"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0119 12.55"/><path d="M5 12.55a10.94 10.94 0 015.17-2.39"/></svg></div>
+    <h3>No tracking</h3>
+    <p>No analytics SDK, no fingerprinting, no behavioral data.</p>
+  </div>
+</div>
+
+<div class="toc-wrap">
+  <div class="toc">
+    <div class="toc-head">Contents</div>
+    <ol>
+      <li><a href="#s1"><span class="toc-n">01</span>Information We Collect</a></li>
+      <li><a href="#s2"><span class="toc-n">02</span>How We Use Information</a></li>
+      <li><a href="#s3"><span class="toc-n">03</span>Photo &amp; Camera Access</a></li>
+      <li><a href="#s4"><span class="toc-n">04</span>Advertising (AdMob)</a></li>
+      <li><a href="#s5"><span class="toc-n">05</span>In-App Purchases</a></li>
+      <li><a href="#s6"><span class="toc-n">06</span>Data Storage &amp; Security</a></li>
+      <li><a href="#s7"><span class="toc-n">07</span>Children's Privacy</a></li>
+      <li><a href="#s8"><span class="toc-n">08</span>Your Rights</a></li>
+      <li><a href="#s9"><span class="toc-n">09</span>Changes to This Policy</a></li>
+      <li><a href="#s10"><span class="toc-n">10</span>Contact Us</a></li>
+    </ol>
+  </div>
+</div>
+
+<div class="content">
+  <div class="sec" id="s1">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Information We Collect</h2></div>
+    <div class="callout">
+      <div class="callout-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>The short version</div>
+      <p>SnapSize does not collect, transmit, or store your photos or personal data on any external server. Ever.</p>
+    </div>
+    <p>The information handled by SnapSize falls into two categories — what stays on your device, and what is handled by third-party SDKs (Apple, Google).</p>
+    <table class="tbl">
+      <thead><tr><th>Data Type</th><th>Stored Where</th><th>Sent Externally</th></tr></thead>
+      <tbody>
+        <tr><td>Your photos &amp; processed images</td><td>Device temp/documents folder</td><td><span class="badge-n">Never</span></td></tr>
+        <tr><td>App preferences (quality, format, theme)</td><td>UserDefaults on device</td><td><span class="badge-n">Never</span></td></tr>
+        <tr><td>Compression history &amp; thumbnails</td><td>Device documents folder</td><td><span class="badge-n">Never</span></td></tr>
+        <tr><td>Daily usage counter</td><td>UserDefaults on device</td><td><span class="badge-n">Never</span></td></tr>
+        <tr><td>Purchase &amp; subscription status</td><td>Apple StoreKit / device</td><td><span class="badge-y">Apple only</span></td></tr>
+        <tr><td>Ad identifiers (free users only)</td><td>Google AdMob SDK</td><td><span class="badge-y">Google only</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec" id="s2">
+    <div class="sec-head"><span class="sec-num">02</span><h2>How We Use Information</h2></div>
+    <p>The limited data processed by SnapSize is used exclusively to:</p>
+    <ul>
+      <li>Provide compression, resize, crop, and format conversion features</li>
+      <li>Remember your default quality settings and format preferences</li>
+      <li>Track your daily free-tier usage limit (3 compressions/day, stored locally, resets at midnight)</li>
+      <li>Verify your Pro subscription status via Apple StoreKit 2</li>
+      <li>Serve contextually relevant ads to free-tier users via Google AdMob</li>
+    </ul>
+    <p>We do not use your data for profiling, sell it to third parties, or share it with any entity beyond what is described in sections 4 and 5.</p>
+  </div>
+
+  <div class="sec" id="s3">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Photo &amp; Camera Access</h2></div>
+    <div class="callout">
+      <div class="callout-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Your photos never leave your device</div>
+      <p>All image processing uses Apple's CoreGraphics and ImageIO frameworks entirely on-device. No photo data is uploaded to any server.</p>
+    </div>
+    <p>SnapSize requests the following iOS permissions:</p>
+    <ul>
+      <li><strong>Photo Library (Read)</strong> — to let you select photos via the system photo picker for processing.</li>
+      <li><strong>Photo Library (Add Only)</strong> — to save processed images back to your library. We request Add Only access; we cannot read or browse your existing photos.</li>
+    </ul>
+    <p>Revoke permissions anytime at <strong>Settings → Privacy &amp; Security → Photos → SnapSize</strong>. Revoking disables save functionality but does not affect image processing.</p>
+  </div>
+
+  <div class="sec" id="s4">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Advertising (Google AdMob)</h2></div>
+    <p>Free-tier users see ads served by <strong>Google AdMob</strong> (Google LLC, Mountain View, CA). <strong>Pro subscribers never see ads.</strong></p>
+    <p>Google AdMob may collect and use the following in accordance with its own privacy policy:</p>
+    <ul>
+      <li>Advertising Identifier (IDFA) — only if you grant App Tracking Transparency permission</li>
+      <li>IP address (for geo-targeting and fraud prevention)</li>
+      <li>Device type, OS version, screen size</li>
+      <li>Ad interaction data (impressions, clicks)</li>
+    </ul>
+    <div class="infobox">
+      <p><strong>App Tracking Transparency:</strong> SnapSize does not request ATT permission. AdMob will serve limited, non-personalized ads without cross-app tracking. Manage ad preferences at <strong>Settings → Privacy &amp; Security → Tracking</strong>.</p>
+    </div>
+    <p>Review <a href="https://policies.google.com/privacy" class="ext" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543" class="ext" target="_blank" rel="noopener">AdMob's data usage policy</a> for full details.</p>
+  </div>
+
+  <div class="sec" id="s5">
+    <div class="sec-head"><span class="sec-num">05</span><h2>In-App Purchases</h2></div>
+    <p>SnapSize Pro is available through Apple's App Store via three purchase options:</p>
+    <ul>
+      <li><strong>Weekly</strong> ($2.99/week) — auto-renewable subscription</li>
+      <li><strong>Yearly</strong> ($14.99/year) — auto-renewable subscription with 3-day free trial</li>
+      <li><strong>Lifetime</strong> ($29.99) — one-time non-consumable purchase</li>
+    </ul>
+    <p>All payment processing is handled exclusively by Apple. Durusoft does not receive, store, or process your payment card information. To manage or cancel subscriptions: <strong>Settings → [Your Name] → Subscriptions</strong>.</p>
+  </div>
+
+  <div class="sec" id="s6">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Data Storage &amp; Security</h2></div>
+    <p>All app data is stored locally on your device within Apple's iOS sandbox:</p>
+    <ul>
+      <li>Preferences stored in <code>UserDefaults</code> — sandboxed, not synced to iCloud</li>
+      <li>Processed images written to a temporary directory, cleaned up automatically</li>
+      <li>History thumbnails stored in the app's Documents directory</li>
+      <li>Widget data shared via App Group <code>group.com.durusoft.snapsize</code></li>
+    </ul>
+    <p>iOS enforces strict app sandboxing. No other app can access SnapSize's data without your explicit permission.</p>
+  </div>
+
+  <div class="sec" id="s7">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Children's Privacy</h2></div>
+    <p>SnapSize is rated 4+ on the App Store and suitable for all ages. We do not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction).</p>
+    <p>Since SnapSize requires no account creation and collects no personal data, there is minimal risk of children's data being processed. Google AdMob's child-directed content policies apply to ad serving.</p>
+  </div>
+
+  <div class="sec" id="s8">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Your Rights</h2></div>
+    <p>Because SnapSize stores all data locally on your device, you retain full control:</p>
+    <ul>
+      <li><strong>Delete history</strong> — Settings → Storage → Clear History within the app</li>
+      <li><strong>Delete all data</strong> — uninstalling the app removes all locally stored data</li>
+      <li><strong>Revoke photo access</strong> — Settings → Privacy &amp; Security → Photos → SnapSize → None</li>
+      <li><strong>Limit ad tracking</strong> — Settings → Privacy &amp; Security → Tracking</li>
+    </ul>
+    <p>If you believe we hold personal data about you (e.g., via a support email exchange) and wish to request deletion, contact us below.</p>
+  </div>
+
+  <div class="sec" id="s9">
+    <div class="sec-head"><span class="sec-num">09</span><h2>Changes to This Policy</h2></div>
+    <p>We may update this Privacy Policy to reflect changes in our practices, technology, or legal requirements. When we make material changes, we will update the effective date at the top of this page.</p>
+    <div class="infobox">
+      <p>This page is always accessible at <strong>durusoft.com/snapsize/privacy</strong> and from within the app via Settings → Privacy Policy.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="s10">
+    <div class="sec-head"><span class="sec-num">10</span><h2>Contact Us</h2></div>
+    <p>Questions, concerns, or data requests? We respond within 1–2 business days.</p>
+    <div class="contact">
+      <h3>Durusoft</h3>
+      <p>We're a small, independent developer. Your privacy matters deeply to us.</p>
+      <a href="mailto:support@durusoft.com">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        support@durusoft.com
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Durusoft. All rights reserved. &nbsp;·&nbsp; <a href="/snapsize/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/snapsize/terms">Terms of Use</a></p>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const bar=document.getElementById('bar');
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=(window.scrollY/h*100)+'%';
+});
+</script>
+</body>
+</html>

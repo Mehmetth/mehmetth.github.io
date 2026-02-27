@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Terms of Use — SnapSize by Durusoft</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0d0d12;--ink-60:rgba(13,13,18,0.6);--ink-30:rgba(13,13,18,0.3);--ink-10:rgba(13,13,18,0.07);
+  --paper:#f7f6f2;--card:#ffffff;
+  --accent:#2a1fff;--accent-dim:rgba(42,31,255,0.08);--accent-mid:rgba(42,31,255,0.15);
+  --red:#ff3b30;--red-dim:rgba(255,59,48,0.08);
+  --amber:#ff9500;--amber-dim:rgba(255,149,0,0.1);
+  --green:#34c759;--green-dim:rgba(52,199,89,0.1);
+  --border:#e5e3dc;--border2:#ccc9be;
+  --max:760px;--r:12px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Source Serif 4',serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* geometric background grid */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(var(--ink-10) 1px,transparent 1px),
+    linear-gradient(90deg,var(--ink-10) 1px,transparent 1px);
+  background-size:48px 48px;
+  pointer-events:none;z-index:0;
+}
+
+#bar{position:fixed;top:0;left:0;z-index:999;height:3px;width:0;background:var(--accent);transition:width .08s linear}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(247,246,242,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:2px solid var(--ink)}
+.header-inner{max-width:var(--max);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:0;text-decoration:none}
+.logo-mark{
+  width:36px;height:36px;
+  background:var(--ink);
+  clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+  display:grid;place-items:center;flex-shrink:0;margin-right:10px;
+}
+.logo-mark svg{width:16px;height:16px;fill:var(--paper)}
+.logo-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--ink);letter-spacing:-0.5px}
+.header-right{display:flex;align-items:center;gap:12px}
+.nav-link{font-family:'Syne',sans-serif;font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--ink-60);text-decoration:none;transition:color .15s}
+.nav-link:hover{color:var(--accent)}
+.doc-tag{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:5px 12px;border-radius:4px}
+
+/* HERO */
+.hero{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:64px 24px 48px}
+.hero-kicker{display:flex;align-items:center;gap:0;margin-bottom:28px}
+.kicker-line{width:32px;height:2px;background:var(--accent);margin-right:10px}
+.kicker-text{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,5.5vw,54px);font-weight:800;line-height:1.05;letter-spacing:-2px;color:var(--ink);margin-bottom:20px}
+.hero h1 .outline{-webkit-text-stroke:2px var(--ink);color:transparent}
+.hero-sub{font-size:17px;font-weight:300;color:var(--ink-60);max-width:480px;margin-bottom:32px;font-style:italic}
+.meta-row{display:flex;align-items:center;gap:0;flex-wrap:wrap}
+.meta-item{
+  display:flex;align-items:center;gap:7px;
+  font-family:'Syne',sans-serif;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--ink-60);
+  padding:8px 16px;border:1px solid var(--border2);
+  margin-right:-1px;background:var(--card);
+}
+.meta-item:first-child{border-radius:var(--r) 0 0 var(--r)}
+.meta-item:last-child{border-radius:0 var(--r) var(--r) 0}
+.meta-item svg{width:12px;height:12px;stroke:var(--accent);fill:none;stroke-width:2}
+
+/* SUMMARY GRID */
+.summary{position:relative;z-index:1;max-width:var(--max);margin:0 auto 56px;padding:0 24px}
+.summary-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ink-30);margin-bottom:14px;padding-left:2px}
+.summary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;background:var(--ink)}
+@media(max-width:500px){.summary-grid{grid-template-columns:1fr}}
+.s-card{background:var(--card);padding:20px;display:flex;align-items:flex-start;gap:14px;transition:background .15s}
+.s-card:hover{background:#f0efff}
+.s-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.s-dot.allowed{background:var(--green)}
+.s-dot.prohibited{background:var(--red)}
+.s-dot.info{background:var(--accent)}
+.s-card h4{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.s-card p{font-size:13px;color:var(--ink-60);line-height:1.5;font-weight:300}
+
+/* TOC */
+.toc-outer{position:relative;z-index:1;max-width:var(--max);margin:0 auto 56px;padding:0 24px}
+.toc-box{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.toc-box-head{background:var(--ink);padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.toc-box-head span{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--paper)}
+.toc-box-head small{font-family:'Syne',sans-serif;font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase}
+.toc-list{padding:6px 0}
+.toc-item{display:flex;align-items:center;border-bottom:1px solid var(--border)}
+.toc-item:last-child{border-bottom:none}
+.toc-item a{display:flex;align-items:center;gap:0;width:100%;text-decoration:none;padding:11px 20px;transition:background .15s}
+.toc-item a:hover{background:var(--accent-dim)}
+.t-num{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--accent);min-width:28px;letter-spacing:.5px}
+.t-text{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;color:var(--ink);flex:1}
+.t-arrow{font-size:12px;color:var(--ink-30)}
+
+/* CONTENT */
+.content{position:relative;z-index:1;max-width:var(--max);margin:0 auto;padding:0 24px 100px}
+
+.sec{margin-bottom:72px;scroll-margin-top:80px}
+.sec-label{
+  display:flex;align-items:center;gap:12px;
+  padding-bottom:16px;margin-bottom:28px;
+  border-bottom:2px solid var(--ink);
+}
+.sec-n{
+  font-family:'Syne',sans-serif;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  background:var(--ink);color:var(--paper);
+  padding:4px 9px;border-radius:4px;flex-shrink:0;
+}
+.sec h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.5px;color:var(--ink)}
+.sec p{font-size:15px;color:var(--ink-60);margin-bottom:16px;font-style:italic;font-weight:300}
+.sec p:last-child{margin-bottom:0}
+.sec p.normal{font-style:normal}
+.sec ul,ol.styled{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:16px}
+.sec li,.styled li{font-size:15px;color:var(--ink-60);display:flex;align-items:flex-start;gap:12px;font-weight:300}
+.sec li::before{content:'→';color:var(--accent);font-family:'Syne',sans-serif;font-weight:700;font-size:12px;margin-top:3px;flex-shrink:0;font-style:normal}
+strong{color:var(--ink);font-weight:700;font-style:normal}
+a.ext{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(42,31,255,0.25);transition:border-color .15s;font-style:normal}
+a.ext:hover{border-color:var(--accent)}
+
+/* notice boxes */
+.notice{border-radius:var(--r);padding:18px 20px;margin-bottom:18px;border-left:4px solid}
+.notice.green{background:var(--green-dim);border-color:var(--green)}
+.notice.red{background:var(--red-dim);border-color:var(--red)}
+.notice.amber{background:var(--amber-dim);border-color:var(--amber)}
+.notice.blue{background:var(--accent-dim);border-color:var(--accent)}
+.notice-head{display:flex;align-items:center;gap:8px;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:7px}
+.notice.green .notice-head{color:var(--green)}
+.notice.red .notice-head{color:var(--red)}
+.notice.amber .notice-head{color:var(--amber)}
+.notice.blue .notice-head{color:var(--accent)}
+.notice p{font-size:14px;color:var(--ink-60);margin-bottom:0;font-style:normal;font-weight:300}
+
+/* plan table */
+.plan-table{width:100%;border-collapse:collapse;margin-bottom:20px;font-size:14px;border:2px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.plan-table th{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:11px 16px;background:var(--ink);color:var(--paper);text-align:left}
+.plan-table td{padding:13px 16px;border-bottom:1px solid var(--border);color:var(--ink-60);font-weight:300}
+.plan-table tr:last-child td{border-bottom:none}
+.plan-table tr:hover td{background:var(--accent-dim)}
+.plan-pill{display:inline-block;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.pill-sub{background:var(--accent-dim);color:var(--accent)}
+.pill-once{background:var(--green-dim);color:#1a7a38}
+.price-tag{font-family:'Syne',sans-serif;font-weight:700;color:var(--ink)}
+
+/* contact */
+.contact-block{
+  background:var(--ink);color:var(--paper);
+  border-radius:var(--r);padding:36px;
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+}
+@media(max-width:520px){.contact-block{grid-template-columns:1fr}}
+.contact-block h3{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:6px}
+.contact-block p{font-size:14px;color:rgba(247,246,242,0.5);font-style:italic;font-weight:300;margin:0}
+.contact-cta{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+@media(max-width:520px){.contact-cta{align-items:flex-start}}
+.contact-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent);color:#fff;
+  text-decoration:none;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.3px;
+  padding:11px 22px;border-radius:6px;white-space:nowrap;
+  transition:opacity .15s;
+}
+.contact-btn:hover{opacity:.85}
+.contact-btn-sec{
+  display:inline-flex;align-items:center;gap:6px;
+  color:rgba(247,246,242,0.5);
+  text-decoration:none;font-family:'Syne',sans-serif;font-size:11px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  transition:color .15s;white-space:nowrap;
+}
+.contact-btn-sec:hover{color:var(--paper)}
+
+/* limit cards */
+.limit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+@media(max-width:480px){.limit-grid{grid-template-columns:1fr}}
+.limit-card{border:1px solid var(--border);border-radius:var(--r);padding:18px;background:var(--card)}
+.limit-card-head{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--ink-60);margin-bottom:10px}
+.limit-card h4{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--ink);margin-bottom:4px}
+.limit-card p{font-size:13px;color:var(--ink-60);font-weight:300;line-height:1.5;margin:0;font-style:normal}
+.limit-card.pro{border-color:var(--accent);background:var(--accent-dim)}
+.limit-card.pro .limit-card-head{color:var(--accent)}
+.limit-card.pro h4{color:var(--accent)}
+
+/* footer */
+footer{position:relative;z-index:1;border-top:2px solid var(--ink);padding:28px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink)}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-family:'Syne',sans-serif;font-size:12px;font-weight:600;color:var(--ink-60);text-decoration:none;letter-spacing:.3px;transition:color .15s}
+.footer-links a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-mark"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+      <span class="logo-name">SnapSize</span>
+    </a>
+    <div class="header-right">
+      <a class="nav-link" href="/snapsize/privacy">Privacy</a>
+      <span class="doc-tag">Terms of Use</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker"><div class="kicker-line"></div><span class="kicker-text">Durusoft · Legal Document</span></div>
+  <h1>Terms<br>of <span class="outline">Use</span></h1>
+  <p class="hero-sub">The rules that govern your use of SnapSize — written to be read, not hidden.</p>
+  <div class="meta-row">
+    <div class="meta-item"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>January 2025</div>
+    <div class="meta-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>iOS 16+</div>
+    <div class="meta-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20"/></svg>English</div>
+  </div>
+</section>
+
+<!-- AT-A-GLANCE SUMMARY -->
+<div class="summary">
+  <div class="summary-title">At a Glance</div>
+  <div class="summary-grid">
+    <div class="s-card">
+      <div class="s-dot allowed"></div>
+      <div><h4>Personal &amp; commercial use</h4><p>Compress your own or client photos freely, for any legal purpose.</p></div>
+    </div>
+    <div class="s-card">
+      <div class="s-dot allowed"></div>
+      <div><h4>Offline, no account</h4><p>SnapSize works without internet and never requires registration.</p></div>
+    </div>
+    <div class="s-card">
+      <div class="s-dot prohibited"></div>
+      <div><h4>No reverse engineering</h4><p>Do not decompile, modify, or redistribute the app or its assets.</p></div>
+    </div>
+    <div class="s-card">
+      <div class="s-dot prohibited"></div>
+      <div><h4>No illegal content</h4><p>You must not process content that violates applicable laws or third-party rights.</p></div>
+    </div>
+    <div class="s-card">
+      <div class="s-dot info"></div>
+      <div><h4>Apple manages payments</h4><p>All purchases go through Apple's App Store. We never touch your card.</p></div>
+    </div>
+    <div class="s-card">
+      <div class="s-dot info"></div>
+      <div><h4>Free tier has daily limits</h4><p>3 compressions/day, 5 photos/batch. Pro removes all limits.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- TOC -->
+<div class="toc-outer">
+  <div class="toc-box">
+    <div class="toc-box-head">
+      <span>Table of Contents</span>
+      <small>10 sections</small>
+    </div>
+    <div class="toc-list">
+      <div class="toc-item"><a href="#t1"><span class="t-num">01</span><span class="t-text">Acceptance of Terms</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t2"><span class="t-num">02</span><span class="t-text">Description of the App</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t3"><span class="t-num">03</span><span class="t-text">Free Tier &amp; Usage Limits</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t4"><span class="t-num">04</span><span class="t-text">Pro Subscriptions &amp; Purchases</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t5"><span class="t-num">05</span><span class="t-text">Intellectual Property</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t6"><span class="t-num">06</span><span class="t-text">Acceptable Use</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t7"><span class="t-num">07</span><span class="t-text">Disclaimers &amp; Limitation of Liability</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t8"><span class="t-num">08</span><span class="t-text">Third-Party Services</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t9"><span class="t-num">09</span><span class="t-text">Changes to These Terms</span><span class="t-arrow">↓</span></a></div>
+      <div class="toc-item"><a href="#t10"><span class="t-num">10</span><span class="t-text">Contact &amp; Governing Law</span><span class="t-arrow">↓</span></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <div class="sec" id="t1">
+    <div class="sec-label"><span class="sec-n">01</span><h2>Acceptance of Terms</h2></div>
+    <p>By downloading, installing, or using SnapSize ("the App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree, please do not use the App.</p>
+    <p class="normal">These Terms apply to all versions of SnapSize, including the free tier and SnapSize Pro, on any iOS device running iOS 16 or later. The App is developed and maintained by <strong>Durusoft</strong> ("we," "us," or "our").</p>
+    <div class="notice blue">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Note</div>
+      <p>SnapSize is distributed via Apple's App Store and is also subject to Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="ext" target="_blank" rel="noopener">Standard End User License Agreement</a>.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="t2">
+    <div class="sec-label"><span class="sec-n">02</span><h2>Description of the App</h2></div>
+    <p>SnapSize is an image processing tool for iOS that enables users to compress, resize, crop, and convert photos (JPEG, PNG, HEIC/HEIF) entirely on-device.</p>
+    <p class="normal">Key characteristics:</p>
+    <ul>
+      <li><strong>Fully offline</strong> — all processing happens on your device; no internet connection required for core features</li>
+      <li><strong>No account required</strong> — the App can be used anonymously without registration</li>
+      <li><strong>No data collection</strong> — your photos are never transmitted to Durusoft's servers</li>
+      <li><strong>SnapSize Widget</strong> — an optional home screen widget showing your savings statistics, sharing data only within the App Group <code style="font-size:13px;background:var(--ink-10);padding:1px 6px;border-radius:4px;border:1px solid var(--border2)">group.com.durusoft.snapsize</code></li>
+    </ul>
+  </div>
+
+  <div class="sec" id="t3">
+    <div class="sec-label"><span class="sec-n">03</span><h2>Free Tier &amp; Usage Limits</h2></div>
+    <p>SnapSize is available free of charge with the following usage limits:</p>
+    <div class="limit-grid">
+      <div class="limit-card">
+        <div class="limit-card-head">Free Tier</div>
+        <h4>3/day</h4>
+        <p>Compressions per day, resetting at midnight local time. Up to 5 photos per batch.</p>
+      </div>
+      <div class="limit-card">
+        <div class="limit-card-head">Rewarded Ad Bonus</div>
+        <h4>+2/day</h4>
+        <p>Watch a rewarded ad to earn 2 additional compressions. Available once per day.</p>
+      </div>
+      <div class="limit-card pro">
+        <div class="limit-card-head">Pro — Unlimited</div>
+        <h4>100/batch</h4>
+        <p>No daily cap. Process up to 100 photos per batch. No ads.</p>
+      </div>
+      <div class="limit-card">
+        <div class="limit-card-head">Offline (Free)</div>
+        <h4>1/batch</h4>
+        <p>When offline, free users can process 1 photo at a time.</p>
+      </div>
+    </div>
+    <p class="normal">These limits may change in future versions of the App. We will update these Terms accordingly.</p>
+  </div>
+
+  <div class="sec" id="t4">
+    <div class="sec-label"><span class="sec-n">04</span><h2>Pro Subscriptions &amp; Purchases</h2></div>
+    <p>SnapSize Pro removes all usage limits and eliminates ads. Three options are available:</p>
+    <table class="plan-table">
+      <thead><tr><th>Plan</th><th>Price</th><th>Type</th><th>Trial</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Weekly</strong></td>
+          <td><span class="price-tag">$2.99</span><span style="font-size:12px;color:var(--ink-60)">/week</span></td>
+          <td><span class="plan-pill pill-sub">Subscription</span></td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><strong>Yearly</strong></td>
+          <td><span class="price-tag">$14.99</span><span style="font-size:12px;color:var(--ink-60)">/year</span></td>
+          <td><span class="plan-pill pill-sub">Subscription</span></td>
+          <td>3-day free</td>
+        </tr>
+        <tr>
+          <td><strong>Lifetime</strong></td>
+          <td><span class="price-tag">$29.99</span></td>
+          <td><span class="plan-pill pill-once">One-time</span></td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="notice amber">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Subscriptions</div>
+      <p>Auto-renewable subscriptions are charged to your Apple ID at the start of each billing period and auto-renew unless cancelled at least 24 hours before the current period ends. Manage or cancel at <strong>Settings → [Your Name] → Subscriptions</strong>.</p>
+    </div>
+    <div class="notice blue">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Free Trial</div>
+      <p>The Yearly plan includes a 3-day free trial. No charge during the trial period. Cancel before the trial ends to avoid being charged.</p>
+    </div>
+    <p class="normal">All payments are processed by Apple. Durusoft does not store your payment information. Prices shown are in USD; the App Store will display prices in your local currency. Durusoft reserves the right to change pricing at any time; changes will not affect your current billing period.</p>
+    <div class="notice red">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>No Refunds</div>
+      <p>All purchases are final and non-refundable, except as required by applicable law or Apple's refund policies. To request a refund from Apple, visit <a href="https://reportaproblem.apple.com" class="ext" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="t5">
+    <div class="sec-label"><span class="sec-n">05</span><h2>Intellectual Property</h2></div>
+    <p>SnapSize and all of its content — including but not limited to the source code, design, graphics, icons, user interface elements, and trademarks — are owned by Durusoft and protected by applicable intellectual property laws.</p>
+    <p class="normal">You are granted a limited, non-exclusive, non-transferable, revocable license to use SnapSize for your personal or commercial image processing needs, subject to these Terms.</p>
+    <p class="normal">You may <strong>not</strong>:</p>
+    <ul>
+      <li>Copy, modify, or distribute the App or any portion of it</li>
+      <li>Reverse engineer, decompile, or disassemble the App</li>
+      <li>Sell, sublicense, or rent access to the App</li>
+      <li>Use Durusoft's trademarks or branding without prior written permission</li>
+    </ul>
+    <p class="normal"><strong>Your content remains yours.</strong> Durusoft claims no ownership over the photos you process with SnapSize. You retain all rights to your images.</p>
+  </div>
+
+  <div class="sec" id="t6">
+    <div class="sec-label"><span class="sec-n">06</span><h2>Acceptable Use</h2></div>
+    <p>You agree to use SnapSize only for lawful purposes and in a manner consistent with all applicable local, national, and international laws and regulations.</p>
+    <p class="normal">You must <strong>not</strong> use SnapSize to process:</p>
+    <ul>
+      <li>Content that infringes any third party's intellectual property, privacy, or publicity rights</li>
+      <li>Content that is illegal, defamatory, obscene, or harmful</li>
+      <li>Content involving the sexual exploitation of minors</li>
+      <li>Content intended to facilitate fraud or other illegal activities</li>
+    </ul>
+    <div class="notice green">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Permitted uses</div>
+      <p>Personal photography, commercial client work, social media content, product photos, document scanning — all fine. SnapSize is a tool; how you use the output is your responsibility.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="t7">
+    <div class="sec-label"><span class="sec-n">07</span><h2>Disclaimers &amp; Limitation of Liability</h2></div>
+    <p>SnapSize is provided "as is" and "as available" without warranties of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+    <p class="normal">Durusoft does not warrant that:</p>
+    <ul>
+      <li>The App will be error-free or uninterrupted</li>
+      <li>Defects will be corrected</li>
+      <li>The App is free of viruses or other harmful components</li>
+      <li>Results obtained from the App will be accurate or reliable</li>
+    </ul>
+    <div class="notice red">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>Important</div>
+      <p>To the fullest extent permitted by applicable law, Durusoft shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, resulting from your use of SnapSize. Always keep backups of your original images.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="t8">
+    <div class="sec-label"><span class="sec-n">08</span><h2>Third-Party Services</h2></div>
+    <p>SnapSize integrates with the following third-party services, each governed by its own terms and privacy policy:</p>
+    <ul>
+      <li><strong>Apple App Store &amp; StoreKit 2</strong> — payment processing and subscription management. <a href="https://www.apple.com/legal/internet-services/itunes/" class="ext" target="_blank" rel="noopener">Apple's Terms</a></li>
+      <li><strong>Google AdMob</strong> — ad serving for free-tier users only. <a href="https://policies.google.com/terms" class="ext" target="_blank" rel="noopener">Google's Terms</a></li>
+    </ul>
+    <p class="normal">Durusoft is not responsible for the practices of these third parties. Your use of these services is at your own risk and subject to their respective terms.</p>
+  </div>
+
+  <div class="sec" id="t9">
+    <div class="sec-label"><span class="sec-n">09</span><h2>Changes to These Terms</h2></div>
+    <p>We reserve the right to update or modify these Terms at any time. When we make material changes, we will update the effective date and, where appropriate, notify you through the App or via the App Store update notes.</p>
+    <p class="normal">Your continued use of SnapSize following any changes constitutes your acceptance of the new Terms. If you do not agree to the revised Terms, please discontinue use of the App.</p>
+    <div class="notice blue">
+      <div class="notice-head"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Always available</div>
+      <p>The current version of these Terms is always accessible at <strong>durusoft.com/snapsize/terms</strong> and from within the app via Settings → Terms of Use.</p>
+    </div>
+  </div>
+
+  <div class="sec" id="t10">
+    <div class="sec-label"><span class="sec-n">10</span><h2>Contact &amp; Governing Law</h2></div>
+    <p>These Terms are governed by the laws applicable to Durusoft's place of establishment. Any disputes shall be resolved through good-faith negotiation; if unresolved, through appropriate legal channels in the applicable jurisdiction.</p>
+    <p class="normal">For questions, disputes, or feedback regarding these Terms:</p>
+    <div class="contact-block">
+      <div>
+        <h3>Durusoft Support</h3>
+        <p>We're a small independent team. We respond to all inquiries within 1–2 business days.</p>
+      </div>
+      <div class="contact-cta">
+        <a href="mailto:support@durusoft.com" class="contact-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email us
+        </a>
+        <a href="/snapsize/privacy" class="contact-btn-sec">Privacy Policy →</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span class="footer-brand">© 2025 Durusoft</span>
+  <div class="footer-links">
+    <a href="/snapsize/privacy">Privacy Policy</a>
+    <a href="/snapsize/terms">Terms of Use</a>
+    <a href="mailto:support@durusoft.com">Support</a>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{
+  const bar=document.getElementById('bar');
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  bar.style.width=(window.scrollY/h*100)+'%';
+});
+</script>
+</body>
+</html>
