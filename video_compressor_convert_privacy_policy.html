@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Video Compressor - Convert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17162B;
+    --muted:#5C5D72;
+    --paper:#FBFAFE;
+    --paper-2:#F1EFFB;
+    --indigo:#4A4FE0;
+    --violet:#7C3AED;
+    --purple:#A855F7;
+    --hairline:#E3E1F2;
+    --max: 1180px;
+    --measure: 70ch;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  a{color:var(--indigo); text-decoration-thickness:1.5px; text-underline-offset:3px;}
+  a:hover{color:var(--violet);}
+  a:focus-visible, button:focus-visible{outline:3px solid var(--violet); outline-offset:3px; border-radius:4px;}
+
+  .cover{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#1E1B4B 0%, var(--violet) 55%, var(--purple) 100%);
+    color:#fff;
+    padding:64px 24px 56px;
+  }
+  .cover-inner{max-width:var(--max); margin:0 auto; position:relative; z-index:2;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    color:rgba(255,255,255,.78);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; border-radius:50%; background:#fff; display:inline-block;}
+  .cover h1{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.08;
+    margin:0 0 14px;
+    color:#fff;
+    max-width:16ch;
+  }
+  .cover p.lede{
+    font-size:17px;
+    color:rgba(255,255,255,.86);
+    max-width:56ch;
+    margin:0 0 6px;
+  }
+  .cover .updated{
+    font-size:13px;
+    color:rgba(255,255,255,.62);
+    margin-top:22px;
+  }
+  .bars{
+    position:absolute; inset:0; z-index:1; display:flex; align-items:flex-end;
+    gap:5px; opacity:.35; pointer-events:none;
+  }
+  .bars span{
+    display:block; width:6px; background:#fff; border-radius:3px 3px 0 0;
+    flex-shrink:0;
+  }
+
+  .layout{
+    max-width:var(--max); margin:0 auto;
+    display:grid; grid-template-columns:250px 1fr; gap:56px;
+    padding:48px 24px 96px;
+  }
+  nav.toc{position:sticky; top:28px; align-self:start; font-size:14px;}
+  nav.toc .toc-label{
+    font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:14px; display:block;
+  }
+  nav.toc ol{list-style:none; margin:0; padding:0; counter-reset:toc;}
+  nav.toc li{counter-increment:toc; margin-bottom:2px;}
+  nav.toc a{
+    display:flex; gap:10px; padding:7px 10px; border-radius:8px;
+    color:var(--ink); text-decoration:none; font-weight:500;
+  }
+  nav.toc a::before{
+    content:counter(toc, decimal-leading-zero);
+    font-family:'Inter'; font-weight:700; font-size:12px; color:var(--violet);
+    padding-top:1px;
+  }
+  nav.toc a:hover{background:var(--paper-2); color:var(--indigo);}
+
+  main{max-width:var(--measure); min-width:0;}
+  .trust-card{
+    background:var(--paper-2);
+    border:1px solid var(--hairline);
+    border-left:4px solid var(--indigo);
+    border-radius:12px;
+    padding:20px 22px;
+    margin:0 0 40px;
+    font-size:15px;
+  }
+  .trust-card strong{color:var(--indigo);}
+
+  section{margin-bottom:44px; scroll-margin-top:24px;}
+  section h2{
+    font-size:23px; margin:0 0 4px;
+    display:flex; align-items:baseline; gap:12px;
+  }
+  section h2 .num{
+    font-family:'Inter'; font-weight:700; font-size:14px; color:var(--violet);
+  }
+  section h3{font-size:17px; margin:22px 0 8px; font-weight:600;}
+  section p{margin:0 0 14px; color:var(--ink);}
+  section ul{margin:0 0 14px; padding-left:20px;}
+  section li{margin-bottom:8px;}
+  .muted{color:var(--muted); font-size:14px;}
+
+  table.perm{
+    width:100%; border-collapse:collapse; margin:14px 0 20px; font-size:14px;
+  }
+  table.perm th, table.perm td{
+    text-align:left; padding:10px 12px; border-bottom:1px solid var(--hairline);
+    vertical-align:top;
+  }
+  table.perm th{
+    font-weight:700; color:var(--muted); font-size:12px; letter-spacing:.04em; text-transform:uppercase;
+  }
+
+  .contact-box{
+    background:var(--ink); color:#fff; border-radius:16px;
+    padding:32px; margin-top:8px;
+  }
+  .contact-box h3{color:#fff; margin-top:0;}
+  .contact-box a{color:#C9CBFF; font-weight:600; font-size:17px;}
+
+  footer{
+    max-width:var(--max); margin:0 auto; padding:0 24px 64px;
+    color:var(--muted); font-size:13px;
+  }
+  footer a{color:var(--muted);}
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr; gap:28px;}
+    nav.toc{position:static;}
+    nav.toc ol{display:flex; flex-wrap:wrap; gap:6px;}
+    nav.toc li{margin:0;}
+    nav.toc a{background:var(--paper-2); font-size:13px;}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="bars" id="bars" aria-hidden="true"></div>
+  <div class="cover-inner">
+    <span class="eyebrow">DuruSoft · Video Compressor - Convert</span>
+    <h1>Privacy Policy</h1>
+    <p class="lede">A plain-language explanation of how we handle your videos, photos, and audio files — and why none of them ever leave your device.</p>
+    <p class="updated">Last updated: July 23, 2026</p>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Table of contents">
+    <span class="toc-label">Contents</span>
+    <ol>
+      <li><a href="#scope">Scope &amp; Data Controller</a></li>
+      <li><a href="#permissions">Permissions We Request</a></li>
+      <li><a href="#data">Data We Collect</a></li>
+      <li><a href="#files">Your Files: Local Processing</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#retention">Retention &amp; Deletion</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#rights">Your Rights</a></li>
+      <li><a href="#security">Data Security</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="trust-card">
+      In short: <strong>your video, photo, or audio file never leaves your device.</strong>
+      Compression, conversion, and merging all run entirely on your phone — we don't operate
+      a server, we never see your media, and we couldn't if we wanted to.
+    </div>
+
+    <section id="scope">
+      <h2><span class="num">01</span> Scope &amp; Data Controller</h2>
+      <p>
+        This Privacy Policy applies to the <strong>Video Compressor - Convert</strong> Android
+        application ("the App"), developed by DuruSoft ("we", "us"). DuruSoft is based in
+        Turkey and, as such, also complies with the Turkish Personal Data Protection Law
+        (KVKK, Law No. 6698). This policy explains what data is processed when you use the
+        App, for what purpose, and with which third parties, if any.
+      </p>
+    </section>
+
+    <section id="permissions">
+      <h2><span class="num">02</span> Permissions We Request</h2>
+      <p>The App only requests permissions it actually uses — none of them serve a hidden purpose.</p>
+      <table class="perm">
+        <tr><th>Permission</th><th>What it's for</th></tr>
+        <tr><td>Video / Photo / Audio access<br><span class="muted">(READ_MEDIA_VIDEO, READ_MEDIA_IMAGES, READ_MEDIA_AUDIO)</span></td>
+            <td>To read the files you choose to compress, convert, or edit. If you pick "Selected photos and videos" on Android 14+, we only ever access what you explicitly select.</td></tr>
+        <tr><td>Write to storage<br><span class="muted">(Android 9–11 devices only)</span></td>
+            <td>To save the processed file to your gallery. You can turn this off in Settings.</td></tr>
+        <tr><td>Post notifications</td>
+            <td>To show the progress of a long-running export in the notification shade.</td></tr>
+      </table>
+    </section>
+
+    <section id="data">
+      <h2><span class="num">03</span> Data We Collect</h2>
+      <p>The App has no account system, no sign-up, and no user profile. The data we do collect is narrow:</p>
+      <ul>
+        <li><strong>Advertising ID:</strong> used by Google AdMob, subject to your consent, to serve ads (see Section 5).</li>
+        <li><strong>Subscription status:</strong> if you purchase Premium, Google Play tells us "subscription active" — your card number, name, or billing details never reach us; Google Play handles them entirely.</li>
+        <li><strong>Optional support details:</strong> if you email us for support, any device model / Android version / app version you include is used solely to diagnose your issue.</li>
+      </ul>
+    </section>
+
+    <section id="files">
+      <h2><span class="num">04</span> Your Files: Local Processing</h2>
+      <p>
+        This is the most important part of this policy. Compression, conversion, merging,
+        cropping, and every other video/audio/image operation runs <strong>entirely on your
+        device's processor</strong>. We have never operated, and do not operate, a server that
+        receives, stores, or processes your media files.
+      </p>
+      <p>
+        Processed files are first created in the App's own private folder. If "Save to
+        Gallery" is on (enabled by default), a copy is also written to your device's gallery.
+        You can delete either copy at any time from the Outputs screen or your device's
+        gallery app.
+      </p>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">05</span> Third-Party Services</h2>
+      <h3>Google AdMob</h3>
+      <p>
+        We use Google AdMob to show ads in the free version. On first launch, Google's User
+        Messaging Platform (UMP) asks for your consent regarding personalized vs.
+        non-personalized ads — you can change this choice anytime from Settings.
+      </p>
+      <h3>Google Play Billing</h3>
+      <p>
+        Premium subscription purchases are processed through Google Play's own billing
+        system. Subscriptions renew automatically; you can cancel anytime from the
+        Subscriptions section of the Google Play app.
+      </p>
+      <p class="muted">For these services' own privacy practices: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">06</span> Retention &amp; Deletion</h2>
+      <p>
+        Because your media never leaves your device, retention is entirely in your hands —
+        delete the file or uninstall the App, and no copy remains with us. For the limited
+        data described above (advertising ID, etc.), Google's own retention policies apply.
+      </p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">07</span> Children's Privacy</h2>
+      <p>
+        The App is listed on Google Play with an "Everyone" content rating and we do not
+        knowingly collect personal data from children under 13. If a parent believes their
+        child has provided us with data, please contact
+        <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a> and we will delete it.
+      </p>
+    </section>
+
+    <section id="rights">
+      <h2><span class="num">08</span> Your Rights</h2>
+      <p>Depending on where you live, you may have some or all of the following rights:</p>
+      <ul>
+        <li>Know whether we process any data about you</li>
+        <li>Request a copy of the data we hold</li>
+        <li>Request correction or deletion of that data</li>
+        <li>Object to processing</li>
+      </ul>
+      <p>You can exercise these rights by emailing <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>; we respond within a reasonable time.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">09</span> Data Security</h2>
+      <p>
+        Because your media files never leave your device, our biggest security advantage is
+        already built into the architecture. For the limited data we do collect (advertising
+        ID, subscription status), we rely on Google's industry-standard infrastructure. No
+        system can guarantee absolute security, but our approach minimizes exposure by
+        design: what we don't collect, we can't leak.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">10</span> Changes to This Policy</h2>
+      <p>
+        We may update this policy from time to time. When we make a material change, we
+        update the "Last updated" date at the top of this page. Continuing to use the App
+        after an update means you accept the revised policy.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">11</span> Contact</h2>
+      <div class="contact-box">
+        <h3>Have a question?</h3>
+        <p style="color:rgba(255,255,255,.78)">Reach out directly with any privacy-related question, request, or concern.</p>
+        <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  © 2026 DuruSoft. All rights reserved. ·
+  <a href="terms-of-service.html">Terms of Service</a>
+</footer>
+
+<script>
+  (function(){
+    var el = document.getElementById('bars');
+    if(!el) return;
+    var n = 60;
+    var html = '';
+    for(var i=0;i<n;i++){
+      var h = 18 + Math.round(Math.abs(Math.sin(i*0.35)) * 140 + Math.random()*20);
+      html += '<span style="height:'+h+'px"></span>';
+    }
+    el.innerHTML = html;
+  })();
+</script>
+
+</body>
+</html>

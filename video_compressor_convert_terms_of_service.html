@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Video Compressor - Convert</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#17162B;
+    --muted:#5C5D72;
+    --paper:#FBFAFE;
+    --paper-2:#F1EFFB;
+    --indigo:#4A4FE0;
+    --violet:#7C3AED;
+    --purple:#A855F7;
+    --hairline:#E3E1F2;
+    --max: 1180px;
+    --measure: 70ch;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+  a{color:var(--indigo); text-decoration-thickness:1.5px; text-underline-offset:3px;}
+  a:hover{color:var(--violet);}
+  a:focus-visible, button:focus-visible{outline:3px solid var(--violet); outline-offset:3px; border-radius:4px;}
+
+  .cover{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#1E1B4B 0%, var(--violet) 55%, var(--purple) 100%);
+    color:#fff;
+    padding:64px 24px 56px;
+  }
+  .cover-inner{max-width:var(--max); margin:0 auto; position:relative; z-index:2;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+    color:rgba(255,255,255,.78);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:7px; height:7px; border-radius:50%; background:#fff; display:inline-block;}
+  .cover h1{
+    font-size:clamp(32px,5vw,52px);
+    line-height:1.08;
+    margin:0 0 14px;
+    color:#fff;
+    max-width:16ch;
+  }
+  .cover p.lede{
+    font-size:17px;
+    color:rgba(255,255,255,.86);
+    max-width:56ch;
+    margin:0 0 6px;
+  }
+  .cover .updated{
+    font-size:13px;
+    color:rgba(255,255,255,.62);
+    margin-top:22px;
+  }
+  .bars{
+    position:absolute; inset:0; z-index:1; display:flex; align-items:flex-end;
+    gap:5px; opacity:.35; pointer-events:none;
+  }
+  .bars span{
+    display:block; width:6px; background:#fff; border-radius:3px 3px 0 0;
+    flex-shrink:0;
+  }
+
+  .layout{
+    max-width:var(--max); margin:0 auto;
+    display:grid; grid-template-columns:250px 1fr; gap:56px;
+    padding:48px 24px 96px;
+  }
+  nav.toc{position:sticky; top:28px; align-self:start; font-size:14px;}
+  nav.toc .toc-label{
+    font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:14px; display:block;
+  }
+  nav.toc ol{list-style:none; margin:0; padding:0; counter-reset:toc;}
+  nav.toc li{counter-increment:toc; margin-bottom:2px;}
+  nav.toc a{
+    display:flex; gap:10px; padding:7px 10px; border-radius:8px;
+    color:var(--ink); text-decoration:none; font-weight:500;
+  }
+  nav.toc a::before{
+    content:counter(toc, decimal-leading-zero);
+    font-family:'Inter'; font-weight:700; font-size:12px; color:var(--violet);
+    padding-top:1px;
+  }
+  nav.toc a:hover{background:var(--paper-2); color:var(--indigo);}
+
+  main{max-width:var(--measure); min-width:0;}
+  .trust-card{
+    background:var(--paper-2);
+    border:1px solid var(--hairline);
+    border-left:4px solid var(--indigo);
+    border-radius:12px;
+    padding:20px 22px;
+    margin:0 0 40px;
+    font-size:15px;
+  }
+  .trust-card strong{color:var(--indigo);}
+
+  section{margin-bottom:44px; scroll-margin-top:24px;}
+  section h2{
+    font-size:23px; margin:0 0 4px;
+    display:flex; align-items:baseline; gap:12px;
+  }
+  section h2 .num{
+    font-family:'Inter'; font-weight:700; font-size:14px; color:var(--violet);
+  }
+  section h3{font-size:17px; margin:22px 0 8px; font-weight:600;}
+  section p{margin:0 0 14px; color:var(--ink);}
+  section ul{margin:0 0 14px; padding-left:20px;}
+  section li{margin-bottom:8px;}
+  .muted{color:var(--muted); font-size:14px;}
+
+  .contact-box{
+    background:var(--ink); color:#fff; border-radius:16px;
+    padding:32px; margin-top:8px;
+  }
+  .contact-box h3{color:#fff; margin-top:0;}
+  .contact-box a{color:#C9CBFF; font-weight:600; font-size:17px;}
+
+  footer{
+    max-width:var(--max); margin:0 auto; padding:0 24px 64px;
+    color:var(--muted); font-size:13px;
+  }
+  footer a{color:var(--muted);}
+
+  @media (max-width:860px){
+    .layout{grid-template-columns:1fr; gap:28px;}
+    nav.toc{position:static;}
+    nav.toc ol{display:flex; flex-wrap:wrap; gap:6px;}
+    nav.toc li{margin:0;}
+    nav.toc a{background:var(--paper-2); font-size:13px;}
+  }
+  @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <div class="bars" id="bars" aria-hidden="true"></div>
+  <div class="cover-inner">
+    <span class="eyebrow">DuruSoft · Video Compressor - Convert</span>
+    <h1>Terms of Service</h1>
+    <p class="lede">The plain-language summary of our agreement while you use the app.</p>
+    <p class="updated">Last updated: July 23, 2026</p>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc" aria-label="Table of contents">
+    <span class="toc-label">Contents</span>
+    <ol>
+      <li><a href="#acceptance">Acceptance</a></li>
+      <li><a href="#service">Description of Service</a></li>
+      <li><a href="#license">License &amp; Right to Use</a></li>
+      <li><a href="#conduct">Acceptable Use</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#subscriptions">Subscriptions &amp; Purchases</a></li>
+      <li><a href="#content">Content Responsibility</a></li>
+      <li><a href="#warranty">Disclaimer of Warranties</a></li>
+      <li><a href="#liability">Limitation of Liability</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#law">Governing Law</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="trust-card">
+      In short: use the app reasonably, and we'll keep it working for you. Subscriptions are
+      managed through Google Play — cancel anytime.
+    </div>
+
+    <section id="acceptance">
+      <h2><span class="num">01</span> Acceptance</h2>
+      <p>
+        By downloading or using the Video Compressor - Convert application ("the App"), you
+        agree to these Terms of Service ("Terms"). If you don't agree, please don't use the App.
+      </p>
+    </section>
+
+    <section id="service">
+      <h2><span class="num">02</span> Description of Service</h2>
+      <p>
+        The App provides video compression, format conversion, merging, cropping, trimming,
+        and related media-editing tools, all running locally on your device. Some features
+        are free; others (Premium subscription) require paid access.
+      </p>
+    </section>
+
+    <section id="license">
+      <h2><span class="num">03</span> License &amp; Right to Use</h2>
+      <p>
+        DuruSoft grants you a non-exclusive, non-transferable, revocable license to use the
+        App for personal, non-commercial purposes. This license does not permit you to
+        reverse-engineer, decompile, redistribute, or resell the App as part of another product.
+      </p>
+    </section>
+
+    <section id="conduct">
+      <h2><span class="num">04</span> Acceptable Use</h2>
+      <p>By using the App, you agree not to:</p>
+      <ul>
+        <li>Process content that is illegal, infringes copyright, or violates others' rights</li>
+        <li>Attempt to bypass the App's security measures or manipulate its advertising or subscription systems</li>
+        <li>Use the App in a way that could damage devices or any infrastructure we operate</li>
+      </ul>
+    </section>
+
+    <section id="ip">
+      <h2><span class="num">05</span> Intellectual Property</h2>
+      <p>
+        The App itself, its design, logo, and brand elements belong to DuruSoft. You retain
+        all rights to the video, photo, and audio files you process — since we never see or
+        store them, we make no claim over them whatsoever.
+      </p>
+    </section>
+
+    <section id="subscriptions">
+      <h2><span class="num">06</span> Subscriptions &amp; Purchases</h2>
+      <p>
+        Premium features are offered as weekly, monthly, or yearly auto-renewing
+        subscriptions through Google Play Billing. Prices are those shown in the App and on
+        Google Play at the time of purchase and may vary by region and tax.
+      </p>
+      <ul>
+        <li>Subscriptions renew automatically at the end of each period unless cancelled.</li>
+        <li>You can cancel anytime from the <strong>Subscriptions</strong> section of the Google Play app; cancellation takes effect at the end of the current billing period.</li>
+        <li>Your payment details (card number, etc.) never reach us — they are handled entirely by Google Play.</li>
+        <li>Refunds are subject to Google Play's own refund policy and are requested directly through Google Play.</li>
+      </ul>
+    </section>
+
+    <section id="content">
+      <h2><span class="num">07</span> Content Responsibility</h2>
+      <p>
+        You are solely responsible for any video, photo, or audio file you process in the
+        App. You warrant that this content is lawful and does not infringe on the
+        intellectual property rights of others. Because your files never leave your device,
+        we have no way to view or moderate them.
+      </p>
+    </section>
+
+    <section id="warranty">
+      <h2><span class="num">08</span> Disclaimer of Warranties</h2>
+      <p>
+        The App is provided "as is." We do not guarantee uninterrupted or error-free
+        compression/conversion quality, processing speed, or compatibility with every
+        device. We recommend keeping a backup of important files before processing them —
+        always retain your original until you've confirmed the processed output is what you expect.
+      </p>
+    </section>
+
+    <section id="liability">
+      <h2><span class="num">09</span> Limitation of Liability</h2>
+      <p>
+        To the maximum extent permitted by applicable law, DuruSoft is not liable for data
+        loss, file corruption, or indirect damages arising from your use of the App. This
+        limitation does not exclude liability arising from DuruSoft's willful misconduct.
+      </p>
+    </section>
+
+    <section id="termination">
+      <h2><span class="num">10</span> Termination</h2>
+      <p>
+        You may stop using the App at any time simply by uninstalling it. We reserve the
+        right to terminate your access without notice if we detect abuse (for example,
+        manipulation of the advertising system).
+      </p>
+    </section>
+
+    <section id="law">
+      <h2><span class="num">11</span> Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of the Republic of Turkey. Any dispute arising
+        from these Terms falls under the jurisdiction of the courts and enforcement offices
+        of Turkey.
+      </p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">12</span> Changes</h2>
+      <p>
+        We may update these Terms from time to time. When we make a material change, we
+        update the date at the top of this page. Continuing to use the App after an update
+        means you accept the revised Terms.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">13</span> Contact</h2>
+      <div class="contact-box">
+        <h3>Have a question?</h3>
+        <p style="color:rgba(255,255,255,.78)">Reach out about these Terms, your subscription, or anything else.</p>
+        <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  © 2026 DuruSoft. All rights reserved. ·
+  <a href="privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  (function(){
+    var el = document.getElementById('bars');
+    if(!el) return;
+    var n = 60;
+    var html = '';
+    for(var i=0;i<n;i++){
+      var h = 18 + Math.round(Math.abs(Math.cos(i*0.35)) * 140 + Math.random()*20);
+      html += '<span style="height:'+h+'px"></span>';
+    }
+    el.innerHTML = html;
+  })();
+</script>
+
+</body>
+</html>
