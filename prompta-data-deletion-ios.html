@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompta — Data Deletion</title>
+<meta name="description" content="How to delete your data from the Prompta teleprompter app for iPhone and iPad.">
+<style>
+  :root {
+    --bg: #ffffff; --text: #1a1b1f; --muted: #5b5d66; --border: #e4e4ea;
+    --brand: #6a5ae0; --card: #f6f5fb; --mark: #fff3b0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0f10; --text: #f4f3f0; --muted: #a2a3aa; --border: #2a2b30;
+            --brand: #a996ff; --card: #17181c; --mark: #5a4b00; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 8px; }
+  .brand { color: var(--brand); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: 13px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 6px 0 8px; }
+  h2 { font-size: 20px; margin: 36px 0 8px; }
+  h3 { font-size: 16px; margin: 22px 0 4px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: 14px; }
+  ul { padding-left: 22px; }
+  a { color: var(--brand); }
+  .summary { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin: 20px 0; }
+  .summary ul { margin: 8px 0 0; }
+  mark { background: var(--mark); color: inherit; padding: 0 3px; border-radius: 3px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); padding: 10px 8px; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; }
+  @media (max-width: 560px) { table, thead, tbody, tr, th, td { display: block; } thead { display: none; }
+    td { border: none; padding: 4px 0; } tr { border-bottom: 1px solid var(--border); padding: 10px 0; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="brand">Prompta</div>
+  <h1>Delete your data</h1>
+  <p class="muted">Prompta for iOS and iPadOS (<code>com.durusoft.teleprompter.script</code>) · Developer: DuruSoft · Last updated: 9 October 2026</p>
+</header>
+
+<section>
+  <div class="summary">
+    <strong>In short</strong>
+    <ul>
+      <li>Prompta has no accounts. Your scripts, settings and recording list are stored on your iPhone or iPad (and in your device's iCloud or computer backup, if it is on), and you can delete them yourself at any time.</li>
+      <li>The only data kept outside your device because of Prompta is your subscription record (if you bought Premium). To delete it, email us — we complete the request within 30 days.</li>
+    </ul>
+  </div>
+
+  <h2>1. Data on your device — delete it yourself</h2>
+  <p>Scripts, their earlier versions, the recording list and your preferences are stored on your device and never sent to us. To delete them:</p>
+  <ol>
+    <li>Open Prompta and go to <strong>Settings › Data &amp; privacy</strong> (in the app: <em>Ayarlar › Veri ve gizlilik</em>).</li>
+    <li>Tap <strong>Delete my data</strong> (<em>Verilerimi sil</em>) and confirm.</li>
+  </ol>
+  <p>Deletion is immediate and cannot be undone. Deleting the app also deletes all of this data. If iCloud Backup (or a backup to your computer) is on, a copy of your scripts and settings may also be in that backup; Apple stores it in your iCloud account (or it is on your computer), and you can delete it, or turn off backup for Prompta, in <em>Settings › [your name] › iCloud</em>. If you exported a ZIP file with <em>Export my data</em>, it stays where you saved it.</p>
+  <p>Videos you recorded are saved in the Photos app (album "Prompta"); the app does not delete them — remove them with the Photos app. If you did not allow Photos access, videos are kept in the app's own folder (Files app › <em>On My iPhone</em> or <em>On My iPad › Prompta</em>); "Delete my data" does not remove them, but deleting the app does, so move any video you want to keep first.</p>
+
+  <h2>2. Subscription records — request deletion by email</h2>
+  <p>If you bought Prompta Premium, a record of the purchase is kept by RevenueCat, the service we use to verify subscriptions. It contains a random, anonymous app user ID, your purchase details (product, dates, status, App Store transaction IDs) and basic technical data (see the <a href="https://mehmetth.github.io/prompta-privacy-policy-ios.html">Privacy Policy</a>, section 6). It is not linked to your name or email.</p>
+  <ol>
+    <li>Email <a href="mailto:duru.sofft@gmail.com?subject=Prompta%20data%20deletion%20request">duru.sofft@gmail.com</a> with the subject <strong>"Prompta data deletion request"</strong>.</li>
+    <li>Include your <strong>App Store Order ID</strong> (<em>Sipariş No</em> on Turkish receipts). You can find it in the purchase receipt email from Apple or at <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>. We need it to find your record, because we do not know who you are otherwise.</li>
+  </ol>
+  <p>We delete the record from RevenueCat <strong>within 30 days</strong> of your request and reply to confirm. Deleting it does not cancel your subscription — cancel it first in <em>Settings › [your name] › Subscriptions</em> if you no longer want it. After deletion, Premium may show as inactive in the app until you tap "Restore purchases", which sends your App Store purchase to RevenueCat again and creates a new record.</p>
+  <p><strong>What is not deleted:</strong> Apple keeps its own records of your purchase and payment under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>; we cannot delete those. You can manage your data with Apple at <a href="https://privacy.apple.com" rel="noopener">privacy.apple.com</a>.</p>
+
+  <h2>3. Advertising data</h2>
+  <p>In the free version, Google AdMob may process device identifiers such as your device's identifier for vendor (IDFV) and related data to show ads (see the <a href="https://mehmetth.github.io/prompta-privacy-policy-ios.html">Privacy Policy</a>, section 7). We do not store this data. Prompta does not ask for permission to track you, so your advertising identifier (IDFA) is not available to the app or to Google. The IDFV is reset when you delete all of our apps from your device. Where consent is required, you can change your ad consent at any time in the app under <em>Settings › Data &amp; privacy › Ad privacy options</em>.</p>
+
+  <h2>4. Voice commands and word tracking</h2>
+  <p>If you use voice commands or word tracking, speech is processed by Apple's speech recognition (on your device, or on Apple's servers if your device does not support your language on the device) only to detect a command or find your place in the script. Prompta does not store or upload this audio or text, so there is nothing for us to delete. Audio processed on Apple's servers is handled under the <a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>.</p>
+
+  <p class="muted">Questions: <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a> · <a href="https://mehmetth.github.io/prompta-privacy-policy-ios.html">Privacy Policy</a></p>
+</section>
+</main>
+</body>
+</html>
