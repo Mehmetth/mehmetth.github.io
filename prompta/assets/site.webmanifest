@@ -1,0 +1,12 @@
+{
+  "name": "Prompta: Teleprompter Script",
+  "short_name": "Prompta",
+  "icons": [
+    {"src": "/prompta/assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/prompta/assets/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ],
+  "theme_color": "#5B47E0",
+  "background_color": "#FAFAF8",
+  "start_url": "/prompta/",
+  "display": "browser"
+}
