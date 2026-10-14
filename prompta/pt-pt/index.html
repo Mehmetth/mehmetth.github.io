@@ -102,6 +102,15 @@ ul,ol{margin:0;padding:0;list-style:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;border-radius:12px;padding:12px 18px}
 .btn:hover{filter:brightness(1.08)}
 .btn-sm{padding:9px 14px;font-size:14px}
+.get{position:relative}
+.get summary{list-style:none;cursor:pointer}
+.get summary::-webkit-details-marker{display:none}
+.get-panel{position:absolute;right:0;top:calc(100% + 8px);width:max-content;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow),0 18px 40px rgba(22,23,26,.12);padding:20px}
+.get-title{font-weight:800;font-size:17px}
+.get-sub{color:var(--text-2);font-size:14px;margin-top:2px}
+.get-panel .stores{margin-top:16px;flex-direction:column;gap:10px}
+.get-panel .store{border-color:transparent}
+@media (prefers-color-scheme:dark){.get-panel .store{border-color:rgba(255,255,255,.22)}}
 @media (max-width:880px){.nav{display:none}.lang{margin-left:auto}}
 
 /* hero */
@@ -331,7 +340,10 @@ html.is-android .store-google{order:-1}
       <summary aria-label="Idioma"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>PT·PT</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
       <ul><li><a href="/prompta/" hreflang="en" lang="en">English</a></li><li><a href="/prompta/tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="/prompta/de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="/prompta/pt-br/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a></li><li><a href="/prompta/pt-pt/" hreflang="pt-PT" lang="pt-PT" aria-current="page">Português (Portugal)</a></li></ul>
     </details>
-    <a class="btn btn-sm" href="#download">Transferir</a>
+    <details class="get">
+      <summary class="btn btn-sm" data-ios="https://apps.apple.com/app/id6821454118" data-android="https://play.google.com/store/apps/details?id=com.durusoft.teleprompter.script&amp;hl=pt_PT">Transferir</summary>
+      <div class="get-panel"><p class="get-title">Transfira o Prompta gratuitamente</p><p class="get-sub">Gratuito para iPhone, iPad e Android</p><div class="stores"><a class="store store-apple" href="https://apps.apple.com/app/id6821454118" aria-label="Descarregar o Prompta na App Store" data-where="header"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small>Descarregar na</small><b>App Store</b></span></a><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.teleprompter.script&amp;hl=pt_PT" aria-label="Transferir o Prompta no Google Play" data-where="header"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>DISPONÍVEL NO</small><b>Google Play</b></span></a></div></div>
+    </details>
   </div>
 </header>
 <main id="main"><section class="hero" id="download">
@@ -465,11 +477,19 @@ html.is-android .store-google{order:-1}
     box.hidden=false;
   }
 
-  /* Close the language menu on outside click / Escape */
-  var lang=d.querySelector(".lang");
-  if(lang){
-    d.addEventListener("click",function(ev){if(lang.open&&!lang.contains(ev.target))lang.open=false});
-    d.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&lang.open){lang.open=false;lang.querySelector("summary").focus()}});
+  /* Header menus (language, download): one open at a time, close on outside click / Escape */
+  var menus=[].slice.call(d.querySelectorAll(".top details"));
+  menus.forEach(function(m){m.addEventListener("toggle",function(){if(m.open)menus.forEach(function(o){if(o!==m)o.open=false})})});
+  d.addEventListener("click",function(ev){menus.forEach(function(m){if(m.open&&!m.contains(ev.target))m.open=false})});
+  d.addEventListener("keydown",function(ev){if(ev.key!=="Escape")return;menus.forEach(function(m){if(m.open){m.open=false;m.querySelector("summary").focus()}})});
+
+  /* Download: phones go straight to their store; desktops get the panel with both */
+  var get=d.querySelector(".get summary");
+  if(get){
+    var android=/android/i.test(ua);
+    var ios=!android&&(/iPad|iPhone|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1)); /* iPadOS reports as a Mac */
+    var target=android?get.getAttribute("data-android"):ios?get.getAttribute("data-ios"):"";
+    if(target) get.addEventListener("click",function(ev){ev.preventDefault();location.href=target});
   }
 
   /* Screenshot gallery arrows */
