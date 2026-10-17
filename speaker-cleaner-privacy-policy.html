@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Water Eject</title>
+<meta name="description" content="How the Water Eject (Speaker Cleaner) Android app by DuruSoft handles your data: no account, data stays on your phone, microphone only while a tool is open, ads by Google AdMob with your consent.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDF4F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#050E1A" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230773AA'/%3E%3Cpath d='M32 12c7 9 14 17 14 25a14 14 0 0 1-28 0c0-8 7-16 14-25z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  /* Water Eject legal pages. Self-contained on purpose: no web fonts, scripts or trackers, so
+     opening a privacy page does not send the visitor's address to anyone. */
+  :root {
+    --bg: #EDF4F8; --surface: #FFFFFF; --surface-2: #E1ECF2; --line: #D3E2EB;
+    --text: #0A1E2C; --text-2: #4E6676; --accent: #0773AA; --accent-soft: #DCEEF7;
+    --ok: #0B7A55; --ok-soft: #DDF3EA; --warn: #9A4B10; --warn-soft: #FBEBDD;
+    --radius: 20px; --gutter: max(18px, env(safe-area-inset-left, 0px));
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --mono: ui-monospace, "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #050E1A; --surface: #0D1C2C; --surface-2: #132A3F; --line: #1D3550;
+      --text: #E9F5FC; --text-2: #8DA7BB; --accent: #38D3F7; --accent-soft: #0F3346;
+      --ok: #4FE0A8; --ok-soft: #0E3328; --warn: #FFB27A; --warn-soft: #3A2414;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 var(--font); text-rendering: optimizeLegibility;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 8px 14px; border-radius: 10px; z-index: 10; }
+  .skip:focus { left: 12px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 var(--gutter); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+
+  header.top { padding: 40px 0 8px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand svg { flex: none; }
+  .brand small { display: block; font-weight: 500; color: var(--text-2); font-size: 13px; letter-spacing: 0; }
+  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 28px 0 10px; text-wrap: balance; }
+  .meta { color: var(--text-2); font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .summary { margin: 28px 0 8px; }
+  .summary h2 { margin: 0 0 12px; font-size: 18px; }
+  .summary ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .summary li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; }
+  .tick { width: 22px; height: 22px; border-radius: 50%; background: var(--ok-soft); color: var(--ok); display: grid; place-items: center; margin-top: 2px; }
+
+  nav.toc { margin: 22px 0 0; }
+  nav.toc details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  nav.toc summary { cursor: pointer; padding: 16px 22px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  nav.toc summary::-webkit-details-marker { display: none; }
+  nav.toc summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--text-2); }
+  nav.toc details[open] summary::after { content: "–"; }
+  nav.toc ol { margin: 0; padding: 0 22px 18px 44px; columns: 2 260px; column-gap: 32px; }
+  nav.toc li { break-inside: avoid; padding: 3px 0; font-size: 15px; }
+
+  main section { padding-top: 38px; }
+  h2 { font-size: clamp(21px, 3.4vw, 25px); line-height: 1.25; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance; }
+  h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 8px; }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, ul, ol { margin: 0 0 14px; }
+  li { margin: 4px 0; }
+  main p, main li { max-width: 70ch; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); margin: 6px 0 16px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2); background: var(--surface-2); }
+  tr:last-child td { border-bottom: 0; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--ok-soft); color: var(--ok); white-space: nowrap; }
+  .pill.g { background: var(--accent-soft); color: var(--accent); }
+
+  .note { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 14px 14px 0; padding: 12px 16px; margin: 6px 0 16px; }
+  .note.warn { border-color: var(--warn); background: var(--warn-soft); }
+  code { font-family: var(--mono); font-size: 0.9em; background: var(--surface-2); padding: 1px 6px; border-radius: 6px; }
+
+  footer { margin: 56px 0 40px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+  .totop { white-space: nowrap; }
+
+  @media (max-width: 600px) {
+    .table-wrap { overflow: visible; background: transparent; border: 0; }
+    table, tbody, tr, td { display: block; min-width: 0; width: 100%; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    tr { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 6px 0; margin-bottom: 10px; }
+    td { border: 0; padding: 6px 16px; }
+    td::before { content: attr(data-label); display: block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2); margin-bottom: 2px; }
+  }
+  @media (max-width: 520px) {
+    header.top { padding-top: 28px; }
+    .card { padding: 18px; }
+    nav.toc ol { columns: 1; }
+  }
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --surface-2: #f2f2f2; --line: #ccc; --text: #000; --text-2: #444; --accent: #000; }
+    nav.toc, .skip, .totop { display: none; }
+    a { color: #000; }
+    main a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #444; word-break: break-all; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0773AA"/><path d="M32 12c7 9 14 17 14 25a14 14 0 0 1-28 0c0-8 7-16 14-25z" fill="#fff"/><path d="M22 39c3 3 6 4 10 4s7-1 10-4" fill="none" stroke="#0773AA" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>Water Eject<small>Speaker Cleaner · by DuruSoft</small></span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective: <strong><time datetime="2026-10-17">October 17, 2026</time></strong></span>
+      <span>Applies to: Water Eject for Android (<code>com.durusoft.speakercleaner</code>), version 2.0 and later</span>
+    </div>
+  </header>
+
+  <aside class="card summary" aria-labelledby="short">
+    <h2 id="short">The short version</h2>
+    <ul>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>No account, no servers of our own.</strong> We do not collect your name, email or location, and we cannot see how you use the app.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Your settings and history stay on your phone.</strong> Cleanings, answers, dB measurements and preferences are stored only on your device.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>The microphone is used only while a tool that needs it is open,</strong> to show sound levels. Audio is processed in memory, never saved to a file and never sent anywhere.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Ads are provided by Google AdMob</strong> and appear only after your first cleaning, only with the consent required in your region, and never for Pro users.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Payments are handled by Google Play.</strong> We never see your card or bank details.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>We do not sell your personal data.</strong></span></li>
+    </ul>
+  </aside>
+
+  <nav class="toc" aria-label="Contents">
+    <details open>
+      <summary>Contents</summary>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#overview">Data at a glance</a></li>
+        <li><a href="#device">Data stored on your device</a></li>
+        <li><a href="#microphone">Microphone</a></li>
+        <li><a href="#camera">Camera and measurement photos</a></li>
+        <li><a href="#notifications">Notifications and vibration</a></li>
+        <li><a href="#purchases">Purchases (Water Eject Pro)</a></li>
+        <li><a href="#ads">Advertising and your consent</a></li>
+        <li><a href="#google">Other Google Play services</a></li>
+        <li><a href="#backup">Device backup</a></li>
+        <li><a href="#diagnostics">Crash and performance reports</a></li>
+        <li><a href="#contact-data">When you contact us</a></li>
+        <li><a href="#sharing">Sharing and selling</a></li>
+        <li><a href="#retention">Retention and deletion</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#children">Children</a></li>
+        <li><a href="#security">Security</a></li>
+        <li><a href="#transfers">International transfers</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <main id="content">
+    <section id="who" aria-labelledby="h-who">
+      <h2 id="h-who"><span class="n">1</span>Who we are</h2>
+      <p>Water Eject (also listed as “Speaker Cleaner – Water Eject” and, in Turkish, “Hoparlör Temizleyici: Su At”) is an Android app published on Google Play by <strong>DuruSoft</strong>, based in Türkiye (“we”, “us”). For the limited personal data described in this policy that we decide about, we are the data controller. Google acts as a separate controller or as our processor for the Google services described below.</p>
+      <p>You can reach us at <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>.</p>
+    </section>
+
+    <section id="overview" aria-labelledby="h-overview">
+      <h2 id="h-overview"><span class="n">2</span>Data at a glance</h2>
+      <p>This table lists every type of data the app touches, where it goes and why. It also matches what we declare in the Google Play “Data safety” section.</p>
+      <div class="table-wrap" role="region" aria-label="Data at a glance" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Data</th><th scope="col">Where it goes</th><th scope="col">Purpose</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Data">Settings, cleaning history and “How does it sound?” answers, dB history, speaker-test reference levels, reminder choice</td><td data-label="Where it goes"><span class="pill">Your device only</span></td><td data-label="Purpose">Running the app and showing your own history to you</td></tr>
+            <tr><td data-label="Data">Microphone audio (only while a tool that needs it is open)</td><td data-label="Where it goes"><span class="pill">Your device only, in memory</span></td><td data-label="Purpose">Live level, dB reading, speaker comparison, 3-second test recording you can play back</td></tr>
+            <tr><td data-label="Data">Measurement photos (only when you take one)</td><td data-label="Where it goes"><span class="pill">Your photo gallery</span></td><td data-label="Purpose">A photo of your measurement, stamped with the level and date</td></tr>
+            <tr><td data-label="Data">Advertising ID, IP address, device and app information, ad interactions, consent choices</td><td data-label="Where it goes"><span class="pill g">Google (AdMob, UMP)</span></td><td data-label="Purpose">Showing ads, measuring them, preventing fraud, and asking for and storing your consent</td></tr>
+            <tr><td data-label="Data">Purchase information (product, purchase token, purchase state)</td><td data-label="Where it goes"><span class="pill g">Google Play</span></td><td data-label="Purpose">Selling and restoring Water Eject Pro</td></tr>
+            <tr><td data-label="Data">Crash, ANR and performance reports</td><td data-label="Where it goes"><span class="pill g">Google Play</span></td><td data-label="Purpose">Finding and fixing problems, if you allow your device to share usage and diagnostics</td></tr>
+            <tr><td data-label="Data">Your email and what you write to us</td><td data-label="Where it goes"><span class="pill">Our inbox</span></td><td data-label="Purpose">Answering you</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The app does not request your location, contacts, files or photos, and it does not use any analytics service of its own.</p>
+    </section>
+
+    <section id="device" aria-labelledby="h-device">
+      <h2 id="h-device"><span class="n">3</span>Data stored on your device</h2>
+      <p>To work, the app keeps the following on your phone in its private app storage:</p>
+      <ul>
+        <li>Your choices: theme, cleaning length, speaker, vibration strength, weekly reminder day, and whether onboarding is finished.</li>
+        <li>Counters: how many cleanings you have finished, when the last one was, whether today’s free Deep Clean was used, single-use unlocks earned by watching a rewarded ad, and whether you were already asked to rate the app.</li>
+        <li>Your cleaning history: date and time, mode, speaker, length, and your answer to “How does it sound?” (up to 100 entries).</li>
+        <li>dB meter history for Pro users (minimum, average, maximum and length of each measurement; up to 50 entries).</li>
+        <li>The speaker test’s “before” reference: three numbers (one level per test tone) and the media volume at the time. No audio is kept.</li>
+        <li>Your last known Pro status, so the app knows it while offline.</li>
+      </ul>
+      <p>We cannot access this data. It is removed when you clear the app’s data or uninstall the app, and the cleaning and dB histories can also be cleared inside the app. See <a href="#backup">Device backup</a> for how Android may back it up.</p>
+    </section>
+
+    <section id="microphone" aria-labelledby="h-microphone">
+      <h2 id="h-microphone"><span class="n">4</span>Microphone</h2>
+      <p>The microphone permission is optional. It is requested only when you open a tool that needs it, after a short explanation in the app:</p>
+      <ul>
+        <li><strong>Microphone Test:</strong> shows a live level and records a 3-second clip that you can play back. The clip stays in memory and is discarded when you leave the screen.</li>
+        <li><strong>dB Meter:</strong> turns the sound level into an approximate decibel value, minimum, average, maximum and a graph.</li>
+        <li><strong>Speaker Test “Before / After”:</strong> plays three test tones and measures how loud each one is heard.</li>
+      </ul>
+      <p>Audio is analysed on your device in real time and only while the tool is on screen; the microphone is released as soon as you leave it or the app goes to the background. <strong>We never save audio to a file, never upload it, and never use it to identify you or for advertising.</strong> Only the resulting numbers described in section 3 may be kept. Cleaning and every other feature work without this permission, and you can withdraw it at any time in Android Settings → Apps → Water Eject → Permissions.</p>
+    </section>
+
+    <section id="camera" aria-labelledby="h-camera">
+      <h2 id="h-camera"><span class="n">5</span>Camera and measurement photos</h2>
+      <p>The app does not request the camera permission. When you choose to take a dB measurement photo, Android opens your camera app; the picture you take comes back to Water Eject, the level and date are drawn on it, and it is saved to your gallery in the “Water Eject” album. The photo is not uploaded or shared by us. Any copy your camera or gallery app keeps, or backs up, is governed by that app’s own policy.</p>
+    </section>
+
+    <section id="notifications" aria-labelledby="h-notifications">
+      <h2 id="h-notifications"><span class="n">6</span>Notifications and vibration</h2>
+      <p>If you turn on the weekly maintenance reminder, the app schedules a local notification on your device. On Android 13 and later it asks for the notification permission first. No notification data leaves your phone, and you can turn the reminder off in the app or in Android Settings. Vibration is used only during vibration cleaning and for short touch feedback.</p>
+    </section>
+
+    <section id="purchases" aria-labelledby="h-purchases">
+      <h2 id="h-purchases"><span class="n">7</span>Purchases (Water Eject Pro)</h2>
+      <p>Water Eject Pro is a one-time purchase made through Google Play Billing. Google processes the payment under the <a href="https://play.google.com/about/play-terms/" rel="noopener">Google Play Terms of Service</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. The app receives only what it needs to unlock and restore Pro: the product, a purchase token, the purchase state and the price to display. We do not receive your name, email address or payment details. Earlier “Remove Ads” purchases are recognised the same way and include Pro.</p>
+    </section>
+
+    <section id="ads" aria-labelledby="h-ads">
+      <h2 id="h-ads"><span class="n">8</span>Advertising and your consent</h2>
+      <p>The free version shows ads served by <strong>Google AdMob</strong> (Google Mobile Ads SDK). Ads are never shown before your first completed cleaning, never during a cleaning, and never to Pro users. Native ads appear on some screens; a full-screen ad may appear when you leave the result screen, at most once every 3 minutes and twice per app session; rewarded ads play only when you choose “Watch an ad, unlock once”.</p>
+      <h3>What Google collects</h3>
+      <p>To serve and measure ads and to prevent fraud, Google may collect your device’s advertising ID, your IP address (from which an approximate location can be inferred), device and app information, and how you interact with ads. On supported devices the SDK may also use the Android Privacy Sandbox (Topics and Attribution APIs). This data is processed by Google; see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
+      <h3>Consent</h3>
+      <p>Where the law requires it (for example in the European Economic Area, the United Kingdom and Switzerland, and in US states with privacy laws), the app uses Google’s User Messaging Platform to ask for your choice before ads are requested. The first time is after your first cleaning. If your region requires it, you can change your choice at any time in the app: <strong>Settings → Privacy options</strong>. Without consent where consent is needed, no ads are requested.</p>
+      <h3>Controlling personalised ads</h3>
+      <ul>
+        <li>Android: Settings → Privacy → Ads, where you can reset or delete your advertising ID.</li>
+        <li>Google: <a href="https://myadcenter.google.com/" rel="noopener">My Ad Center</a>.</li>
+        <li>Water Eject Pro removes all ads.</li>
+      </ul>
+    </section>
+
+    <section id="google" aria-labelledby="h-google">
+      <h2 id="h-google"><span class="n">9</span>Other Google Play services</h2>
+      <ul>
+        <li><strong>In-app review:</strong> the app may show Google Play’s rating card after a few cleanings. Your rating and review go to Google Play under your Google account; we only see what Google Play shows publicly or in our developer console.</li>
+        <li><strong>In-app updates:</strong> the app asks Google Play whether a newer version exists and lets you install it.</li>
+      </ul>
+      <p>These features are provided by Google Play under Google’s terms and privacy policy.</p>
+    </section>
+
+    <section id="backup" aria-labelledby="h-backup">
+      <h2 id="h-backup"><span class="n">10</span>Device backup</h2>
+      <p>If you have turned on Android’s backup, Android may include the app’s on-device data (section 3) in your device backup to your Google account and restore it on a new phone. This backup is controlled by you and by Google, is encrypted by Android, and is not accessible to us. You can turn it off in Android Settings → Google → Backup.</p>
+    </section>
+
+    <section id="diagnostics" aria-labelledby="h-diagnostics">
+      <h2 id="h-diagnostics"><span class="n">11</span>Crash and performance reports</h2>
+      <p>If you allow your device to share usage and diagnostics with Google, Google Play may send us crash reports, “app not responding” reports and performance statistics. These reports describe the device model, Android version and what the app was doing when a problem happened; they do not identify you to us. We use them only to fix problems.</p>
+    </section>
+
+    <section id="contact-data" aria-labelledby="h-contact-data">
+      <h2 id="h-contact-data"><span class="n">12</span>When you contact us</h2>
+      <p>If you write to us (for example from “Write to us” in Settings), we receive your email address and what you write, and your email app may add your device model and Android version to help us. We use this only to answer you and to fix the issue you report, and we delete it when it is no longer needed, at the latest two years after our last exchange.</p>
+    </section>
+
+    <section id="sharing" aria-labelledby="h-sharing">
+      <h2 id="h-sharing"><span class="n">13</span>Sharing and selling</h2>
+      <p>We do not sell or rent personal data, and we do not share it for purposes other than those in this policy. Data reaches Google only through the Google services described above. We may disclose information if required by law or to protect the rights and safety of users or others.</p>
+    </section>
+
+    <section id="retention" aria-labelledby="h-retention">
+      <h2 id="h-retention"><span class="n">14</span>Retention and deletion</h2>
+      <ul>
+        <li><strong>On-device data:</strong> kept until you clear it in the app, clear the app’s data or uninstall the app.</li>
+        <li><strong>Microphone audio:</strong> not retained.</li>
+        <li><strong>Google data</strong> (ads, purchases, reports): retained by Google under its policies.</li>
+        <li><strong>Emails:</strong> as described in section 12.</li>
+      </ul>
+      <p>Because we hold no account or profile about you, there is nothing else for us to delete. If you still want to ask, write to us and we will reply.</p>
+    </section>
+
+    <section id="rights" aria-labelledby="h-rights">
+      <h2 id="h-rights"><span class="n">15</span>Your rights</h2>
+      <p>Depending on where you live, you may have rights to access, correct, delete, restrict or object to the processing of your personal data, to data portability, to withdraw consent at any time, and to complain to a data protection authority. This includes rights under the EU and UK General Data Protection Regulation, the Turkish Personal Data Protection Law No. 6698 (KVKK), and US state privacy laws such as the California Consumer Privacy Act.</p>
+      <p>The legal bases we rely on are: performing our agreement with you (running the app and Pro), your consent (personalised ads where required, microphone and notification permissions), and our legitimate interests (keeping the app working and secure, answering your messages). For data processed by Google, you can also use Google’s own tools and requests.</p>
+      <p>To use your rights with us, email <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>. We will reply within the time the law requires, usually 30 days.</p>
+    </section>
+
+    <section id="children" aria-labelledby="h-children">
+      <h2 id="h-children"><span class="n">16</span>Children</h2>
+      <p>Water Eject is not directed at children under 13 (or the minimum age in your country) and we do not knowingly collect personal data from them. If you believe a child has sent us personal data, contact us and we will delete it.</p>
+    </section>
+
+    <section id="security" aria-labelledby="h-security">
+      <h2 id="h-security"><span class="n">17</span>Security</h2>
+      <p>On-device data is kept in the app’s private storage, which other apps cannot read. Connections to Google services are encrypted. No method of storage or transmission is completely secure, but we keep the data we handle to a minimum.</p>
+    </section>
+
+    <section id="transfers" aria-labelledby="h-transfers">
+      <h2 id="h-transfers"><span class="n">18</span>International transfers</h2>
+      <p>Google may process data in countries other than yours, including the United States, using safeguards such as standard contractual clauses and certifications described in Google’s policies. Emails you send us are stored with our email provider.</p>
+    </section>
+
+    <section id="changes" aria-labelledby="h-changes">
+      <h2 id="h-changes"><span class="n">19</span>Changes to this policy</h2>
+      <p>We will update this page when the app or the law changes and change the “Effective” date above. If a change materially affects how your data is used, we will also tell you in the app or in the Google Play release notes before it takes effect.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact"><span class="n">20</span>Contact</h2>
+      <p>DuruSoft · Türkiye<br>Email: <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a></p>
+      <p>See also our <a href="terms-of-use.html">Terms of Use</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 DuruSoft · Water Eject</span>
+    <a class="totop" href="#content">Back to top ↑</a>
+  </footer>
+</div>
+</body>
+</html>

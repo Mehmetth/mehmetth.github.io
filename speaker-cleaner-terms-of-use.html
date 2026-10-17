@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Use · Water Eject</title>
+<meta name="description" content="Terms of Use for the Water Eject (Speaker Cleaner) Android app by DuruSoft: safe use, what the app can and cannot do, Water Eject Pro, ads and your consumer rights.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#EDF4F8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#050E1A" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230773AA'/%3E%3Cpath d='M32 12c7 9 14 17 14 25a14 14 0 0 1-28 0c0-8 7-16 14-25z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  /* Water Eject legal pages. Self-contained on purpose: no web fonts, scripts or trackers, so
+     opening a privacy page does not send the visitor's address to anyone. */
+  :root {
+    --bg: #EDF4F8; --surface: #FFFFFF; --surface-2: #E1ECF2; --line: #D3E2EB;
+    --text: #0A1E2C; --text-2: #4E6676; --accent: #0773AA; --accent-soft: #DCEEF7;
+    --ok: #0B7A55; --ok-soft: #DDF3EA; --warn: #9A4B10; --warn-soft: #FBEBDD;
+    --radius: 20px; --gutter: max(18px, env(safe-area-inset-left, 0px));
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --mono: ui-monospace, "SF Mono", "Roboto Mono", Menlo, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #050E1A; --surface: #0D1C2C; --surface-2: #132A3F; --line: #1D3550;
+      --text: #E9F5FC; --text-2: #8DA7BB; --accent: #38D3F7; --accent-soft: #0F3346;
+      --ok: #4FE0A8; --ok-soft: #0E3328; --warn: #FFB27A; --warn-soft: #3A2414;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 16px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 var(--font); text-rendering: optimizeLegibility;
+    padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
+  }
+  a { color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--surface); padding: 8px 14px; border-radius: 10px; z-index: 10; }
+  .skip:focus { left: 12px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 var(--gutter); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
+
+  header.top { padding: 40px 0 8px; }
+  .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: -0.01em; }
+  .brand svg { flex: none; }
+  .brand small { display: block; font-weight: 500; color: var(--text-2); font-size: 13px; letter-spacing: 0; }
+  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.1; letter-spacing: -0.025em; margin: 28px 0 10px; text-wrap: balance; }
+  .meta { color: var(--text-2); font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .meta strong { color: var(--text); font-weight: 600; }
+
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px 24px; }
+  .summary { margin: 28px 0 8px; }
+  .summary h2 { margin: 0 0 12px; font-size: 18px; }
+  .summary ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .summary li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; align-items: start; }
+  .tick { width: 22px; height: 22px; border-radius: 50%; background: var(--ok-soft); color: var(--ok); display: grid; place-items: center; margin-top: 2px; }
+
+  nav.toc { margin: 22px 0 0; }
+  nav.toc details { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  nav.toc summary { cursor: pointer; padding: 16px 22px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  nav.toc summary::-webkit-details-marker { display: none; }
+  nav.toc summary::after { content: "+"; font-size: 22px; line-height: 1; color: var(--text-2); }
+  nav.toc details[open] summary::after { content: "–"; }
+  nav.toc ol { margin: 0; padding: 0 22px 18px 44px; columns: 2 260px; column-gap: 32px; }
+  nav.toc li { break-inside: avoid; padding: 3px 0; font-size: 15px; }
+
+  main section { padding-top: 38px; }
+  h2 { font-size: clamp(21px, 3.4vw, 25px); line-height: 1.25; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance; }
+  h2 .n { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: 8px; }
+  h3 { font-size: 17px; margin: 22px 0 6px; }
+  p, ul, ol { margin: 0 0 14px; }
+  li { margin: 4px 0; }
+  main p, main li { max-width: 70ch; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); margin: 6px 0 16px; }
+  table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-2); background: var(--surface-2); }
+  tr:last-child td { border-bottom: 0; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 2px 9px; border-radius: 99px; background: var(--ok-soft); color: var(--ok); white-space: nowrap; }
+  .pill.g { background: var(--accent-soft); color: var(--accent); }
+
+  .note { border-left: 4px solid var(--accent); background: var(--accent-soft); border-radius: 0 14px 14px 0; padding: 12px 16px; margin: 6px 0 16px; }
+  .note.warn { border-color: var(--warn); background: var(--warn-soft); }
+  code { font-family: var(--mono); font-size: 0.9em; background: var(--surface-2); padding: 1px 6px; border-radius: 6px; }
+
+  footer { margin: 56px 0 40px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+  .totop { white-space: nowrap; }
+
+  @media (max-width: 520px) {
+    header.top { padding-top: 28px; }
+    .card { padding: 18px; }
+    nav.toc ol { columns: 1; }
+  }
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --surface-2: #f2f2f2; --line: #ccc; --text: #000; --text-2: #444; --accent: #000; }
+    nav.toc, .skip, .totop { display: none; }
+    a { color: #000; }
+    main a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; color: #444; word-break: break-all; }
+    section { break-inside: avoid-page; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0773AA"/><path d="M32 12c7 9 14 17 14 25a14 14 0 0 1-28 0c0-8 7-16 14-25z" fill="#fff"/><path d="M22 39c3 3 6 4 10 4s7-1 10-4" fill="none" stroke="#0773AA" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>Water Eject<small>Speaker Cleaner · by DuruSoft</small></span>
+    </div>
+    <h1>Terms of Use</h1>
+    <div class="meta">
+      <span>Effective: <strong><time datetime="2026-10-17">October 17, 2026</time></strong></span>
+      <span>Applies to: Water Eject for Android (<code>com.durusoft.speakercleaner</code>), version 2.0 and later</span>
+    </div>
+  </header>
+
+  <aside class="card summary" aria-labelledby="short">
+    <h2 id="short">The short version</h2>
+    <ul>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Water Eject plays sounds and vibrations</strong> that can help push water and dust out of your phone’s speaker. It cannot repair a damaged speaker, and results vary.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Keep the phone away from your ears</strong> while it plays loud or high tones, and stop if anything sounds wrong.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>The dB meter and speaker test give estimates,</strong> not certified measurements.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Water Eject Pro is a one-time purchase</strong>, not a subscription. Water ejection, vibration, the quick test and the dB meter stay free.</span></li>
+      <li><span class="tick" aria-hidden="true">✓</span><span><strong>Your consumer rights are not affected</strong> by anything in these terms.</span></li>
+    </ul>
+  </aside>
+
+  <nav class="toc" aria-label="Contents">
+    <details open>
+      <summary>Contents</summary>
+      <ol>
+        <li><a href="#agreement">Agreement</a></li>
+        <li><a href="#what">What the app does</a></li>
+        <li><a href="#safety">Safe use</a></li>
+        <li><a href="#results">No guaranteed results</a></li>
+        <li><a href="#measurements">Measurements are estimates</a></li>
+        <li><a href="#free-pro">Free features and Water Eject Pro</a></li>
+        <li><a href="#rewarded">Ads and rewarded unlocks</a></li>
+        <li><a href="#license">Your licence</a></li>
+        <li><a href="#acceptable">Acceptable use</a></li>
+        <li><a href="#third">Third-party services</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#changes-app">Changes to the app</a></li>
+        <li><a href="#liability">Liability</a></li>
+        <li><a href="#ending">Ending these terms</a></li>
+        <li><a href="#law">Governing law and disputes</a></li>
+        <li><a href="#changes">Changes to these terms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </details>
+  </nav>
+
+  <main id="content">
+    <section id="agreement" aria-labelledby="h-agreement">
+      <h2 id="h-agreement"><span class="n">1</span>Agreement</h2>
+      <p>These Terms of Use are an agreement between you and <strong>DuruSoft</strong>, based in Türkiye (“we”, “us”), for the Water Eject Android app (also listed as “Speaker Cleaner – Water Eject” and “Hoparlör Temizleyici: Su At”), including Water Eject Pro (the “app”). By installing or using the app you accept these terms. If you do not accept them, please do not use the app.</p>
+      <p>You also use the app under the <a href="https://play.google.com/about/play-terms/" rel="noopener">Google Play Terms of Service</a>, which apply to downloading the app and paying for Pro. If you are under the age of majority where you live, a parent or guardian should review these terms with you.</p>
+    </section>
+
+    <section id="what" aria-labelledby="h-what">
+      <h2 id="h-what"><span class="n">2</span>What the app does</h2>
+      <p>Water Eject plays tones, frequency sweeps and pulses through your phone’s loudspeaker and earpiece (and, in some modes, your headphones), optionally together with vibration. Sound pressure moves the speaker membrane, which can help push out water and loosen dust caught in the speaker grille. The app also includes a tone generator, a speaker test, a microphone test and a dB meter.</p>
+      <p>The animations in the app show how the method works. They are illustrations and do not mean that you will see water coming out of your phone.</p>
+    </section>
+
+    <section id="safety" aria-labelledby="h-safety">
+      <h2 id="h-safety"><span class="n">3</span>Safe use</h2>
+      <div class="note warn" role="note"><strong>Protect your hearing.</strong> Cleaning uses loud, low and high tones at high volume, and the tone generator can play up to 20,000&nbsp;Hz. Never hold the phone against or close to your ear while a cleaning, test or tone is playing, and do not play tones through headphones you are wearing at high volume.</div>
+      <ul>
+        <li>Hold or place the phone with the speaker facing down, as the app suggests, and keep it away from your ears, children and pets. Some animals can hear high tones that people cannot.</li>
+        <li>Stop at once if the speaker rattles, distorts, gets warm, or the phone behaves unusually. The app adds a short rest between longer sessions to protect the speaker; please do not work around it by running sessions back to back for a long time.</li>
+        <li>Water Eject does not dry a phone that has been submerged. If your phone has been under water, follow the manufacturer’s guidance (for example, switch it off and let it dry) and have it checked if it shows signs of damage. Do not put your phone in water to test the app.</li>
+        <li>Do not use the app where loud sounds could startle others or are not allowed, or where you need your full attention, such as while driving.</li>
+      </ul>
+    </section>
+
+    <section id="results" aria-labelledby="h-results">
+      <h2 id="h-results"><span class="n">4</span>No guaranteed results</h2>
+      <p>How well the app works depends on your phone’s speaker design, how much water or dust there is and where it is. We do not promise that the app will remove all water or dust, restore your speaker’s sound, or fix any hardware fault. The app is not a repair service and does not replace a manufacturer, a warranty claim or a qualified technician.</p>
+    </section>
+
+    <section id="measurements" aria-labelledby="h-measurements">
+      <h2 id="h-measurements"><span class="n">5</span>Measurements are estimates</h2>
+      <p>Phone microphones are not calibrated measuring instruments. The dB meter, the speaker test and the before/after comparison give approximate values that can differ between phones and situations. Do not rely on them for medical, occupational, legal, safety or regulatory purposes. Measurement photos show the app’s estimate at the time of the photo.</p>
+    </section>
+
+    <section id="free-pro" aria-labelledby="h-free-pro">
+      <h2 id="h-free-pro"><span class="n">6</span>Free features and Water Eject Pro</h2>
+      <p><strong>Always free:</strong> water ejection on the main speaker and earpiece, vibration cleaning, the quick test, the basic speaker test, the microphone test, the live dB meter, the weekly reminder and the cleaning history. Deep Clean is free once a day.</p>
+      <p><strong>Water Eject Pro</strong> adds unlimited Deep Clean, Dust Mode, cleaning each speaker on its own and headphone cleaning, the full tone generator (10–20,000&nbsp;Hz, four waveforms), the speaker test’s before/after comparison, dB history and measurement photos, and removes all ads.</p>
+      <ul>
+        <li><strong>One-time payment.</strong> Pro is a single purchase for your Google account, not a subscription, and it does not renew. The price, any introductory offer and its end date are shown in the app and by Google Play before you pay, in your local currency and including the taxes Google Play applies.</li>
+        <li><strong>Payment and refunds</strong> are handled by Google Play under its terms and refund policies. Your statutory rights as a consumer, including any right of withdrawal under the law of your country, are not affected. If you have a problem with Pro, contact us and we will do our best to help.</li>
+        <li><strong>Restoring.</strong> Pro is linked to the Google account used to buy it and can be restored on your devices with the same account through “Restore purchase”. A refunded or reversed purchase removes Pro.</li>
+        <li><strong>Earlier purchases.</strong> If you bought “Remove Ads” in an earlier version, you get Pro at no extra cost.</li>
+        <li><strong>Lifetime</strong> means for as long as we offer the app on Google Play and it supports your device. We may add, change or remove Pro features over time, but we will not take away the core of what you paid for without a fair reason, and we will not ask existing Pro owners to pay again for the features listed in the app at the time of purchase.</li>
+      </ul>
+    </section>
+
+    <section id="rewarded" aria-labelledby="h-rewarded">
+      <h2 id="h-rewarded"><span class="n">7</span>Ads and rewarded unlocks</h2>
+      <p>The free version shows ads provided by Google AdMob, as described in the <a href="privacy-policy.html">Privacy Policy</a>. Ads are not shown before your first cleaning, during a cleaning, or to Pro users.</p>
+      <p>For some Pro features you can choose to watch a rewarded ad. A completed rewarded ad unlocks a single use: one Deep Clean, Dust Mode or Channels/Headphones session; the full tone generator until you leave its screen; one before/after speaker comparison; or one measurement photo. Unused unlocks stay on your device until you use them. Rewarded unlocks have no cash value, cannot be transferred and are not available for every feature (for example, dB history and ad removal need Pro). Whether an ad is available depends on Google and your region; we cannot guarantee one is always available.</p>
+    </section>
+
+    <section id="license" aria-labelledby="h-license">
+      <h2 id="h-license"><span class="n">8</span>Your licence</h2>
+      <p>We give you a personal, non-exclusive, non-transferable, revocable licence to install and use the app on Android devices you own or control, for your own non-commercial use, in line with these terms and the Google Play rules. The app, its design, sounds, texts, graphics and code belong to DuruSoft or its licensors and are protected by law. Open-source components included in the app are licensed under their own licences, which take precedence for those components.</p>
+    </section>
+
+    <section id="acceptable" aria-labelledby="h-acceptable">
+      <h2 id="h-acceptable"><span class="n">9</span>Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>copy, modify, decompile or reverse engineer the app, except where the law allows it;</li>
+        <li>remove, bypass or tamper with purchases, ads, rewarded ads, usage limits or security features;</li>
+        <li>click ads you are not interested in, use automation to view ads, or otherwise generate invalid ad activity;</li>
+        <li>use the app to disturb, harm or harass people or animals, or in breach of any law.</li>
+      </ul>
+    </section>
+
+    <section id="third" aria-labelledby="h-third">
+      <h2 id="h-third"><span class="n">10</span>Third-party services</h2>
+      <p>The app relies on services from Google, including Google Play (downloads, payments, ratings and updates) and Google AdMob (ads and consent). These services are provided by Google under its own terms and policies, and ads show content from third-party advertisers. We are not responsible for third-party content, products or websites you reach through an ad or link.</p>
+    </section>
+
+    <section id="privacy" aria-labelledby="h-privacy">
+      <h2 id="h-privacy"><span class="n">11</span>Privacy</h2>
+      <p>Our <a href="privacy-policy.html">Privacy Policy</a> explains what data the app uses and why. In short: there is no account, your data stays on your phone, the microphone is used only while a tool is open, and we do not sell personal data.</p>
+    </section>
+
+    <section id="changes-app" aria-labelledby="h-changes-app">
+      <h2 id="h-changes-app"><span class="n">12</span>Changes to the app</h2>
+      <p>We work to improve the app and may update, change or stop features, or stop supporting older Android versions. Some updates may be needed to keep using the app. The app works offline; only ads, purchases and updates need an internet connection.</p>
+    </section>
+
+    <section id="liability" aria-labelledby="h-liability">
+      <h2 id="h-liability"><span class="n">13</span>Liability</h2>
+      <p>The app is provided “as is” and “as available”. To the extent the law allows, we do not give warranties beyond those set out in these terms, including that the app will be uninterrupted or error-free or will achieve a particular result.</p>
+      <p>To the extent the law allows, we are not liable for indirect or consequential loss, for damage caused by using the app against the safe-use guidance in section 3, or for damage to a device that was already damaged or exposed to water. Our total liability to you for any claim about the app is limited to the amount you paid for Water Eject Pro, or USD 10 if you have not bought it.</p>
+      <div class="note" role="note">Nothing in these terms limits or excludes any liability or right that cannot be limited or excluded by law, including your rights under consumer protection law in your country (in Türkiye, Law No. 6502 on Consumer Protection), and liability for intent or gross negligence.</div>
+    </section>
+
+    <section id="ending" aria-labelledby="h-ending">
+      <h2 id="h-ending"><span class="n">14</span>Ending these terms</h2>
+      <p>You can stop using the app at any time by uninstalling it. We may suspend or end your licence if you seriously breach these terms, for example by tampering with purchases or generating invalid ad activity. Sections that by their nature should continue (such as 4, 5, 13 and 15) continue after the terms end.</p>
+    </section>
+
+    <section id="law" aria-labelledby="h-law">
+      <h2 id="h-law"><span class="n">15</span>Governing law and disputes</h2>
+      <p>These terms are governed by the laws of the Republic of Türkiye, without regard to conflict-of-law rules. If you are a consumer, you also keep the protection of the mandatory laws of the country where you live, and you may bring a claim in the courts or before the consumer authorities available to you there. Before going to court, please contact us: most issues can be solved quickly by email.</p>
+    </section>
+
+    <section id="changes" aria-labelledby="h-changes">
+      <h2 id="h-changes"><span class="n">16</span>Changes to these terms</h2>
+      <p>We may update these terms when the app or the law changes and will change the “Effective” date above. If a change materially affects your rights, we will tell you in the app or in the Google Play release notes before it takes effect. If you continue to use the app after the change, the new terms apply; if you do not agree, you can stop using the app.</p>
+    </section>
+
+    <section id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact"><span class="n">17</span>Contact</h2>
+      <p>DuruSoft · Türkiye<br>Email: <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a></p>
+      <p>See also our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 DuruSoft · Water Eject</span>
+    <a class="totop" href="#content">Back to top ↑</a>
+  </footer>
+</div>
+</body>
+</html>
