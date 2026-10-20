@@ -1,0 +1,21 @@
+{
+  "name": "Water Eject",
+  "short_name": "Water Eject",
+  "start_url": "/water-eject/",
+  "scope": "/water-eject/",
+  "display": "browser",
+  "background_color": "#050E1A",
+  "theme_color": "#0B2B4C",
+  "icons": [
+    {
+      "src": "/water-eject/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/water-eject/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
