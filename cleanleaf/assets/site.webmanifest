@@ -1,0 +1,21 @@
+{
+  "name": "CleanLeaf",
+  "short_name": "CleanLeaf",
+  "start_url": "/cleanleaf/",
+  "scope": "/cleanleaf/",
+  "display": "browser",
+  "background_color": "#062A22",
+  "theme_color": "#0E3D32",
+  "icons": [
+    {
+      "src": "/cleanleaf/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/cleanleaf/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

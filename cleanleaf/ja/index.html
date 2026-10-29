@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CleanLeaf: 写真整理とスマホの容量確保｜Android 向け写真クリーナー</title>
+<meta name="description" content="CleanLeaf は、重複写真や類似写真、ぼやけた写真、大きな動画を見つけて、スマホの空き容量を増やす写真整理アプリです。ベストな 1 枚を残して、ほかはすっきり。削除したものは 30 日間元に戻せます。確認はすべてスマホ上で行います。">
+<link rel="canonical" href="https://mehmetth.github.io/cleanleaf/ja/">
+<link rel="alternate" hreflang="en" href="https://mehmetth.github.io/cleanleaf/">
+<link rel="alternate" hreflang="es" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-MX" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-US" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-AR" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-CO" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-CL" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-PE" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="es-ES" href="https://mehmetth.github.io/cleanleaf/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://mehmetth.github.io/cleanleaf/pt-br/">
+<link rel="alternate" hreflang="pt" href="https://mehmetth.github.io/cleanleaf/pt-br/">
+<link rel="alternate" hreflang="de" href="https://mehmetth.github.io/cleanleaf/de/">
+<link rel="alternate" hreflang="fr" href="https://mehmetth.github.io/cleanleaf/fr/">
+<link rel="alternate" hreflang="tr" href="https://mehmetth.github.io/cleanleaf/tr/">
+<link rel="alternate" hreflang="ru" href="https://mehmetth.github.io/cleanleaf/ru/">
+<link rel="alternate" hreflang="id" href="https://mehmetth.github.io/cleanleaf/id/">
+<link rel="alternate" hreflang="vi" href="https://mehmetth.github.io/cleanleaf/vi/">
+<link rel="alternate" hreflang="ja" href="https://mehmetth.github.io/cleanleaf/ja/">
+<link rel="alternate" hreflang="x-default" href="https://mehmetth.github.io/cleanleaf/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0E3D32">
+<meta name="author" content="Durusoft">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CleanLeaf">
+<meta property="og:url" content="https://mehmetth.github.io/cleanleaf/ja/">
+<meta property="og:title" content="CleanLeaf: ベストを残して、ほかはすっきり。">
+<meta property="og:description" content="落ち着いて使える Android 向け写真クリーナー。重複写真、類似写真、大きな動画、スワイプで整理。確認するまで何も削除されません。">
+<meta property="og:image" content="https://mehmetth.github.io/cleanleaf/assets/og/ja.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="CleanLeaf: ベストを残して、ほかはすっきり。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CleanLeaf: ベストを残して、ほかはすっきり。">
+<meta name="twitter:description" content="落ち着いて使える Android 向け写真クリーナー。重複写真、類似写真、大きな動画、スワイプで整理。確認するまで何も削除されません。">
+<meta name="twitter:image" content="https://mehmetth.github.io/cleanleaf/assets/og/ja.jpg">
+<link rel="icon" href="/cleanleaf/assets/icon.svg" type="image/svg+xml">
+<link rel="icon" href="/cleanleaf/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/cleanleaf/assets/apple-touch-icon.png">
+<link rel="manifest" href="/cleanleaf/assets/site.webmanifest">
+<style>/* CleanLeaf landing: tokens mirror the app's Mint Daylight theme (design/tokens.json): porcelain light, pine dark */
+:root{
+  --bg:#F2F7F5;--surface:#FFFFFF;--surface-2:#E7F1ED;--text:#0B201A;--text-2:#34504A;--text-3:#50665F;
+  --border:#D5E5DE;--brand:#0E765E;--brand-text:#0E765E;--on-brand:#FFFFFF;--brand-soft:#EEFBF6;--brand-line:#A9EBD5;
+  --aqua:#74DDBE;--on-aqua:#062A22;--pearl:#8F4012;--pearl-soft:#FFF0E5;--ok:#139273;
+  --hero-1:#062A22;--hero-2:#0E3D32;--hero-3:#0E5A47;
+  --shadow:0 1px 2px rgba(11,32,26,.05),0 8px 24px rgba(11,32,26,.07);
+  --r:20px;--wrap:1160px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI Variable","Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#051A15;--surface:#0B2620;--surface-2:#08201A;--text:#E8F6F0;--text-2:#AFC3BC;--text-3:#8EA49C;
+  --border:#1A3D33;--brand:#62D4B0;--brand-text:#74DDBE;--on-brand:#062A22;--brand-soft:#143A30;--brand-line:#1F5A49;
+  --pearl:#F6B88E;--pearl-soft:#2A2016;--ok:#62D4B0;
+  --hero-1:#03130F;--hero-2:#062A22;--hero-3:#0B4A3B;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+/* Scripts with tall glyphs get more room; Urdu is written in Nastaliq where the device has it */
+:lang(ur){--font:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq","Urdu Typesetting",-apple-system,"Segoe UI",Roboto,"Noto Sans Arabic",sans-serif}
+:lang(my),:lang(km),:lang(th),:lang(ur){line-height:1.9}
+:lang(my) h1,:lang(my) h2,:lang(my) h3,:lang(km) h1,:lang(km) h2,:lang(km) h3,:lang(ur) h1,:lang(ur) h2,:lang(ur) h3{line-height:1.55;letter-spacing:0}
+:lang(ar) h1,:lang(ar) h2,:lang(fa) h1,:lang(fa) h2,:lang(hi) h1,:lang(hi) h2,:lang(bn) h1,:lang(bn) h2,:lang(th) h1,:lang(th) h2{line-height:1.4;letter-spacing:0}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--brand-text)}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.narrow{max-width:820px}
+.ic{width:20px;height:20px;flex:none}
+.muted{color:var(--text-3)}
+.small{font-size:13px}
+.center{text-align:center}
+:focus-visible{outline:3px solid var(--aqua);outline-offset:2px;border-radius:6px}
+[dir=rtl] .ic-flip,[dir=rtl] .gal-btn .ic{transform:scaleX(-1)}
+
+/* skip link + language suggestion */
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:100;background:var(--text);color:var(--bg);padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.suggest{position:fixed;z-index:60;left:50%;bottom:16px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 32px);display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;padding:12px 18px;padding-inline-end:48px;background:var(--text);color:var(--bg);font-size:14px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.28);animation:rise .35s ease-out}
+@keyframes rise{from{opacity:0;transform:translate(-50%,12px)}}
+@media (prefers-reduced-motion:reduce){.suggest{animation:none}}
+.suggest[hidden]{display:none}
+.suggest a{color:var(--bg);font-weight:700}
+.suggest button{position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:inherit;padding:8px;cursor:pointer;border-radius:8px;display:flex}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--border)}
+.top-in{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-weight:800;font-size:19px;letter-spacing:-.01em;white-space:nowrap}
+.brand img{border-radius:8px}
+.nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav a{color:var(--text-2);text-decoration:none;font-size:15px;font-weight:500;padding:8px 12px;border-radius:10px;white-space:nowrap}
+.nav a:hover{color:var(--text);background:var(--surface-2)}
+.lang{position:relative}
+.lang summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;padding:8px 10px;border-radius:10px;color:var(--text-2);font-size:14px;font-weight:600}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary:hover{background:var(--surface-2);color:var(--text)}
+.lang .chev{width:16px;height:16px;transition:transform .2s}
+.lang[open] .chev{transform:rotate(180deg)}
+.lang ul{position:absolute;inset-inline-end:0;top:calc(100% + 6px);width:min(460px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:6px}
+.lang li a{display:block;padding:8px 12px;border-radius:9px;color:var(--text);text-decoration:none;font-size:15px}
+.lang li a:hover{background:var(--surface-2)}
+.lang li a[aria-current]{color:var(--brand-text);font-weight:700;background:var(--brand-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:var(--on-brand);text-decoration:none;font-weight:700;border-radius:12px;padding:12px 18px;white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+.btn-sm{padding:9px 14px;font-size:14px}
+/* Download menu: phones go straight to their store (main.js); desktops get both stores */
+.get{position:relative}
+.get summary{list-style:none;cursor:pointer}
+.get summary::-webkit-details-marker{display:none}
+.get-panel{position:absolute;inset-inline-end:0;top:calc(100% + 8px);width:max-content;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow),0 18px 40px rgba(11,32,26,.14);padding:20px}
+.get-title{font-weight:800;font-size:17px}
+.get-sub{color:var(--text-2);font-size:14px;margin-top:2px}
+.get-panel .stores{margin-top:16px;flex-direction:column;gap:10px}
+.get-panel .store{border-color:transparent}
+@media (prefers-color-scheme:dark){.get-panel .store{border-color:rgba(255,255,255,.22)}}
+@media (max-width:980px){.nav{display:none}.lang{margin-inline-start:auto}}
+@media (max-width:420px){.top .brand span{display:none}.lang ul{grid-template-columns:1fr}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(160deg,var(--hero-1) 0%,var(--hero-2) 50%,var(--hero-3) 100%);scroll-margin-top:64px}
+.rings{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(circle at 78% 46%,transparent 0 179px,rgba(116,221,190,.16) 180px 181px,transparent 182px 299px,rgba(116,221,190,.12) 300px 301px,transparent 302px 439px,rgba(116,221,190,.09) 440px 441px,transparent 442px 599px,rgba(116,221,190,.07) 600px 601px,transparent 602px)}
+[dir=rtl] .rings{transform:scaleX(-1)}
+.hero-in{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;letter-spacing:.02em;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 4px rgba(116,221,190,.25)}
+.hero h1{font-size:clamp(38px,5.6vw,66px);font-weight:850;letter-spacing:-.035em;margin:22px 0 20px;text-wrap:balance}
+mark{background:var(--aqua);color:var(--on-aqua);padding:0 .16em;border-radius:.18em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:rgba(255,255,255,.88);max-width:560px;text-wrap:pretty}
+.stores{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.store{display:inline-flex;align-items:center;gap:10px;min-width:184px;height:56px;padding:0 18px 0 14px;padding-inline:14px 18px;border-radius:14px;background:#000;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.28);transition:transform .15s ease,box-shadow .15s ease}
+.store-badge{display:inline-flex;height:56px}
+.store-badge img{height:56px;width:auto}
+a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.store .logo{width:26px;height:26px;flex:none}
+.store span{display:flex;flex-direction:column;line-height:1.1}
+.store small{font-size:11px;font-weight:500;letter-spacing:.02em;opacity:.9}
+.store b{font-size:21px;font-weight:600;letter-spacing:-.01em}
+html.is-android .store-google{order:-1}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-size:15px;font-weight:600;color:rgba(255,255,255,.92)}
+.trust li{display:flex;align-items:center;gap:6px}
+.trust .ic{width:18px;height:18px;color:var(--aqua);stroke-width:2.6}
+.hero-art{display:flex;justify-content:center}
+@media (max-width:960px){
+  .hero-in{grid-template-columns:1fr;padding-top:48px;padding-bottom:56px;gap:40px;text-align:center}
+  .hero-copy{display:flex;flex-direction:column;align-items:center}
+  .lead{margin:0 auto}.stores,.trust{justify-content:center}
+  .rings{background-position:0 18%}
+}
+
+/* phone: a real screenshot of the app in a device frame */
+.phone{width:300px;height:620px;border-radius:46px;padding:10px;background:linear-gradient(145deg,#26303a,#07090c);box-shadow:0 0 0 2px rgba(255,255,255,.1) inset,0 40px 80px rgba(0,15,10,.55),0 12px 24px rgba(0,15,10,.35);transform:rotate(-4deg)}
+[dir=rtl] .phone{transform:rotate(4deg)}
+.screen{position:relative;height:100%;border-radius:37px;overflow:hidden;background:#062A22;color:#E8F6F0;font-family:var(--font);display:flex;flex-direction:column;padding:0 16px 14px;line-height:1.3}
+.screen::before{content:"";position:absolute;top:9px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#000;box-shadow:0 0 0 2px #10161d}
+.status{display:flex;justify-content:space-between;align-items:center;padding:12px 6px 0;font-size:12.5px;font-weight:600;height:34px;direction:ltr}
+.sig{display:flex;align-items:flex-end;gap:2px;height:11px}
+.sig i{width:3px;background:#E8F6F0;border-radius:1px}
+.sig i:nth-child(1){height:4px}.sig i:nth-child(2){height:6px}.sig i:nth-child(3){height:8px}.sig i:nth-child(4){height:11px}
+.s-top{display:flex;align-items:center;gap:10px;margin-top:10px}
+.round{width:34px;height:34px;border-radius:50%;background:#12382F;display:flex;align-items:center;justify-content:center;flex:none}
+.round .ic{width:17px;height:17px}
+.s-title{display:flex;flex-direction:column;min-width:0}
+.s-title b{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-title small{font-size:11px;color:#8EA49C;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-pill{align-self:flex-start;display:inline-flex;align-items:center;gap:7px;margin-top:10px;background:#12382F;padding:6px 11px;border-radius:12px;font-size:11.5px;font-weight:600;max-width:100%}
+.s-pill span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-pill i{width:7px;height:7px;border-radius:50%;background:#74DDBE;flex:none;animation:blink 1s ease-in-out infinite alternate}
+@keyframes blink{to{opacity:.25}}
+.scene{width:calc(100% + 32px);margin:2px -16px 0;aspect-ratio:1;height:auto;display:block}
+.s-read{display:flex;align-items:flex-end;justify-content:space-between;margin-top:-6px}
+.s-pct{display:flex;align-items:baseline;gap:4px;direction:ltr}
+[dir=rtl] .s-pct{direction:rtl}
+.s-num{font-size:46px;font-weight:700;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.s-pct small{font-size:16px;color:#8EA49C;font-weight:600}
+.s-meta{display:flex;flex-direction:column;align-items:flex-end;gap:3px;font:500 12px/1.2 ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+.s-hz{color:#8EA49C}
+.s-hint{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px;font-size:10.5px;color:#8EA49C;text-align:center}
+.s-hint .ic{width:13px;height:13px}
+.s-ctrl{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:auto}
+.s-stop,.s-gap{width:42px;height:42px;border-radius:50%;background:#12382F;display:flex;align-items:center;justify-content:center}
+.s-gap{background:none}
+.s-stop .ic{width:17px;height:17px}
+.s-play{width:60px;height:60px;border-radius:50%;background:#74DDBE;color:#062A22;display:flex;align-items:center;justify-content:center;box-shadow:0 0 22px rgba(116,221,190,.45)}
+.s-play .ic{width:24px;height:24px;stroke-width:2.6}
+@media (prefers-reduced-motion:reduce){.s-pill i{animation:none}}
+@media (max-width:960px){.phone,[dir=rtl] .phone{transform:none}}
+@media (max-width:380px){.phone{width:276px;height:576px}.s-num{font-size:40px}}
+
+/* use cases */
+.uses{padding:44px 0;border-bottom:1px solid var(--border)}
+.uses h2{font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);text-align:center}
+:lang(ar) .uses h2,:lang(fa) .uses h2,:lang(ur) .uses h2{letter-spacing:0}
+.uses ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.uses li{padding:9px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-weight:600;font-size:15px}
+
+/* sections */
+.sec{padding:96px 0}
+.sec-alt{background:var(--surface-2)}
+.sh{max-width:720px;margin:0 auto 48px;text-align:center}
+.kicker{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-text);margin-bottom:12px}
+:lang(ar) .kicker,:lang(fa) .kicker,:lang(ur) .kicker{letter-spacing:0}
+.sh h2,.priv h2{font-size:clamp(30px,3.8vw,46px);font-weight:800;text-wrap:balance}
+.sub{font-size:18px;color:var(--text-2);margin-top:16px;text-wrap:pretty}
+.fine{font-size:13.5px;color:var(--text-3);margin-top:28px;max-width:820px}
+.fine.center{margin-left:auto;margin-right:auto}
+@media (max-width:640px){.sec{padding:68px 0}.sh{margin-bottom:36px}}
+
+/* modes: three on top, two below */
+.modes{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.mode{grid-column:span 2;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;box-shadow:var(--shadow)}
+.mode:nth-child(n+4){grid-column:span 3}
+.mode-hl{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand),var(--shadow)}
+.mode-ic,.card-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--brand-soft);color:var(--brand-text);margin-bottom:18px}
+.mode-ic .ic,.card-ic .ic{width:24px;height:24px}
+.mode h3,.card h3{font-size:21px;font-weight:750}
+.tag{display:inline-flex;align-items:center;gap:5px;margin:10px 0 12px;font-size:12.5px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--text-2);border:1px solid var(--border)}
+.tag .ic,.pro-chip .ic{width:14px;height:14px}
+.tag-free{color:var(--ok)}
+.tag-daily{background:var(--brand-soft);color:var(--brand-text);border-color:transparent}
+.tag-pro,.pro-chip{background:var(--pearl-soft);color:var(--pearl);border-color:transparent}
+.mode p:last-child,.card p{color:var(--text-2)}
+@media (max-width:880px){.modes{grid-template-columns:1fr}.mode,.mode:nth-child(n+4){grid-column:auto}}
+
+/* tools */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.card h3{margin-bottom:10px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.pro-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;letter-spacing:0;padding:3px 9px;border-radius:999px}
+@media (max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+
+/* gallery */
+.gal{position:relative}
+.gal-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(20px,calc((100vw - var(--wrap))/2 + 20px)) 24px;scrollbar-width:none;overscroll-behavior-x:contain}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-track li{flex:none;width:240px;scroll-snap-align:center}
+.gal-track img{width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow);background:var(--hero-2)}
+.gal-btn{position:absolute;top:calc(50% - 32px);z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.gal-btn:disabled{opacity:0;pointer-events:none}
+.gal-btn.prev{inset-inline-start:max(12px,calc((100vw - var(--wrap))/2 - 12px))}
+.gal-btn.next{inset-inline-end:max(12px,calc((100vw - var(--wrap))/2 - 12px))}
+@media (max-width:640px){.gal-btn{display:none}.gal-track li{width:min(230px,64vw)}}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.num{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:var(--brand);color:var(--on-brand);font-weight:800;font-size:18px;margin-bottom:18px}
+.steps h3{font-size:21px;font-weight:750;margin-bottom:10px}
+.steps p{color:var(--text-2)}
+@media (min-width:881px){.steps li:not(:last-child)::after{content:"";position:absolute;top:47px;inset-inline-end:-21px;width:22px;height:2px;background:var(--brand-line)}}
+@media (max-width:880px){.steps{grid-template-columns:1fr}}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:auto 1fr 1fr;gap:32px 40px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:44px;box-shadow:var(--shadow)}
+.priv-ic{width:72px;height:72px;border-radius:22px;background:linear-gradient(145deg,#0E3D32,#0E7FC0 60%,#74DDBE);color:#fff;display:flex;align-items:center;justify-content:center}
+.priv-ic .ic{width:36px;height:36px}
+.priv h2{font-size:clamp(26px,3vw,36px)}
+.priv .sub{font-size:16.5px}
+.priv ul{display:grid;gap:12px}
+.priv li,.plan li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.priv li .ic,.plan li .ic{color:var(--brand-text);margin-top:2px;stroke-width:2.4}
+@media (max-width:960px){.priv{grid-template-columns:1fr;padding:32px 24px}}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
+.plan{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px}
+.plan h3{font-size:26px;font-weight:800;display:flex;align-items:center;gap:10px}
+.plan h3 .ic{width:26px;height:26px}
+.plan-tag{color:var(--text-2);margin:6px 0 22px;font-weight:600}
+.plan ul{display:grid;gap:12px}
+.plan li{font-weight:500}
+.plan-pro{border:2px solid var(--pearl);background:linear-gradient(180deg,var(--pearl-soft),var(--surface) 46%)}
+.plan-pro h3,.plan-pro li .ic{color:var(--pearl)}
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:0 22px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:700;font-size:17.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .chev{color:var(--text-3);transition:transform .2s}
+.faq details[open] .chev{transform:rotate(180deg)}
+.faq details p{color:var(--text-2);padding-bottom:22px;margin-top:-4px}
+
+/* final cta */
+.cta{position:relative;overflow:hidden;color:#fff;background:linear-gradient(160deg,var(--hero-1),var(--hero-3));text-align:center}
+.cta .rings{background-position:-28vw 10%}
+.cta-in{position:relative;display:flex;flex-direction:column;align-items:center;padding-top:88px;padding-bottom:96px}
+.cta img{border-radius:18px;box-shadow:0 12px 30px rgba(0,0,0,.3);margin-bottom:24px}
+.cta h2{font-size:clamp(32px,4.4vw,52px);font-weight:850;letter-spacing:-.03em;text-wrap:balance}
+.cta p{font-size:19px;color:rgba(255,255,255,.88);margin-top:14px;max-width:560px}
+.cta .stores{justify-content:center}
+
+/* footer */
+.foot{padding:64px 0 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr;gap:32px}
+.foot-brand p{color:var(--text-2);margin-top:12px;max-width:280px}
+.foot h2{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.foot ul{display:grid;gap:10px}
+.foot li{display:flex;flex-wrap:wrap;gap:4px 10px}
+.foot nav a{color:var(--text);text-decoration:none}
+.foot nav a:hover{color:var(--brand-text);text-decoration:underline}
+.foot .small{margin-top:12px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--text-3);font-size:14px}
+.foot .foot-langs{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot-langs a{color:var(--text-2);text-decoration:none}
+.foot-langs a:hover{color:var(--brand-text)}
+.foot-langs a[aria-current]{color:var(--text);font-weight:700}
+@media (max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+
+/* CleanLeaf additions */
+.screen.shot{padding:0;background:#F2F7F5}
+.screen.shot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+@media (min-width:881px){.mode:nth-child(n+4){grid-column:span 2}}
+.store-soon{background:transparent;border:1px dashed rgba(255,255,255,.45);cursor:default;opacity:.92}
+.store-soon .logo{color:#fff}
+.sec .store-soon,.get-panel .store-soon{color:var(--text);border-color:var(--border)}
+.get-panel .store-soon .logo{color:var(--text-2)}
+.pearl-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFE1C9 0%,#F2A271 45%,#C76F3D 100%);vertical-align:middle}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"CleanLeaf","alternateName":["CleanLeaf: 写真整理とスマホの容量確保"],"description":"CleanLeaf は、重複写真や類似写真、ぼやけた写真、大きな動画を見つけて、スマホの空き容量を増やす写真整理アプリです。ベストな 1 枚を残して、ほかはすっきり。削除したものは 30 日間元に戻せます。確認はすべてスマホ上で行います。","url":"https://mehmetth.github.io/cleanleaf/ja/","inLanguage":"ja","applicationCategory":"UtilitiesApplication","operatingSystem":"Android 8.0+","image":"https://mehmetth.github.io/cleanleaf/assets/icon-512.png","screenshot":["https://mehmetth.github.io/cleanleaf/assets/shots/ja/01.webp","https://mehmetth.github.io/cleanleaf/assets/shots/ja/02.webp","https://mehmetth.github.io/cleanleaf/assets/shots/ja/03.webp"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"installUrl":["https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&hl=ja"],"publisher":{"@type":"Organization","name":"Durusoft","url":"https://mehmetth.github.io/","email":"duru.sofft@gmail.com","logo":"https://mehmetth.github.io/cleanleaf/assets/icon-512.png"},"featureList":["重複","類似","ぼやけた写真","暗い写真","スクリーンショット","大きな動画","スワイプ","動画の圧縮","プライベート保管庫","ファイル","アプリ","連絡先"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"CleanLeaf は無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。CleanLeaf は無料でダウンロードでき、無料プランでは広告付きで 1 日 50 件まで削除できます。短い広告を視聴すると、削除できる件数を増やせます。Premium では 1 日の上限と広告がなくなります。"}},{"@type":"Question","name":"確認なしに写真が削除されることはありますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。確認するまで何も削除されません。削除したものはすべて 30 日間ゴミ箱に保管されるので、元に戻すことができます。"}},{"@type":"Question","name":"ベストな写真はどうやって選ばれますか？","acceptedAnswer":{"@type":"Answer","text":"コピーや類似写真の各グループで、CleanLeaf はスマホ内のファイルを比べ、コピーより元のファイル、縮小版よりフルサイズ、ぼやけた写真よりシャープな写真を優先します。理由は各グループの下に表示され、別の写真を選ぶこともできます。"}},{"@type":"Question","name":"写真がどこかにアップロードされますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。写真、動画、ファイル、連絡先はスマホ上で確認され、アップロードされることはありません。アカウント登録やログインも不要です。"}},{"@type":"Question","name":"どれくらいの容量を取り戻せますか？","acceptedAnswer":{"@type":"Answer","text":"ギャラリーの内容によって異なります。CleanLeaf は削除する前に各グループのサイズを表示し、クリーンアップのたびに、スマホが測定した実際に空いた容量を表示します。"}},{"@type":"Question","name":"スワイプとは何ですか？","acceptedAnswer":{"@type":"Answer","text":"写真を 1 枚ずつ落ち着いて確認できる方法です。左にスワイプで削除、右にスワイプで残す。選んだ内容を確認するまで何も削除されません。"}},{"@type":"Question","name":"動画を圧縮すると画質は落ちますか？","acceptedAnswer":{"@type":"Answer","text":"画質は圧縮する前に選べます。たとえば 4K から 1080p にしても、スマホの画面では違いがほとんどわかりません。新しいサイズを先に確認でき、決めるまで元の動画はそのまま残ります。"}},{"@type":"Question","name":"CleanLeaf がファイルへのアクセスを求めるのはなぜですか？","acceptedAnswer":{"@type":"Answer","text":"「ファイル」機能のためだけです。この機能は、ストレージ全体から大きなファイル、APK、古いダウンロード、空のフォルダを見つけます。アクセスはこの機能を開いたときにリクエストされ、許可しなくても写真の整理は使えます。"}},{"@type":"Question","name":"Premium には何が含まれますか？","acceptedAnswer":{"@type":"Answer","text":"1 日の上限なし、広告なし、複数の動画のまとめて圧縮、ウィジェットのスタイルの追加、保管庫の容量無制限です。Premium は月間プラン、年間プラン（対象の場合は無料トライアル付き）、または 1 回払いの買い切りから選べます。"}},{"@type":"Question","name":"どのスマホで使えますか？","acceptedAnswer":{"@type":"Answer","text":"Android 8.0 以降の Android スマホで使えます。iPhone 版も近日公開予定です。"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+<div class="suggest" id="suggest" hidden></div>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/cleanleaf/ja/" aria-label="CleanLeaf">
+      <img src="/cleanleaf/assets/icon.svg" width="32" height="32" alt=""><span>CleanLeaf</span>
+    </a>
+    <nav class="nav" aria-label="CleanLeaf">
+      <a href="#cleans">整理できるもの</a>
+      <a href="#tools">ツール</a>
+      <a href="#pricing">料金</a>
+      <a href="#faq">よくある質問</a>
+    </nav>
+    <details class="lang">
+      <summary aria-label="言語"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>JA</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <ul><li><a href="/cleanleaf/" hreflang="en" lang="en" dir="ltr">English</a></li><li><a href="/cleanleaf/es/" hreflang="es" lang="es" dir="ltr">Español</a></li><li><a href="/cleanleaf/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr">Português (Brasil)</a></li><li><a href="/cleanleaf/de/" hreflang="de" lang="de" dir="ltr">Deutsch</a></li><li><a href="/cleanleaf/fr/" hreflang="fr" lang="fr" dir="ltr">Français</a></li><li><a href="/cleanleaf/tr/" hreflang="tr" lang="tr" dir="ltr">Türkçe</a></li><li><a href="/cleanleaf/ru/" hreflang="ru" lang="ru" dir="ltr">Русский</a></li><li><a href="/cleanleaf/id/" hreflang="id" lang="id" dir="ltr">Bahasa Indonesia</a></li><li><a href="/cleanleaf/vi/" hreflang="vi" lang="vi" dir="ltr">Tiếng Việt</a></li><li><a href="/cleanleaf/ja/" hreflang="ja" lang="ja" dir="ltr" aria-current="page">日本語</a></li></ul>
+    </details>
+    <details class="get">
+      <summary class="btn btn-sm" data-ios="" data-android="https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&amp;hl=ja">ダウンロード</summary>
+      <div class="get-panel"><p class="get-title">CleanLeaf を入手</p><p class="get-sub">Android 向け・無料</p><div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&amp;hl=ja" aria-label="Google Play で CleanLeaf を入手" data-where="header"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>今すぐダウンロード</small><b>Google Play</b></span></a><span class="store store-soon" role="img" aria-label="iPhone 版 CleanLeaf は近日公開予定です"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span><small>近日公開</small><b>iPhone 版</b></span></span></div></div>
+    </details>
+  </div>
+</header>
+<main id="main"><section class="hero" id="download">
+  <div class="rings" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">Android 向け・無料</p>
+      <h1>ベストを残して、<mark>ほかはすっきり。</mark></h1>
+      <p class="lead">CleanLeaf は、重複写真、類似写真、ぼやけた写真、大きな動画を見つけて、グループごとにベストな 1 枚を残し、どれだけ容量を取り戻せるかを正確に表示します。</p>
+      <div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&amp;hl=ja" aria-label="Google Play で CleanLeaf を入手" data-where="hero"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>今すぐダウンロード</small><b>Google Play</b></span></a><span class="store store-soon" role="img" aria-label="iPhone 版 CleanLeaf は近日公開予定です"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span><small>近日公開</small><b>iPhone 版</b></span></span></div>
+      <ul class="trust"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>確認するまで何も削除しません</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>30 日間は元に戻せます</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>スマホ上で確認、アップロードなし</li></ul>
+    </div>
+    <div class="hero-art"><div class="phone" aria-hidden="true"><div class="screen shot"><img src="/cleanleaf/assets/hero/ja.webp" width="560" height="1213" alt="" decoding="async" fetchpriority="high"></div></div></div>
+  </div>
+</section>
+<section class="uses" aria-labelledby="uses-t">
+  <div class="wrap"><h2 id="uses-t">「ストレージがいっぱい」と表示されたときに</h2><ul><li>旅行の前に</li><li>写真をたくさん撮ったあとに</li><li>大型アップデートの前に</li><li>カメラで保存できないときに</li><li>チャットで保存した画像</li><li>お下がりの古いスマホ</li></ul></div>
+</section>
+<section class="sec" id="cleans" aria-labelledby="cleans-t">
+  <div class="wrap"><div class="sh"><p class="kicker">整理できるもの</p><h2 id="cleans-t">ギャラリーを数分ですっきり整理</h2><p class="sub">CleanLeaf は、もう必要のないものをグループにまとめ、それぞれが使っている容量を表示します。何を削除するかは、あなたが決めます。</p></div><div class="modes"><article class="mode mode-hl"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></div><h3>重複</h3><p>完全に同じコピーをグループにまとめ、1 枚は必ず残します。</p></article><article class="mode"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="13" rx="2"/><path d="M8 3h11a2 2 0 0 1 2 2v11"/><path d="m5 16 3.5-3.5 2.5 2.5 2-2 2 2"/></svg></div><h3>類似</h3><p>連写やほぼ同じ写真を並べて表示。最もシャープな 1 枚を提案しますが、決めるのはあなたです。</p></article><article class="mode"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8" stroke-dasharray="2 3"/><circle cx="12" cy="12" r="3"/></svg></div><h3>ぼやけた写真</h3><p>手ぶれやピンぼけで、この先使うことのない写真。</p></article><article class="mode"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></div><h3>暗い写真</h3><p>ポケットの中で撮れてしまった写真や、暗すぎて見えない写真。</p></article><article class="mode"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M9 7h6M9 10.5h6M9 14h3"/></svg></div><h3>スクリーンショット</h3><p>スクリーンショット、古いスクリーンショット、画面録画。</p></article><article class="mode"><div class="mode-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg></div><h3>大きな動画</h3><p>大きな動画と短い動画を、サイズの大きい順に。</p></article></div></div>
+</section>
+<section class="sec sec-alt" id="tools" aria-labelledby="tools-t">
+  <div class="wrap"><div class="sh"><p class="kicker">ツールでさらに容量を確保</p><h2 id="tools-t">整理して、圧縮して、守る</h2><p class="sub">ギャラリーだけでなく、スマホを埋めているファイルやアプリ、思い出の整理にも CleanLeaf が役立ちます。</p></div><div class="grid"><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="3" width="10" height="16" rx="2"/><path d="M3 21h4M17 21h4M4.5 19.5 3 21l1.5 1.5M19.5 19.5 21 21l-1.5 1.5"/></svg></div><h3>スワイプ</h3><p>写真を 1 枚ずつ確認して、左にスワイプで削除、右にスワイプで残す。選んだ内容を確認するまで何も削除されません。</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6H3M15 3v6h6M9 21v-6H3M15 21v-6h6"/></svg></div><h3>動画の圧縮</h3><p>大きな動画を 4K から 1080p などに小さくして、ギャラリーに残せます。</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div><h3>プライベート保管庫</h3><p>選んだ写真や動画を暗号化し、PIN または指紋で保護します。</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><h3>ファイル</h3><p>ストレージ全体の大きなファイル、APK、ダウンロード、空のフォルダ。</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg></div><h3>アプリ</h3><p>使っていないアプリと、各アプリの使用容量を確認できます。</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="3.5"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/></svg></div><h3>連絡先</h3><p>重複した連絡先や不完全な連絡先を見つけて統合します（先にバックアップを作成）。</p></article></div>
+  <p class="fine">すべての数値は、スマホ本体のストレージ情報にもとづいています。クリーンアップのたびに、実際に空いた容量が表示されます。</p></div>
+</section>
+<section class="sec" aria-labelledby="gallery-t">
+  <div class="wrap"><div class="sh"><p class="kicker">画面をチェック</p><h2 id="gallery-t">落ち着いた画面で、迷わず選べる</h2></div></div>
+  <div class="gal">
+    <button class="gal-btn prev" type="button" aria-label="前のスクリーンショット"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></button>
+    <ul class="gal-track" tabindex="0" aria-labelledby="gallery-t"><li><img src="/cleanleaf/assets/shots/ja/01.webp" width="540" height="960" alt="ベストを残して、 ほかはすっきり — 重複やぼやけた写真、大きな動画を見つけます" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/02.webp" width="540" height="960" alt="最もシャープな写真を残します — ベストを提案します。決めるのはあなたです。" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/03.webp" width="540" height="960" alt="スワイプで写真を整理 — 左にスワイプで削除、右にスワイプで残す" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/04.webp" width="540" height="960" alt="1 タップで重複を一掃 — 必ず 1 枚はアルバムに残ります" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/05.webp" width="540" height="960" alt="勝手に消しません — 気が変わっても、30 日以内なら元に戻せます" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/06.webp" width="540" height="960" alt="大きな動画をぐっと小さく — 同じ瞬間を、ずっと少ない容量で" loading="lazy" decoding="async"></li><li><img src="/cleanleaf/assets/shots/ja/07.webp" width="540" height="960" alt="写真は外に出しません — 確認はすべてこのスマホ上で行います" loading="lazy" decoding="async"></li></ul>
+    <button class="gal-btn next" type="button" aria-label="次のスクリーンショット"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></svg></button>
+  </div>
+</section>
+<section class="sec sec-alt" id="how" aria-labelledby="how-t">
+  <div class="wrap"><div class="sh"><p class="kicker">使い方</p><h2 id="how-t">3 ステップで空き容量を確保</h2></div><ol class="steps"><li><span class="num">1</span><h3>スマホ上でスキャン</h3><p>CleanLeaf は写真と動画をデバイス上で確認します。アップロードは一切ありません。</p></li><li><span class="num">2</span><h3>提案を確認</h3><p>コピーや類似写真はグループにまとめられ、各グループのベストな 1 枚が残されます。</p></li><li><span class="num">3</span><h3>安心して削除</h3><p>確認すると、削除したものはすべて 30 日間ゴミ箱に保管されるので、元に戻すことができます。</p></li></ol>
+  <p class="fine center">確認するまで、ギャラリーからは何も削除されません。</p></div>
+</section>
+<section class="sec" aria-labelledby="privacy-t">
+  <div class="wrap"><div class="priv">
+    <div class="priv-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div>
+    <div><p class="kicker">プライバシーを最優先に設計</p><h2 id="privacy-t">写真はスマホの中だけに</h2><p class="sub">CleanLeaf は写真、動画、ファイル、連絡先をデバイス上で確認します。アカウントは不要で、何もアップロードされません。</p></div>
+    <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>スマホ上で分析、アップロードは一切なし</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>アカウント登録もログインも不要</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>権限は、その権限が必要な機能を開いたときにだけリクエストします</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>プライベート保管庫は暗号化され、このスマホの中だけに保存されます</li></ul>
+  </div></div>
+</section>
+<section class="sec sec-alt" id="pricing" aria-labelledby="pricing-t">
+  <div class="wrap"><div class="sh"><p class="kicker">料金</p><h2 id="pricing-t">まずは無料で。必要になったら Premium へ。</h2></div>
+  <div class="plans">
+    <article class="plan"><h3>無料</h3><p class="plan-tag">すべての整理機能</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>1 日 50 件まで削除、短い広告の視聴で追加</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>重複写真、類似写真、スワイプ、ツール</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>削除したものはすべて 30 日間元に戻せます</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>プライベート保管庫は 10 件まで</li></ul></article>
+    <article class="plan plan-pro"><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l4 4 4-6 4 6 4-4-1.5 10h-13z"/></svg>Premium</h3><p class="plan-tag">月間プラン・年間プラン・買い切り</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>1 日の上限なし</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>広告なし</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>複数の動画をまとめて圧縮</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>保管庫の容量が無制限</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>ウィジェットのスタイルを追加</li></ul></article>
+  </div>
+  <p class="fine center">価格は購入前に Google Play で表示されます。定期購入は Google Play で解約するまで自動更新されます。</p></div>
+</section>
+<section class="sec" id="faq" aria-labelledby="faq-t">
+  <div class="wrap narrow"><div class="sh"><p class="kicker">よくある質問</p><h2 id="faq-t">よくある質問と回答</h2></div><div class="faq"><details open><summary>CleanLeaf は無料ですか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>はい。CleanLeaf は無料でダウンロードでき、無料プランでは広告付きで 1 日 50 件まで削除できます。短い広告を視聴すると、削除できる件数を増やせます。Premium では 1 日の上限と広告がなくなります。</p></details><details><summary>確認なしに写真が削除されることはありますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>いいえ。確認するまで何も削除されません。削除したものはすべて 30 日間ゴミ箱に保管されるので、元に戻すことができます。</p></details><details><summary>ベストな写真はどうやって選ばれますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>コピーや類似写真の各グループで、CleanLeaf はスマホ内のファイルを比べ、コピーより元のファイル、縮小版よりフルサイズ、ぼやけた写真よりシャープな写真を優先します。理由は各グループの下に表示され、別の写真を選ぶこともできます。</p></details><details><summary>写真がどこかにアップロードされますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>いいえ。写真、動画、ファイル、連絡先はスマホ上で確認され、アップロードされることはありません。アカウント登録やログインも不要です。</p></details><details><summary>どれくらいの容量を取り戻せますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>ギャラリーの内容によって異なります。CleanLeaf は削除する前に各グループのサイズを表示し、クリーンアップのたびに、スマホが測定した実際に空いた容量を表示します。</p></details><details><summary>スワイプとは何ですか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>写真を 1 枚ずつ落ち着いて確認できる方法です。左にスワイプで削除、右にスワイプで残す。選んだ内容を確認するまで何も削除されません。</p></details><details><summary>動画を圧縮すると画質は落ちますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>画質は圧縮する前に選べます。たとえば 4K から 1080p にしても、スマホの画面では違いがほとんどわかりません。新しいサイズを先に確認でき、決めるまで元の動画はそのまま残ります。</p></details><details><summary>CleanLeaf がファイルへのアクセスを求めるのはなぜですか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>「ファイル」機能のためだけです。この機能は、ストレージ全体から大きなファイル、APK、古いダウンロード、空のフォルダを見つけます。アクセスはこの機能を開いたときにリクエストされ、許可しなくても写真の整理は使えます。</p></details><details><summary>Premium には何が含まれますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>1 日の上限なし、広告なし、複数の動画のまとめて圧縮、ウィジェットのスタイルの追加、保管庫の容量無制限です。Premium は月間プラン、年間プラン（対象の場合は無料トライアル付き）、または 1 回払いの買い切りから選べます。</p></details><details><summary>どのスマホで使えますか？<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>Android 8.0 以降の Android スマホで使えます。iPhone 版も近日公開予定です。</p></details></div></div>
+</section>
+<section class="cta" aria-labelledby="cta-t">
+  <div class="rings" aria-hidden="true"></div>
+  <div class="wrap cta-in">
+    <img src="/cleanleaf/assets/icon.svg" width="72" height="72" alt="" loading="lazy">
+    <h2 id="cta-t">新しい思い出のための空き容量を</h2><p>CleanLeaf をダウンロードして、ギャラリーからどれだけ容量を取り戻せるか確かめてみましょう。</p>
+    <div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&amp;hl=ja" aria-label="Google Play で CleanLeaf を入手" data-where="cta"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>今すぐダウンロード</small><b>Google Play</b></span></a><span class="store store-soon" role="img" aria-label="iPhone 版 CleanLeaf は近日公開予定です"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span><small>近日公開</small><b>iPhone 版</b></span></span></div>
+  </div>
+</section>
+</main><footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/cleanleaf/ja/"><img src="/cleanleaf/assets/icon.svg" width="32" height="32" alt="" loading="lazy"><span>CleanLeaf</span></a>
+        <p>ベストを残して、ほかはすっきり。</p>
+      </div>
+      <nav aria-label="アプリ"><h2>アプリ</h2><ul>
+        <li><a href="#cleans">整理できるもの</a></li><li><a href="#tools">ツール</a></li>
+        <li><a href="#pricing">料金</a></li><li><a href="#faq">よくある質問</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.durusoft.storage.cleaner.cleanleaf&amp;hl=ja">Google Play</a></li></ul></nav>
+      <nav aria-label="法的情報"><h2>法的情報</h2><ul>
+        <li><a href="/cleanleaf-privacy-policy.html" hreflang="en">プライバシー ポリシー</a></li>
+        <li><a href="/cleanleaf-terms-and-conditions.html" hreflang="en">利用規約</a></li>
+        <li><a href="/cleanleaf-data-deletion.html" hreflang="en">データの削除</a></li></ul>
+        <p class="muted small">法的情報のページは英語のみです。</p></nav>
+      <nav aria-label="ヘルプ"><h2>ヘルプ</h2><ul>
+        <li><a href="mailto:duru.sofft@gmail.com">お問い合わせ</a></li>
+        <li><span class="muted">duru.sofft@gmail.com</span></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Durusoft. 無断転載を禁じます。</p>
+      <ul class="foot-langs" aria-label="言語"><li><a href="/cleanleaf/" hreflang="en" lang="en" dir="ltr">English</a></li><li><a href="/cleanleaf/es/" hreflang="es" lang="es" dir="ltr">Español</a></li><li><a href="/cleanleaf/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr">Português (Brasil)</a></li><li><a href="/cleanleaf/de/" hreflang="de" lang="de" dir="ltr">Deutsch</a></li><li><a href="/cleanleaf/fr/" hreflang="fr" lang="fr" dir="ltr">Français</a></li><li><a href="/cleanleaf/tr/" hreflang="tr" lang="tr" dir="ltr">Türkçe</a></li><li><a href="/cleanleaf/ru/" hreflang="ru" lang="ru" dir="ltr">Русский</a></li><li><a href="/cleanleaf/id/" hreflang="id" lang="id" dir="ltr">Bahasa Indonesia</a></li><li><a href="/cleanleaf/vi/" hreflang="vi" lang="vi" dir="ltr">Tiếng Việt</a></li><li><a href="/cleanleaf/ja/" hreflang="ja" lang="ja" dir="ltr" aria-current="page">日本語</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script>var CLEANLEAF={"cur":"ja","langs":{"en":{"url":"/cleanleaf/","msg":"This page is also available in English.","go":"Read in English","close":"Close","dir":"ltr"},"es":{"url":"/cleanleaf/es/","msg":"Esta página también está disponible en español.","go":"Leer en español","close":"Cerrar","dir":"ltr"},"pt-BR":{"url":"/cleanleaf/pt-br/","msg":"Esta página também está disponível em português.","go":"Ler em português","close":"Fechar","dir":"ltr"},"de":{"url":"/cleanleaf/de/","msg":"Diese Seite gibt es auch auf Deutsch.","go":"Auf Deutsch lesen","close":"Schließen","dir":"ltr"},"fr":{"url":"/cleanleaf/fr/","msg":"Cette page est aussi disponible en français.","go":"Lire en français","close":"Fermer","dir":"ltr"},"tr":{"url":"/cleanleaf/tr/","msg":"Bu sayfa Türkçe olarak da mevcut.","go":"Türkçe oku","close":"Kapat","dir":"ltr"},"ru":{"url":"/cleanleaf/ru/","msg":"Эта страница доступна и на русском языке.","go":"Читать на русском","close":"Закрыть","dir":"ltr"},"id":{"url":"/cleanleaf/id/","msg":"Halaman ini juga tersedia dalam Bahasa Indonesia.","go":"Baca dalam Bahasa Indonesia","close":"Tutup","dir":"ltr"},"vi":{"url":"/cleanleaf/vi/","msg":"Trang này cũng có bằng tiếng Việt.","go":"Đọc bằng tiếng Việt","close":"Đóng","dir":"ltr"},"ja":{"url":"/cleanleaf/ja/","msg":"このページは日本語でもご覧いただけます。","go":"日本語で読む","close":"閉じる","dir":"ltr"}}};(function(){
+  var d=document, root=d.documentElement, W=window.CLEANLEAF, ua=navigator.userAgent||"";
+  var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Put the visitor's own store first */
+  if(/android/i.test(ua)) root.classList.add("is-android");
+
+  /* Offer (never force) the visitor's language: no redirects, so every URL stays crawlable */
+  function store(k,v){try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch(e){return null}}
+  function pick(){
+    var want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""]);
+    var have=Object.keys(W.langs), low={};
+    have.forEach(function(h){low[h.toLowerCase()]=h});
+    for(var i=0;i<want.length;i++){
+      var w=(want[i]||"").toLowerCase(), base=w.split("-")[0];
+      if(low[w]) return low[w];
+      if(base==="zh") return /hant|tw|hk|mo/.test(w)?"zh-Hant":"zh-Hans";
+      if(base==="pt") return w==="pt-pt"?"pt-PT":"pt-BR";
+      if(base==="es") return w==="es-es"?"es-ES":"es";
+      if(base==="no"||base==="nn") return "nb";
+      if(base==="tl") return "fil";
+      if(base==="in") return "id";
+      if(low[base]) return low[base];
+    }
+    return null;
+  }
+  var best=pick(), box=d.getElementById("suggest");
+  if(box&&best&&best!==W.cur&&!store("cleanleaf-lang-dismissed")){
+    var L=W.langs[best];
+    box.setAttribute("lang",best); box.setAttribute("dir",L.dir);
+    box.innerHTML='<span></span><a></a><button type="button"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>';
+    box.firstChild.textContent=L.msg;
+    var a=box.querySelector("a"); a.textContent=L.go+(L.dir==="rtl"?" ←":" →"); a.href=L.url; a.hreflang=best;
+    var b=box.querySelector("button"); b.setAttribute("aria-label",L.close);
+    b.onclick=function(){box.hidden=true;store("cleanleaf-lang-dismissed","1")};
+    box.hidden=false;
+  }
+
+  /* Header menus (language, download): one open at a time, close on outside click / Escape */
+  var menus=[].slice.call(d.querySelectorAll(".top details"));
+  menus.forEach(function(m){m.addEventListener("toggle",function(){if(m.open)menus.forEach(function(o){if(o!==m)o.open=false})})});
+  d.addEventListener("click",function(ev){menus.forEach(function(m){if(m.open&&!m.contains(ev.target))m.open=false})});
+  d.addEventListener("keydown",function(ev){if(ev.key!=="Escape")return;menus.forEach(function(m){if(m.open){m.open=false;m.querySelector("summary").focus()}})});
+
+  /* Download: phones go straight to their store when it is live; otherwise the panel shows both */
+  var get=d.querySelector(".get summary");
+  if(get){
+    var android=/android/i.test(ua);
+    var ios=!android&&(/iPad|iPhone|iPod/.test(ua)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1)); /* iPadOS reports as a Mac */
+    var target=android?get.getAttribute("data-android"):ios?get.getAttribute("data-ios"):"";
+    if(target) get.addEventListener("click",function(ev){ev.preventDefault();location.href=target});
+  }
+
+  /* Screenshot gallery arrows (scroll direction follows the page direction) */
+  var track=d.querySelector(".gal-track"), prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
+  if(track&&prev&&next){
+    var rtl=root.dir==="rtl", sign=rtl?-1:1;
+    var step=function(){var li=track.querySelector("li");return li?li.getBoundingClientRect().width+20:260};
+    var sync=function(){var x=Math.abs(track.scrollLeft);prev.disabled=x<8;next.disabled=x+track.clientWidth>=track.scrollWidth-8};
+    prev.onclick=function(){track.scrollBy({left:-sign*step()*2,behavior:"smooth"})};
+    next.onclick=function(){track.scrollBy({left:sign*step()*2,behavior:"smooth"})};
+    track.addEventListener("scroll",sync,{passive:true}); window.addEventListener("resize",sync); sync();
+  }
+
+  /* Hero: the app's cleaning screen, running a 30 s Water Eject at double speed */
+  var phone=d.querySelector(".phone[data-mock]");
+  if(!phone) return;
+  var M=JSON.parse(phone.getAttribute("data-mock"));
+  var canvas=phone.querySelector(".scene"), g=canvas.getContext("2d");
+  var num=phone.querySelector(".s-num"), clock=phone.querySelector(".s-clock"), hzEl=phone.querySelector(".s-hz"), phaseEl=phone.querySelector(".s-phase");
+  var nf; try{nf=new Intl.NumberFormat(root.lang)}catch(e){nf=new Intl.NumberFormat()}
+  var nf2; try{nf2=new Intl.NumberFormat(root.lang,{minimumIntegerDigits:2})}catch(e){nf2=new Intl.NumberFormat(undefined,{minimumIntegerDigits:2})}
+  var fill=function(t,args){return t.replace(/\{(\d)\}/g,function(_,i){return args[+i]})};
+  var TOTAL=30, SPEED=2, HOLD=1.6, SHARES=[.2,.3,.4,.1];
+  var C=280, CONE=118, rings=[], drops=[], bubbles=[], ringT=0, last=0, t0=0, shown={};
+
+  function phaseAt(p){var acc=0;for(var i=0;i<4;i++){if(p<acc+SHARES[i]||i===3)return{i:i,f:(p-acc)/SHARES[i]};acc+=SHARES[i]}}
+  function state(sec){
+    var p=Math.min(1,sec/TOTAL), ph=phaseAt(p), hz, level=1;
+    if(ph.i===0) hz=100+200*Math.min(1,ph.f);
+    else if(ph.i===1){hz=165;level=(sec%0.5)<0.25?1:.15}
+    else if(ph.i===2) hz=165+8*Math.sin(Math.PI*sec);
+    else hz=440;
+    return{p:p,phase:ph.i,hz:hz,level:level,left:TOTAL-sec};
+  }
+  function text(s){
+    var pct=Math.floor(s.p*100), left=Math.max(0,Math.ceil(s.left-1e-6));
+    var v={pct:nf.format(pct),clock:nf.format(Math.floor(left/60))+":"+nf2.format(left%60),hz:fill(M.hz,[nf.format(Math.round(s.hz))]),
+           phase:fill(M.step,[nf.format(s.phase+1),nf.format(4),M.phases[s.phase]])};
+    if(v.pct!==shown.pct) num.textContent=v.pct;
+    if(v.clock!==shown.clock) clock.textContent=v.clock;
+    if(v.hz!==shown.hz) hzEl.textContent=v.hz;
+    if(v.phase!==shown.phase) phaseEl.textContent=v.phase;
+    shown=v;
+  }
+  function drop(x,y,s,a,alpha){
+    var c=Math.cos(a), sn=Math.sin(a);
+    g.save(); g.translate(x,y); g.rotate(a); g.globalAlpha=alpha; g.fillStyle="#38D3F7";
+    g.beginPath(); g.moveTo(-s*2,0); g.quadraticCurveTo(-s*.4,-s*1.05,0,-s); g.arc(0,0,s,-Math.PI/2,Math.PI/2); g.quadraticCurveTo(-s*.4,s*1.05,-s*2,0);
+    g.fill(); g.restore();
+  }
+  function draw(s,dt,time){
+    g.clearRect(0,0,560,560);
+    var glow=g.createRadialGradient(C,C,40,C,C,280); glow.addColorStop(0,"rgba(56,211,247,.10)"); glow.addColorStop(1,"rgba(56,211,247,0)");
+    g.fillStyle=glow; g.fillRect(0,0,560,560);
+    /* pressure rings */
+    if(dt>0){ringT+=dt; if(ringT>(s.level>.5?.32:.9)){ringT=0; rings.push({r:CONE+34,a:.42*s.level+.08})}}
+    rings=rings.filter(function(r){r.r+=dt*110; r.a-=dt*.32; return r.a>0&&r.r<280});
+    rings.forEach(function(r){g.strokeStyle="rgba(56,211,247,"+r.a.toFixed(3)+")"; g.lineWidth=3; g.beginPath(); g.arc(C,C,r.r,0,Math.PI*2); g.stroke()});
+    /* progress around the speaker */
+    g.lineWidth=8; g.lineCap="round";
+    g.strokeStyle="rgba(56,211,247,.13)"; g.beginPath(); g.arc(C,C,CONE+22,0,Math.PI*2); g.stroke();
+    if(s.p>0){g.strokeStyle="#38D3F7"; g.beginPath(); g.arc(C,C,CONE+22,-Math.PI/2,-Math.PI/2+Math.PI*2*s.p); g.stroke()}
+    /* speaker cone, moving with the sound */
+    var move=1+(reduce?0:.018*s.level*Math.sin(time*2*Math.PI*9));
+    g.save(); g.translate(C,C); g.scale(move,move);
+    var cone=g.createRadialGradient(-30,-36,10,0,0,CONE); cone.addColorStop(0,"#1B3A57"); cone.addColorStop(1,"#0A1828");
+    g.fillStyle=cone; g.beginPath(); g.arc(0,0,CONE,0,Math.PI*2); g.fill();
+    g.strokeStyle="rgba(150,205,255,.16)"; g.lineWidth=2;
+    [CONE*.74,CONE*.48].forEach(function(r){g.beginPath(); g.arc(0,0,r,0,Math.PI*2); g.stroke()});
+    /* water inside, filling as the session runs (as in the app) */
+    g.save(); g.beginPath(); g.arc(0,0,CONE-3,0,Math.PI*2); g.clip();
+    var level=CONE-(CONE*2)*(.12+.62*s.p), amp=reduce?3:5+4*s.level;
+    var water=g.createLinearGradient(0,level-10,0,CONE); water.addColorStop(0,"rgba(26,143,208,.95)"); water.addColorStop(1,"rgba(12,94,151,.95)");
+    g.fillStyle=water; g.beginPath(); g.moveTo(-CONE,CONE);
+    for(var x=-CONE;x<=CONE;x+=6) g.lineTo(x,level+Math.sin(x*.05+time*4)*amp);
+    g.lineTo(CONE,CONE); g.closePath(); g.fill();
+    if(dt>0&&Math.random()<dt*10) bubbles.push({x:(Math.random()-.5)*CONE*1.4,y:CONE,r:2+Math.random()*4,v:40+Math.random()*60});
+    bubbles=bubbles.filter(function(b){b.y-=b.v*dt; return b.y>level});
+    g.fillStyle="rgba(233,245,252,.35)"; bubbles.forEach(function(b){g.beginPath(); g.arc(b.x,b.y,b.r,0,Math.PI*2); g.fill()});
+    g.restore();
+    g.fillStyle="#132A3F"; g.beginPath(); g.arc(0,0,24,0,Math.PI*2); g.fill();
+    g.strokeStyle="rgba(150,205,255,.22)"; g.beginPath(); g.arc(0,0,24,0,Math.PI*2); g.stroke();
+    g.restore();
+    /* drops pushed out of the grille */
+    if(dt>0&&Math.random()<dt*(10*s.level+1)){
+      var a=-Math.PI/2+(Math.random()-.5)*Math.PI*1.3, sp=150+Math.random()*130;
+      drops.push({x:C+Math.cos(a)*CONE,y:C+Math.sin(a)*CONE,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,s:3+Math.random()*4,life:1});
+    }
+    drops=drops.filter(function(p){p.vy+=330*dt; p.x+=p.vx*dt; p.y+=p.vy*dt; p.life-=dt*.8; return p.life>0&&p.y<560});
+    drops.forEach(function(p){drop(p.x,p.y,p.s,Math.atan2(p.vy,p.vx),Math.max(0,p.life))});
+  }
+  var running=false, visible=true;
+  function frame(now){
+    if(!running) return;
+    var dt=last?Math.min(.05,(now-last)/1000):0; last=now;
+    if(!t0) t0=now;
+    var real=(now-t0)/1000, sec=Math.min(TOTAL,real*SPEED);
+    if(real*SPEED>=TOTAL+HOLD*SPEED){t0=now; rings=[]; drops=[]; bubbles=[]; sec=0}
+    var s=state(sec); text(s); draw(s,dt,real);
+    requestAnimationFrame(frame);
+  }
+  function play(){ if(running||reduce||!visible||d.hidden) return; running=true; last=0; requestAnimationFrame(frame) }
+  function stop(){ running=false }
+  var still=state(12.3); text(still); draw(still,0,.8);
+  if(reduce) return;
+  if("IntersectionObserver" in window) new IntersectionObserver(function(es){visible=es[0].isIntersecting; visible?play():stop()}).observe(phone);
+  d.addEventListener("visibilitychange",function(){d.hidden?stop():play()});
+  play();
+})();
+</script>
+</body>
+</html>
