@@ -1,0 +1,21 @@
+{
+  "name": "SnapSize",
+  "short_name": "SnapSize",
+  "start_url": "/snapsize/",
+  "scope": "/snapsize/",
+  "display": "browser",
+  "background_color": "#1A3AE8",
+  "theme_color": "#1A3AE8",
+  "icons": [
+    {
+      "src": "/snapsize/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/snapsize/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

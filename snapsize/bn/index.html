@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="bn" dir="ltr" class="s-tall">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SnapSize: ছবির সাইজ কমান KB-তে – ফোনেই Photo Compress</title>
+<meta name="description" content="ছবির সাইজ ঠিক ১০০ KB বা ২০০ KB-তে কমান, চাকরির আবেদন, ভর্তি ও অনলাইন ফর্মের জন্য। Resize, Crop, HEIC থেকে JPG। ফ্রি, কোনো আপলোড নেই।">
+<link rel="canonical" href="https://mehmetth.github.io/snapsize/bn/">
+<link rel="alternate" hreflang="en" href="https://mehmetth.github.io/snapsize/">
+<link rel="alternate" hreflang="hi" href="https://mehmetth.github.io/snapsize/hi/">
+<link rel="alternate" hreflang="id" href="https://mehmetth.github.io/snapsize/id/">
+<link rel="alternate" hreflang="pt-BR" href="https://mehmetth.github.io/snapsize/pt-br/">
+<link rel="alternate" hreflang="pt" href="https://mehmetth.github.io/snapsize/pt-br/">
+<link rel="alternate" hreflang="es" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-MX" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-US" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-AR" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-CO" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-CL" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="es-PE" href="https://mehmetth.github.io/snapsize/es/">
+<link rel="alternate" hreflang="tr" href="https://mehmetth.github.io/snapsize/tr/">
+<link rel="alternate" hreflang="ar" href="https://mehmetth.github.io/snapsize/ar/">
+<link rel="alternate" hreflang="ru" href="https://mehmetth.github.io/snapsize/ru/">
+<link rel="alternate" hreflang="vi" href="https://mehmetth.github.io/snapsize/vi/">
+<link rel="alternate" hreflang="bn" href="https://mehmetth.github.io/snapsize/bn/">
+<link rel="alternate" hreflang="de" href="https://mehmetth.github.io/snapsize/de/">
+<link rel="alternate" hreflang="fr" href="https://mehmetth.github.io/snapsize/fr/">
+<link rel="alternate" hreflang="x-default" href="https://mehmetth.github.io/snapsize/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1A3AE8">
+<meta name="author" content="Durusoft">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SnapSize">
+<meta property="og:url" content="https://mehmetth.github.io/snapsize/bn/">
+<meta property="og:title" content="SnapSize – ২০০ KB-এর নিচে ছবি, সরাসরি আপনার ফোনে">
+<meta property="og:description" content="সাইজ বেছে নিন, ছবি নির্বাচন করুন, কাজ শেষ। KB-তে Compress, Resize, তৈরি সাইজে Crop আর HEIC থেকে JPG। ফ্রি এবং ইন্টারনেট ছাড়াই চলে।">
+<meta property="og:image" content="https://mehmetth.github.io/snapsize/assets/og/bn.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="SnapSize – ২০০ KB-এর নিচে ছবি, সরাসরি আপনার ফোনে">
+<meta property="og:locale" content="bn_BD">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SnapSize – ২০০ KB-এর নিচে ছবি, সরাসরি আপনার ফোনে">
+<meta name="twitter:description" content="সাইজ বেছে নিন, ছবি নির্বাচন করুন, কাজ শেষ। KB-তে Compress, Resize, তৈরি সাইজে Crop আর HEIC থেকে JPG। ফ্রি এবং ইন্টারনেট ছাড়াই চলে।">
+<meta name="twitter:image" content="https://mehmetth.github.io/snapsize/assets/og/bn.jpg">
+<link rel="icon" href="/snapsize/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/snapsize/assets/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/snapsize/assets/apple-touch-icon.png">
+<link rel="manifest" href="/snapsize/assets/site.webmanifest">
+<style>/* SnapSize landing — tokens mirror the app's "Tek Cümle" stage (ui/theme/Stage.kt): Cobalt, Sun, Ink */
+:root{
+  --cobalt:#1A3AE8;--sun:#FFD60A;--ink:#0B1033;--ink-muted:#4B5066;--night-sheet:#151C4F;--night-edge:#3A4699;--night-muted:#B7BDE6;
+  --bg:#F5F6FC;--surface:#FFFFFF;--surface-2:#ECEEF9;--text:#0B1033;--text-2:#4B5066;--text-3:#5A5F76;
+  --border:#DADDF0;--brand:#1A3AE8;--brand-text:#1A35D6;--on-brand:#FFFFFF;--brand-soft:#E6EAFD;--brand-line:#BCC6F7;
+  --ok:#0B7A4B;--pro:#7A5A00;--pro-soft:#FFF4C2;
+  --shadow:0 1px 2px rgba(11,16,51,.05),0 8px 24px rgba(11,16,51,.07);
+  --r:20px;--wrap:1160px;
+  --sys:-apple-system,BlinkMacSystemFont,"Segoe UI Variable","Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  --font:"Bricolage",var(--sys);--display:"Bricolage Display","Bricolage",var(--sys);
+  --track:-.015em;--lh-head:1.14;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0B1033;--surface:#151C4F;--surface-2:#10163F;--text:#F3F4FF;--text-2:#B7BDE6;--text-3:#A2A9D9;
+  --border:#2A3373;--brand:#FFD60A;--brand-text:#FFD60A;--on-brand:#0B1033;--brand-soft:#1E2660;--brand-line:#3A4699;
+  --ok:#5BE3A4;--pro:#FFD60A;--pro-soft:#2A2A3F;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.28);
+}}
+/* One family per script, as in the app (ui/theme/Fonts.kt); spacing stays 0 for joined and stacked scripts */
+.s-cyrillic{--font:"Geologica",var(--sys);--display:"Geologica",var(--sys)}
+.s-arabic{--font:"Vazirmatn",var(--sys);--display:"Vazirmatn",var(--sys);--track:0;--lh-head:1.4}
+.s-tall{--font:var(--sys);--display:var(--sys);--track:0;--lh-head:1.45}
+.s-tall body,.s-arabic body{line-height:1.75}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--brand-text)}
+h1,h2,h3{font-family:var(--display);line-height:var(--lh-head);letter-spacing:var(--track);margin:0}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.narrow{max-width:820px}
+.ic{width:20px;height:20px;flex:none}
+.muted{color:var(--text-3)}
+.small{font-size:13px}
+.center{text-align:center}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px;border-radius:6px}
+[dir=rtl] .gal-btn .ic{transform:scaleX(-1)}
+
+/* skip link + language suggestion */
+.skip{position:absolute;inset-inline-start:12px;top:-60px;z-index:100;background:var(--text);color:var(--bg);padding:10px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+.suggest{position:fixed;z-index:60;left:50%;bottom:16px;transform:translateX(-50%);width:max-content;max-width:calc(100% - 32px);display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;padding:12px 18px;padding-inline-end:48px;background:var(--ink);color:#fff;font-size:14px;border-radius:14px;box-shadow:0 12px 32px rgba(0,0,0,.28);animation:rise .35s ease-out}
+@keyframes rise{from{opacity:0;transform:translate(-50%,12px)}}
+@media (prefers-reduced-motion:reduce){.suggest{animation:none}}
+.suggest[hidden]{display:none}
+.suggest a{color:var(--sun);font-weight:700}
+.suggest button{position:absolute;inset-inline-end:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:inherit;padding:8px;cursor:pointer;border-radius:8px;display:flex}
+
+/* header */
+.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);border-bottom:1px solid var(--border)}
+.top-in{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-family:var(--display);font-weight:700;font-size:20px;white-space:nowrap}
+.brand img{border-radius:8px}
+.nav{display:flex;gap:4px;margin-inline-start:auto}
+.nav a{color:var(--text-2);text-decoration:none;font-size:15px;font-weight:600;padding:8px 12px;border-radius:10px;white-space:nowrap}
+.nav a:hover{color:var(--text);background:var(--surface-2)}
+.lang{position:relative}
+.lang summary{list-style:none;display:flex;align-items:center;gap:6px;cursor:pointer;padding:8px 10px;border-radius:10px;color:var(--text-2);font-size:14px;font-weight:600}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary:hover{background:var(--surface-2);color:var(--text)}
+.lang .chev{width:16px;height:16px;transition:transform .2s}
+.lang[open] .chev{transform:rotate(180deg)}
+.lang ul{position:absolute;inset-inline-end:0;top:calc(100% + 6px);width:min(440px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);padding:6px}
+.lang li a{display:block;padding:8px 12px;border-radius:9px;color:var(--text);text-decoration:none;font-size:15px}
+.lang li a:hover{background:var(--surface-2)}
+.lang li a[aria-current]{color:var(--brand-text);font-weight:700;background:var(--brand-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:var(--on-brand);text-decoration:none;font-weight:700;border-radius:12px;padding:12px 18px;white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+.btn-sm{padding:9px 14px;font-size:14px}
+/* Download menu: Android phones go straight to Google Play (main.js) */
+.get{position:relative}
+.get summary{list-style:none;cursor:pointer}
+.get summary::-webkit-details-marker{display:none}
+.get-panel{position:absolute;inset-inline-end:0;top:calc(100% + 8px);width:max-content;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow),0 18px 40px rgba(11,16,51,.14);padding:20px}
+.get-title{font-family:var(--display);font-weight:700;font-size:18px}
+.get-sub{color:var(--text-2);font-size:14px;margin-top:2px}
+.get-panel .stores{margin-top:16px;flex-direction:column;align-items:flex-start;gap:10px}
+.get-panel .soon{color:var(--text-2);border-color:var(--border)}
+@media (max-width:980px){.nav{display:none}.lang{margin-inline-start:auto}}
+@media (max-width:420px){.top .brand span{display:none}.lang ul{grid-template-columns:1fr}}
+
+/* hero: the app's home screen sentence on the Cobalt stage */
+.hero{position:relative;overflow:hidden;color:#fff;background:var(--cobalt);scroll-margin-top:64px}
+.hero::after{content:"";position:absolute;inset:auto -10% -38% 40%;height:70%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,214,10,.16),transparent);pointer-events:none}
+[dir=rtl] .hero::after{inset:auto 40% -38% -10%}
+.hero-in{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:64px;padding-bottom:80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.24);padding:7px 14px;border-radius:999px}
+.eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 4px rgba(255,214,10,.25);flex:none}
+.hero h1{font-size:clamp(44px,6.6vw,84px);font-weight:700;margin:22px 0 22px;text-wrap:balance;line-height:1.08}
+.s-tall .hero h1,.s-arabic .hero h1{line-height:1.45;font-size:clamp(38px,5.6vw,68px)}
+mark{background:var(--sun);color:var(--ink);padding:0 .18em;border-radius:.16em;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:nowrap}
+.slot.pop,.p-slot.pop{animation:pop .32s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.86)}}
+@media (prefers-reduced-motion:reduce){.slot.pop,.p-slot.pop{animation:none}}
+.slot{display:inline-block}
+.keys{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.key{font:inherit;font-weight:700;font-size:16px;color:#fff;background:transparent;border:2px solid rgba(255,255,255,.55);border-radius:14px;padding:10px 18px;cursor:pointer;min-width:96px;transition:background .15s,color .15s,border-color .15s}
+.key:hover{border-color:#fff}
+.key.on{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+@media (max-width:480px){.keys{gap:8px;flex-wrap:nowrap}.key{min-width:0;flex:1;padding:9px 6px;font-size:14.5px;white-space:nowrap}}
+.lead{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:rgba(255,255,255,.9);max-width:580px;text-wrap:pretty}
+.stores{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:30px}
+.store{display:inline-flex;align-items:center;gap:10px;min-width:184px;height:56px;padding-inline:14px 18px;border-radius:14px;background:#000;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.32);transition:transform .15s ease,box-shadow .15s ease}
+a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+.store .logo{width:26px;height:26px;flex:none}
+.store span{display:flex;flex-direction:column;line-height:1.1}
+.store small{font-size:11px;font-weight:500;letter-spacing:.02em;opacity:.9}
+.store b{font-family:var(--sys);font-size:21px;font-weight:600;letter-spacing:-.01em}
+.soon{display:inline-flex;align-items:center;height:56px;padding:0 18px;border-radius:14px;border:1.5px dashed rgba(255,255,255,.5);color:rgba(255,255,255,.92);font-weight:600;font-size:15px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font-size:15px;font-weight:600;color:rgba(255,255,255,.94)}
+.trust li{display:flex;align-items:center;gap:6px}
+.trust .ic{width:18px;height:18px;color:var(--sun);stroke-width:2.6}
+.hero-art{display:flex;justify-content:center}
+@media (max-width:960px){
+  .hero-in{grid-template-columns:1fr;padding-top:44px;padding-bottom:56px;gap:40px;text-align:center}
+  .hero-copy{display:flex;flex-direction:column;align-items:center}
+  .lead{margin:0 auto}.keys,.stores,.trust{justify-content:center}
+}
+
+/* phone mock — the app's home screen (presentation/home/HomeScreen.kt) */
+.phone{width:300px;height:620px;border-radius:46px;padding:10px;background:linear-gradient(145deg,#2a2f45,#070914);box-shadow:0 0 0 2px rgba(255,255,255,.1) inset,0 40px 80px rgba(5,10,40,.5),0 12px 24px rgba(5,10,40,.3);transform:rotate(-3deg)}
+[dir=rtl] .phone{transform:rotate(3deg)}
+.screen{position:relative;height:100%;border-radius:37px;overflow:hidden;background:var(--cobalt);color:#fff;display:flex;flex-direction:column;padding:0 16px;line-height:1.25}
+.screen::before{content:"";position:absolute;top:9px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#000;box-shadow:0 0 0 2px #10161d}
+.status{display:flex;justify-content:space-between;align-items:center;padding:12px 6px 0;font:600 12.5px var(--sys);height:34px;direction:ltr}
+.sig{display:flex;align-items:flex-end;gap:2px;height:11px}
+.sig i{width:3px;background:#fff;border-radius:1px}
+.sig i:nth-child(1){height:4px}.sig i:nth-child(2){height:6px}.sig i:nth-child(3){height:8px}.sig i:nth-child(4){height:11px}
+.p-top{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-family:var(--display);font-size:17px}
+.p-top span{font-size:13px;font-weight:700;font-family:var(--font)}
+.p-sentence{font-family:var(--display);font-weight:700;font-size:33px;line-height:1.12;margin-top:16px;letter-spacing:var(--track)}
+.s-tall .p-sentence,.s-arabic .p-sentence{font-size:27px;line-height:1.5}
+.p-keys{display:flex;gap:6px;margin-top:14px}
+.p-key{flex:1;text-align:center;border:1.5px solid rgba(255,255,255,.55);border-radius:10px;padding:7px 2px;font-size:12px;font-weight:700;white-space:nowrap}
+.p-pick{display:block;margin-top:12px;background:#fff;color:var(--ink);text-align:center;border-radius:16px;padding:12px;font-weight:700;font-size:15px}
+.p-folder{display:block;text-align:center;font-weight:700;font-size:13px;margin-top:10px}
+.p-sheet{margin:auto -16px 0;background:#fff;color:var(--ink);border-radius:26px 26px 0 0;padding:16px 18px 26px}
+.p-tabs{display:flex;gap:6px;font-weight:700;font-size:13px;line-height:1.2;padding-bottom:10px;border-bottom:1px solid #E3E5F2}
+.p-tabs span{flex:1;min-width:0;text-align:center;overflow-wrap:anywhere;hyphens:auto}
+.p-empty{font-family:var(--display);font-weight:700;font-size:16px;margin-top:12px;line-height:1.25}
+.p-body{font-size:11.5px;color:var(--ink-muted);margin-top:6px;line-height:1.4}
+@media (max-width:960px){.phone,[dir=rtl] .phone{transform:none}}
+@media (max-width:380px){.phone{width:276px;height:580px}.p-sentence{font-size:29px}}
+
+/* use cases */
+.uses{padding:44px 0;border-bottom:1px solid var(--border)}
+.uses h2{font-family:var(--font);font-size:15px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-3);text-align:center}
+.s-arabic .uses h2,.s-tall .uses h2{letter-spacing:0}
+.uses ul{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+.uses li{padding:9px 16px;border-radius:999px;background:var(--surface);border:1px solid var(--border);font-weight:600;font-size:15px}
+
+/* sections */
+.sec{padding:96px 0}
+.sec-alt{background:var(--surface-2)}
+.sh{max-width:720px;margin:0 auto 48px;text-align:center}
+.kicker{font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-text);margin-bottom:12px}
+.s-arabic .kicker,.s-tall .kicker{letter-spacing:0}
+.sh h2,.priv h2{font-size:clamp(30px,3.8vw,48px);font-weight:700;text-wrap:balance}
+.sub{font-size:18px;color:var(--text-2);margin-top:16px;text-wrap:pretty}
+.fine{font-size:13.5px;color:var(--text-3);margin-top:28px;max-width:820px}
+.fine.center{margin-left:auto;margin-right:auto}
+@media (max-width:640px){.sec{padding:68px 0}.sh{margin-bottom:36px}}
+
+/* tools */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.card-hl{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand),var(--shadow)}
+.card-ic{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--brand-soft);color:var(--brand-text);margin-bottom:18px}
+.card-ic .ic{width:24px;height:24px}
+.card h3{font-size:21px;font-weight:700;margin-bottom:10px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.card p{color:var(--text-2)}
+.pro-chip{display:inline-flex;align-items:center;gap:4px;font-family:var(--font);font-size:12px;font-weight:700;letter-spacing:0;padding:3px 9px;border-radius:999px;background:var(--pro-soft);color:var(--pro)}
+.pro-chip .ic{width:14px;height:14px}
+@media (max-width:960px){.grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+
+/* ready sizes */
+.sizes-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.sizes-in .sh{text-align:start;margin:0}
+.size-list{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:8px 24px;box-shadow:var(--shadow)}
+.size-list li{display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-bottom:1px solid var(--border);font-weight:600}
+.size-list li:last-child{border-bottom:0}
+.size-list b{font-variant-numeric:tabular-nums;color:var(--text-2);font-weight:700;white-space:nowrap}
+@media (max-width:880px){.sizes-in{grid-template-columns:1fr;gap:32px}.sizes-in .sh{text-align:center}.sizes-in .fine{text-align:center;margin-inline:auto}}
+
+/* gallery */
+.gal{position:relative}
+.gal-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(20px,calc((100vw - var(--wrap))/2 + 20px)) 24px;scrollbar-width:none;overscroll-behavior-x:contain}
+.gal-track::-webkit-scrollbar{display:none}
+.gal-track li{flex:none;width:240px;scroll-snap-align:center}
+.gal-track img{width:100%;height:auto;border-radius:22px;box-shadow:var(--shadow);background:var(--sun)}
+.gal-btn{position:absolute;top:calc(50% - 32px);z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid var(--border);background:var(--surface);color:var(--text);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.gal-btn:disabled{opacity:0;pointer-events:none}
+.gal-btn.prev{inset-inline-start:max(12px,calc((100vw - var(--wrap))/2 - 12px))}
+.gal-btn.next{inset-inline-end:max(12px,calc((100vw - var(--wrap))/2 - 12px))}
+@media (max-width:640px){.gal-btn{display:none}.gal-track li{width:min(230px,64vw)}}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps li{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px}
+.num{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:12px;background:var(--sun);color:var(--ink);font-weight:800;font-size:18px;margin-bottom:18px}
+.steps h3{font-size:21px;font-weight:700;margin-bottom:10px}
+.steps p{color:var(--text-2)}
+@media (min-width:881px){.steps li:not(:last-child)::after{content:"";position:absolute;top:47px;inset-inline-end:-21px;width:22px;height:2px;background:var(--brand-line)}}
+@media (max-width:880px){.steps{grid-template-columns:1fr}}
+
+/* privacy */
+.priv{display:grid;grid-template-columns:auto 1fr 1fr;gap:32px 40px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:28px;padding:44px;box-shadow:var(--shadow)}
+.priv-ic{width:72px;height:72px;border-radius:22px;background:var(--cobalt);color:var(--sun);display:flex;align-items:center;justify-content:center}
+.priv-ic .ic{width:36px;height:36px}
+.priv h2{font-size:clamp(26px,3vw,38px)}
+.priv .sub{font-size:16.5px}
+.priv ul{display:grid;gap:12px}
+.priv li,.plan li{display:flex;gap:10px;align-items:flex-start;font-weight:600}
+.priv li .ic,.plan li .ic{color:var(--brand-text);margin-top:2px;stroke-width:2.4}
+@media (max-width:960px){.priv{grid-template-columns:1fr;padding:32px 24px}}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
+.plan{background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:32px}
+.plan h3{font-size:26px;font-weight:700;display:flex;align-items:center;gap:10px}
+.plan h3 .ic{width:26px;height:26px}
+.plan-tag{color:var(--text-2);margin:6px 0 22px;font-weight:600}
+.plan ul{display:grid;gap:12px}
+.plan li{font-weight:500}
+.plan-pro{border:2px solid var(--sun);background:linear-gradient(180deg,var(--pro-soft),var(--surface) 46%)}
+.plan-pro h3 .ic{color:var(--pro)}
+@media (max-width:760px){.plans{grid-template-columns:1fr}}
+
+/* faq */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:0 22px}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-weight:700;font-size:17.5px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .chev{color:var(--text-3);transition:transform .2s}
+.faq details[open] .chev{transform:rotate(180deg)}
+.faq details p{color:var(--text-2);padding-bottom:22px;margin-top:-4px}
+
+/* final cta: the result screen's yellow stage */
+.cta{position:relative;overflow:hidden;color:var(--ink);background:var(--sun);text-align:center}
+.cta-in{position:relative;display:flex;flex-direction:column;align-items:center;padding-top:88px;padding-bottom:96px}
+.cta img{border-radius:18px;box-shadow:0 12px 30px rgba(11,16,51,.22);margin-bottom:24px}
+.cta h2{font-size:clamp(34px,4.6vw,56px);font-weight:700;text-wrap:balance}
+.cta h2 mark{background:var(--ink);color:var(--sun)}
+.cta p{font-size:19px;color:var(--ink-muted);margin-top:14px;max-width:560px}
+.cta .stores{justify-content:center}
+.cta .store{border-color:transparent}
+.cta .soon{border-color:rgba(11,16,51,.4);color:var(--ink)}
+
+/* footer */
+.foot{padding:64px 0 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr;gap:32px}
+.foot-brand p{color:var(--text-2);margin-top:12px;max-width:280px}
+.foot h2{font-family:var(--font);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.s-arabic .foot h2,.s-tall .foot h2{letter-spacing:0}
+.foot ul{display:grid;gap:10px}
+.foot li{display:flex;flex-wrap:wrap;gap:4px 10px}
+.foot nav a{color:var(--text);text-decoration:none}
+.foot nav a:hover{color:var(--brand-text);text-decoration:underline}
+.foot .small{margin-top:12px}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:24px;border-top:1px solid var(--border);color:var(--text-3);font-size:14px}
+.foot .foot-langs{display:flex;flex-wrap:wrap;gap:6px 16px}
+.foot-langs a{color:var(--text-2);text-decoration:none}
+.foot-langs a:hover{color:var(--brand-text)}
+.foot-langs a[aria-current]{color:var(--text);font-weight:700}
+@media (max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"SnapSize","alternateName":["SnapSize: ছবির সাইজ কমান KB"],"description":"ছবির সাইজ ঠিক ১০০ KB বা ২০০ KB-তে কমান, চাকরির আবেদন, ভর্তি ও অনলাইন ফর্মের জন্য। Resize, Crop, HEIC থেকে JPG। ফ্রি, কোনো আপলোড নেই।","url":"https://mehmetth.github.io/snapsize/bn/","inLanguage":"bn","applicationCategory":"PhotographyApplication","operatingSystem":"Android 8.0+","image":"https://mehmetth.github.io/snapsize/assets/icon-512.png","screenshot":["https://mehmetth.github.io/snapsize/assets/shots/bn/01.webp","https://mehmetth.github.io/snapsize/assets/shots/bn/02.webp","https://mehmetth.github.io/snapsize/assets/shots/bn/03.webp"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"installUrl":"https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&hl=bn","publisher":{"@type":"Organization","name":"Durusoft","url":"https://mehmetth.github.io/","email":"mehmetpetek28@gmail.com","logo":"https://mehmetth.github.io/snapsize/assets/icon-512.png"},"featureList":["ঠিক সাইজে Compress","শুরুর আগেই সাইজ দেখুন","পিক্সেল বা শতাংশে Resize","তৈরি অনুপাতে Crop","HEIC থেকে JPG","অনেক ছবি ও পুরো ফোল্ডার","আসলের জায়গায় রাখুন, Undo সহ","গোছানো ফাইল","হিস্ট্রি, উইজেট, শর্টকাট"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"bn","mainEntity":[{"@type":"Question","name":"ছবি কীভাবে ১০০ KB বা ২০০ KB করব?","acceptedAnswer":{"@type":"Answer","text":"SnapSize খুলুন, ১০০ KB বা ২০০ KB-তে ট্যাপ করুন (অথবা যেকোনো সীমা লিখুন), আপনার ছবি নির্বাচন করুন আর কমপ্রেস-এ ট্যাপ করুন। SnapSize আগে কোয়ালিটি কমায়, দরকার হলেই রেজোলিউশন কমায়। সাইজে পৌঁছানো না গেলে বেশি বড় ফাইল সেভ না করে অ্যাপ আপনাকে জানিয়ে দেয়।"}},{"@type":"Question","name":"SnapSize কি ফ্রি?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ। একবারে ১০টি ছবি পর্যন্ত Compress, Resize, Crop ও Convert ফ্রি, বিজ্ঞাপনসহ। একটি ছবির জন্য নির্দিষ্ট ফাইল সাইজ ফ্রি; অনেক ছবির জন্য একটি ছোট বিজ্ঞাপন দেখুন অথবা Pro নিন। Pro একবারের ঐচ্ছিক কেনাকাটা।"}},{"@type":"Question","name":"আমার ছবি কি কোথাও আপলোড হয়?","acceptedAnswer":{"@type":"Answer","text":"না। সব কাজ আপনার ফোনেই হয় আর আপনার ছবি কোথাও আপলোড হয় না। Compress ইন্টারনেট ছাড়াই চলে; শুধু বিজ্ঞাপন আর কেনাকাটার জন্য সংযোগ লাগে।"}},{"@type":"Question","name":"আমার ছবি কি পরিষ্কার থাকবে?","acceptedAnswer":{"@type":"Answer","text":"সাইজ যতটা অনুমতি দেয়, SnapSize ততটা কোয়ালিটি রাখে: আগে কোয়ালিটি কমায়, দরকার হলেই রেজোলিউশন। শুরুর আগে দেখবেন ফাইল আনুমানিক কত ছোট হবে, তারপর স্লাইডার দিয়ে আগে-পরে তুলনা করবেন।"}},{"@type":"Question","name":"একসাথে অনেক ছবি Compress করা যায়?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ। ফ্রিতে ১০টি বা Pro দিয়ে ১০০টি ছবি পর্যন্ত বেছে নিন, পুরো একটি ফোল্ডার নিন, অথবা গ্যালারি থেকে SnapSize-এ শেয়ার করুন। ছবির ক্রম ঠিক থাকে, আর যেকোনো সময় থামালেও শেষ হওয়া ছবিগুলো হারায় না।"}},{"@type":"Question","name":"SnapSize কি আমার আসল ছবি মুছে দেয় বা বদলায়?","acceptedAnswer":{"@type":"Answer","text":"না। ফলাফল নতুন কপি হিসেবে Pictures/SnapSize-এ সেভ হয় আর আসল ছবি যেমন আছে তেমনই থাকে। জায়গা খালি করতে চাইলে ছোট ছবিটি আসলের জায়গায় রাখতে পারেন আর ফলাফলের স্ক্রিন থেকে Undo করতে পারেন।"}},{"@type":"Question","name":"পাসপোর্ট বা Instagram-এর জন্য ছবি তৈরি করা যায়?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ। পিক্সেলে ঠিক প্রস্থ ও উচ্চতা বা শতাংশ দিয়ে Resize করুন, অথবা তৈরি সাইজ বেছে নিন: Instagram বর্গ ও খাড়া, স্টোরি, Facebook পোস্ট, YouTube থাম্বনেইল, পাসপোর্ট ৩৫×৪৫ মিমি ও ছবি ৫০×৬০ মিমি। এগুলো শুধু মাপ; যেখানে আবেদন করছেন, তাদের নিয়ম দেখে নিন।"}},{"@type":"Question","name":"HEIC থেকে JPG করা যায়?","acceptedAnswer":{"@type":"Answer","text":"হ্যাঁ। SnapSize iPhone-এর HEIC ছবি খোলে আর Android 9 বা নতুন সংস্করণে JPG-তে বদলায়। JPG, PNG ও WEBP-এর মধ্যেও বদলাতে পারেন।"}},{"@type":"Question","name":"তারিখ, ক্যামেরার তথ্য আর লোকেশনের কী হয়?","acceptedAnswer":{"@type":"Answer","text":"প্রতিটি ফলাফল থেকে GPS লোকেশন মুছে ফেলা হয়। তোলার তারিখ ও ক্যামেরার তথ্য রাখবেন কি না, সেটা আপনি ঠিক করেন। Android আসল নাম দিলে ফাইলের নাম সেটাই থাকে, না দিলে তোলার তারিখ।"}},{"@type":"Question","name":"কোন ফোনে চলে? iPhone অ্যাপ আছে?","acceptedAnswer":{"@type":"Answer","text":"SnapSize Android 8.0 বা নতুন সংস্করণের Android ফোন ও ট্যাবলেটে চলে। iPhone সংস্করণ শীঘ্রই আসছে।"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">মূল অংশে যান</a>
+<div class="suggest" id="suggest" hidden></div>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/snapsize/bn/" aria-label="SnapSize">
+      <img src="/snapsize/assets/icon-192.png" width="32" height="32" alt=""><span>SnapSize</span>
+    </a>
+    <nav class="nav" aria-label="SnapSize">
+      <a href="#tools">ফিচার</a>
+      <a href="#sizes">তৈরি সাইজ</a>
+      <a href="#pricing">দাম</a>
+      <a href="#faq">প্রশ্নোত্তর</a>
+    </nav>
+    <details class="lang">
+      <summary aria-label="ভাষা"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>BN</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <ul><li><a href="/snapsize/" hreflang="en" lang="en" dir="ltr">English</a></li><li><a href="/snapsize/hi/" hreflang="hi" lang="hi" dir="ltr">हिन्दी</a></li><li><a href="/snapsize/id/" hreflang="id" lang="id" dir="ltr">Bahasa Indonesia</a></li><li><a href="/snapsize/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr">Português (Brasil)</a></li><li><a href="/snapsize/es/" hreflang="es" lang="es" dir="ltr">Español (Latinoamérica)</a></li><li><a href="/snapsize/tr/" hreflang="tr" lang="tr" dir="ltr">Türkçe</a></li><li><a href="/snapsize/ar/" hreflang="ar" lang="ar" dir="rtl">العربية</a></li><li><a href="/snapsize/ru/" hreflang="ru" lang="ru" dir="ltr">Русский</a></li><li><a href="/snapsize/vi/" hreflang="vi" lang="vi" dir="ltr">Tiếng Việt</a></li><li><a href="/snapsize/bn/" hreflang="bn" lang="bn" dir="ltr" aria-current="page">বাংলা</a></li><li><a href="/snapsize/de/" hreflang="de" lang="de" dir="ltr">Deutsch</a></li><li><a href="/snapsize/fr/" hreflang="fr" lang="fr" dir="ltr">Français</a></li></ul>
+    </details>
+    <details class="get">
+      <summary class="btn btn-sm" data-android="https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&amp;hl=bn">ডাউনলোড</summary>
+      <div class="get-panel"><p class="get-title">SnapSize ফ্রিতে ডাউনলোড করুন</p><p class="get-sub">Android-এ ফ্রি · ইন্টারনেট ছাড়াই চলে</p><div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&amp;hl=bn" aria-label="Google Play থেকে SnapSize ডাউনলোড করুন" data-where="header"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>এটি পান</small><b>Google Play</b></span></a><p class="soon">শীঘ্রই iPhone-এর জন্য আসছে</p></div></div>
+    </details>
+  </div>
+</header>
+<main id="main"><section class="hero" id="download">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow">Android-এ ফ্রি · ইন্টারনেট ছাড়াই চলে</p>
+      <h1>ছবি <mark class="slot">২০০ KB</mark> এর নিচে নামান।</h1>
+      <div class="keys" role="group" aria-label="একটি সাইজ চেষ্টা করুন"><button type="button" class="key" aria-pressed="false" data-size="১০০ KB">১০০ KB</button><button type="button" class="key on" aria-pressed="true" data-size="২০০ KB">২০০ KB</button><button type="button" class="key" aria-pressed="false" data-size="৫০০ KB">৫০০ KB</button><button type="button" class="key" aria-pressed="false" data-size="১ MB">১ MB</button></div>
+      <p class="lead">চাকরির আবেদন বা ভর্তির অনলাইন ফর্মে ছবি নিচ্ছে না, কারণ ফাইল বড়? সাইজ বেছে নিন, ছবি নির্বাচন করুন, কাজ শেষ। SnapSize আগে কোয়ালিটি কমায় আর দরকার হলেই রেজোলিউশন, যাতে ছবি পরিষ্কার থাকে।</p>
+      <div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&amp;hl=bn" aria-label="Google Play থেকে SnapSize ডাউনলোড করুন" data-where="hero"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>এটি পান</small><b>Google Play</b></span></a><p class="soon">শীঘ্রই iPhone-এর জন্য আসছে</p></div>
+      <ul class="trust"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>কোনো আপলোড নেই</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>সাবস্ক্রিপশন নেই</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>আসল ছবি নিরাপদ</li></ul>
+    </div>
+    <div class="hero-art"><div class="phone" aria-hidden="true">
+  <div class="screen">
+    <div class="status"><span>9:41</span><span class="sig"><i></i><i></i><i></i><i></i></span></div>
+    <div class="p-top"><b>SnapSize</b><span>PRO</span></div>
+    <p class="p-sentence">ছবি <mark class="p-slot">২০০ KB</mark> এর নিচে নামান।</p>
+    <div class="p-keys"><span class="p-key">১০০ KB</span><span class="p-key">৫০০ KB</span><span class="p-key">১ MB</span></div>
+    <span class="p-pick">ছবি বেছে নিন</span>
+    <span class="p-folder">পুরো ফোল্ডার বেছে নিন</span>
+    <div class="p-sheet">
+      <div class="p-tabs"><span>ক্রপ</span><span>রিসাইজ</span><span>কনভার্ট</span></div>
+      <p class="p-empty">আপনার প্রথম ছবি বেছে নিন। ফলাফল এখানে দেখা যাবে।</p>
+      <p class="p-body">আসল ছবি বদলায় না। ছোট কপি যায় Pictures/SnapSize-এ।</p>
+    </div>
+  </div>
+</div></div>
+  </div>
+</section>
+<section class="uses" aria-labelledby="uses-t">
+  <div class="wrap"><h2 id="uses-t">প্রতিটি আপলোড সীমার জন্য</h2><ul><li>অনলাইন ফর্ম</li><li>সরকারি চাকরির আবেদন</li><li>ভর্তি ও সিভি</li><li>ইমেইল অ্যাটাচমেন্ট</li><li>পাসপোর্ট ছবি</li><li>প্রোফাইল ছবি</li><li>iPhone-এর HEIC ছবি</li><li>ভরা ফোন মেমোরি</li></ul></div>
+</section>
+<section class="sec" id="tools" aria-labelledby="tools-t">
+  <div class="wrap"><div class="sh"><p class="kicker">এটি কী করে</p><h2 id="tools-t">সব সাইজের ছবির জন্য একটি অ্যাপ</h2><p class="sub">Compress, Resize, Crop আর Convert। সব কাজ আপনার ফোনেই হয়।</p></div><div class="grid"><article class="card card-hl"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1.2"/></svg></div><h3>ঠিক সাইজে Compress</h3><p>৫০ KB, ১০০ KB, ২০০ KB, ৫০০ KB বা ১ MB-তে ট্যাপ করুন, অথবা নিজের সীমা লিখুন। সাইজে পৌঁছানো না গেলে অ্যাপ চুপচাপ বেশি করে না, আপনাকে জানিয়ে দেয়।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="2.8"/></svg></div><h3>শুরুর আগেই সাইজ দেখুন</h3><p>দেখুন আপনার ছবি এখন কত বড় আর আনুমানিক কত ছোট হবে। আগে একটি ছবির প্রিভিউ দেখুন, তারপর স্লাইডার দিয়ে আগে-পরে তুলনা করুন।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><path d="M9 15l6-6M10.5 9H15v4.5"/></svg></div><h3>পিক্সেল বা শতাংশে Resize</h3><p>পিক্সেলে ঠিক প্রস্থ ও উচ্চতা দিন অথবা শতাংশ দিয়ে ছোট করুন। অনুপাত লক করুন, যাতে ছবি বিকৃত না হয়।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 2.5v14a1 1 0 0 0 1 1h14M2.5 6.5h14a1 1 0 0 1 1 1v14"/></svg></div><h3>তৈরি অনুপাতে Crop</h3><p>হাতে Crop করুন অথবা ১:১, ৪:৩, ৩:৪, ১৬:৯, ৩:২ ও ৩৫×৪৫ মিমি ব্যবহার করুন, কিংবা Instagram, পাসপোর্ট ও আরও অনেক কিছুর জন্য তৈরি সাইজ বেছে নিন।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/></svg></div><h3>HEIC থেকে JPG</h3><p>iPhone-এর HEIC ছবি খুলুন আর Android 9 বা নতুন সংস্করণে JPG-তে বদলান। JPG, PNG ও WEBP-এর মধ্যেও বদলান।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="13" height="13" rx="2"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/></svg></div><h3>অনেক ছবি ও পুরো ফোল্ডার</h3><p>অনেক ছবি বা পুরো একটি ফোল্ডার বেছে নিন, অথবা গ্যালারি থেকে শেয়ার করুন। ছবির ক্রম ঠিক থাকে, আর যেকোনো সময় থামাতে পারেন।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8H4V4"/><path d="M4.5 8A8 8 0 1 1 6 17"/></svg></div><h3>আসলের জায়গায় রাখুন, Undo সহ</h3><p>ফলাফল কপি হিসেবে সেভ হয়। জায়গা খালি করতে ছোট ছবিটি আসলের জায়গায় রাখুন, আর ফলাফলের স্ক্রিন থেকে Undo করুন।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 7a1.5 1.5 0 0 1 1.5-1.5h4.2l2 2.2H19a1.5 1.5 0 0 1 1.5 1.5v8.3A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5z"/></svg></div><h3>গোছানো ফাইল</h3><p>স্পষ্ট নামে Pictures/SnapSize-এ সেভ হয়। তোলার তারিখ ও ক্যামেরার তথ্য রাখুন বা মুছুন। Compress কখনো আসলের চেয়ে বড় কপি সেভ করে না।</p></article><article class="card"><div class="card-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div><h3>হিস্ট্রি, উইজেট, শর্টকাট</h3><p>প্রতিটি ফলাফল হিস্ট্রিতে থাকে, ফিল্টার ও একসাথে মোছার সুবিধাসহ। হোম স্ক্রিন উইজেট আজকের সাশ্রয় দেখায়, আর অ্যাপ আইকনে চেপে ধরলে প্রতিটি টুল খোলে।</p></article></div></div>
+</section>
+<section class="sec sec-alt" id="sizes" aria-labelledby="sizes-t">
+  <div class="wrap sizes-in">
+    <div><div class="sh"><p class="kicker">তৈরি সাইজ</p><h2 id="sizes-t">আপনার আপলোডের জন্য সঠিক মাপ</h2><p class="sub">একটি তৈরি সাইজ বেছে নিন, SnapSize ছবিটি সেই আকারে Crop করে ঠিক পিক্সেলে সেট করে।</p></div><p class="fine">এগুলো শুধু মাপ। যেখানে আবেদন করছেন, তাদের নিয়ম অবশ্যই দেখে নিন।</p></div>
+    <ul class="size-list"><li><span>Instagram বর্গ</span><b dir="ltr">১০৮০×১০৮০</b></li><li><span>Instagram খাড়া</span><b dir="ltr">১০৮০×১৩৫০</b></li><li><span>স্টোরি</span><b dir="ltr">১০৮০×১৯২০</b></li><li><span>Facebook পোস্ট</span><b dir="ltr">১২০০×৬৩০</b></li><li><span>YouTube থাম্বনেইল</span><b dir="ltr">১২৮০×৭২০</b></li><li><span>পাসপোর্ট 35×45 মিমি</span><b dir="ltr">৪১৩×৫৩১</b></li><li><span>ছবি 50×60 মিমি</span><b dir="ltr">৫৯১×৭০৯</b></li></ul>
+  </div>
+</section>
+<section class="sec" aria-labelledby="gallery-t">
+  <div class="wrap"><div class="sh"><p class="kicker">এক নজরে</p><h2 id="gallery-t">একই ছবি। ছোট ফাইল।</h2></div></div>
+  <div class="gal">
+    <button class="gal-btn prev" type="button" aria-label="আগের স্ক্রিনশট"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></button>
+    <ul class="gal-track" tabindex="0" aria-labelledby="gallery-t"><li><img src="/snapsize/assets/shots/bn/01.webp" width="540" height="960" alt="একই ছবি, ছোট ফাইল: আগে ৫.১ MB, পরে ১৯৪ KB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/02.webp" width="540" height="960" alt="ঠিক সাইজে পৌঁছান: ৫০ KB থেকে ১ MB পর্যন্ত দ্রুত লক্ষ্য" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/03.webp" width="540" height="960" alt="Pro দিয়ে একবারে ১০০টি ছবি পর্যন্ত" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/04.webp" width="540" height="960" alt="আপনার আপলোডের জন্য তৈরি সাইজ, Instagram থেকে পাসপোর্ট ছবি পর্যন্ত" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/05.webp" width="540" height="960" alt="আসলের জায়গায় রেখে জায়গা খালি করুন, Undo সহ" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/06.webp" width="540" height="960" alt="আপনার ছবি আপনার ফোনেই থাকে: কিছুই আপলোড হয় না" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/bn/07.webp" width="540" height="960" alt="iPhone-এর HEIC ছবিকে JPG, PNG বা WEBP-তে বদলান" loading="lazy" decoding="async"></li></ul>
+    <button class="gal-btn next" type="button" aria-label="পরের স্ক্রিনশট"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></svg></button>
+  </div>
+</section>
+<section class="sec sec-alt" id="how" aria-labelledby="how-t">
+  <div class="wrap"><div class="sh"><p class="kicker">কীভাবে কাজ করে</p><h2 id="how-t">তিন ট্যাপে ছোট ছবি</h2></div><ol class="steps"><li><span class="num">১</span><h3>সাইজ বেছে নিন</h3><p>১০০ KB, ২০০ KB, ৫০০ KB বা ১ MB-তে ট্যাপ করুন, অথবা ফর্মে চাওয়া সীমা লিখুন।</p></li><li><span class="num">২</span><h3>ছবি নির্বাচন করুন</h3><p>একটি ছবি, কয়েকটি, বা পুরো একটি ফোল্ডার। চাইলে আগে প্রিভিউ দেখুন।</p></li><li><span class="num">৩</span><h3>শেয়ার বা সেভ করুন</h3><p>ছোট কপিটি Pictures/SnapSize-এ সেভ হয়। সঙ্গে সঙ্গে শেয়ার করুন বা গ্যালারিতে খুলুন।</p></li></ol>
+  <p class="fine center">আপনি বদলানো বেছে না নিলে আপনার আসল ছবি যেমন আছে তেমনই থাকে।</p></div>
+</section>
+<section class="sec" aria-labelledby="privacy-t">
+  <div class="wrap"><div class="priv">
+    <div class="priv-ic"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8.3 7 9.5 4-1.2 7-5.1 7-9.5V6z"/><path d="m9 12 2.2 2.2L15.5 10"/></svg></div>
+    <div><p class="kicker">শুরু থেকেই গোপনীয়</p><h2 id="privacy-t">আপনার ছবি কখনো ফোনের বাইরে যায় না</h2><p class="sub">সব কাজ আপনার ডিভাইসেই হয়, আর Compress ইন্টারনেট ছাড়াই চলে। শুধু বিজ্ঞাপন আর কেনাকাটার জন্য সংযোগ লাগে।</p></div>
+    <ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>কিছুই আপলোড হয় না</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>ইন্টারনেট ছাড়াই চলে</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>প্রতিটি ফলাফল থেকে GPS লোকেশন মুছে যায়</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>তারিখ ও ক্যামেরার তথ্য রাখুন বা মুছুন</li></ul>
+  </div></div>
+</section>
+<section class="sec sec-alt" id="pricing" aria-labelledby="pricing-t">
+  <div class="wrap"><div class="sh"><p class="kicker">দাম</p><h2 id="pricing-t">ব্যবহার ফ্রি। Pro একবার, চিরকালের জন্য।</h2></div>
+  <div class="plans">
+    <article class="plan"><h3>ফ্রি</h3><p class="plan-tag">কখনো সাবস্ক্রিপশন নেই</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>Compress, Resize, Crop ও Convert</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>একবারে ১০টি ছবি পর্যন্ত</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>একটি ছবির জন্য নির্দিষ্ট ফাইল সাইজ</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>অনেক ছবির জন্য নির্দিষ্ট সাইজ: একটি ছোট বিজ্ঞাপন দেখুন</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>তৈরি সাইজ, HEIC থেকে JPG, হিস্ট্রি ও উইজেট</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>বিজ্ঞাপনের মাধ্যমে চলে</li></ul></article>
+    <article class="plan plan-pro"><h3><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8l4 4 4-6 4 6 4-4-1.5 10h-13z"/></svg>Pro</h3><p class="plan-tag">একবার পেমেন্ট</p><ul><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>বিজ্ঞাপন নেই</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>একবারে ১০০টি ছবি পর্যন্ত</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>অনেক ছবির জন্য নির্দিষ্ট ফাইল সাইজ</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.2 4.2L19 7"/></svg>ফ্রি সংস্করণের সবকিছু</li></ul></article>
+  </div>
+  <p class="fine center">Pro একবারের কেনাকাটা, সাবস্ক্রিপশন নয়। দাম Google Play-তে আপনার স্থানীয় মুদ্রায় দেখানো হয়।</p></div>
+</section>
+<section class="sec" id="faq" aria-labelledby="faq-t">
+  <div class="wrap narrow"><div class="sh"><p class="kicker">প্রশ্নোত্তর</p><h2 id="faq-t">সাধারণ প্রশ্ন</h2></div><div class="faq"><details open><summary>ছবি কীভাবে ১০০ KB বা ২০০ KB করব?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>SnapSize খুলুন, ১০০ KB বা ২০০ KB-তে ট্যাপ করুন (অথবা যেকোনো সীমা লিখুন), আপনার ছবি নির্বাচন করুন আর কমপ্রেস-এ ট্যাপ করুন। SnapSize আগে কোয়ালিটি কমায়, দরকার হলেই রেজোলিউশন কমায়। সাইজে পৌঁছানো না গেলে বেশি বড় ফাইল সেভ না করে অ্যাপ আপনাকে জানিয়ে দেয়।</p></details><details><summary>SnapSize কি ফ্রি?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>হ্যাঁ। একবারে ১০টি ছবি পর্যন্ত Compress, Resize, Crop ও Convert ফ্রি, বিজ্ঞাপনসহ। একটি ছবির জন্য নির্দিষ্ট ফাইল সাইজ ফ্রি; অনেক ছবির জন্য একটি ছোট বিজ্ঞাপন দেখুন অথবা Pro নিন। Pro একবারের ঐচ্ছিক কেনাকাটা।</p></details><details><summary>আমার ছবি কি কোথাও আপলোড হয়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>না। সব কাজ আপনার ফোনেই হয় আর আপনার ছবি কোথাও আপলোড হয় না। Compress ইন্টারনেট ছাড়াই চলে; শুধু বিজ্ঞাপন আর কেনাকাটার জন্য সংযোগ লাগে।</p></details><details><summary>আমার ছবি কি পরিষ্কার থাকবে?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>সাইজ যতটা অনুমতি দেয়, SnapSize ততটা কোয়ালিটি রাখে: আগে কোয়ালিটি কমায়, দরকার হলেই রেজোলিউশন। শুরুর আগে দেখবেন ফাইল আনুমানিক কত ছোট হবে, তারপর স্লাইডার দিয়ে আগে-পরে তুলনা করবেন।</p></details><details><summary>একসাথে অনেক ছবি Compress করা যায়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>হ্যাঁ। ফ্রিতে ১০টি বা Pro দিয়ে ১০০টি ছবি পর্যন্ত বেছে নিন, পুরো একটি ফোল্ডার নিন, অথবা গ্যালারি থেকে SnapSize-এ শেয়ার করুন। ছবির ক্রম ঠিক থাকে, আর যেকোনো সময় থামালেও শেষ হওয়া ছবিগুলো হারায় না।</p></details><details><summary>SnapSize কি আমার আসল ছবি মুছে দেয় বা বদলায়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>না। ফলাফল নতুন কপি হিসেবে Pictures/SnapSize-এ সেভ হয় আর আসল ছবি যেমন আছে তেমনই থাকে। জায়গা খালি করতে চাইলে ছোট ছবিটি আসলের জায়গায় রাখতে পারেন আর ফলাফলের স্ক্রিন থেকে Undo করতে পারেন।</p></details><details><summary>পাসপোর্ট বা Instagram-এর জন্য ছবি তৈরি করা যায়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>হ্যাঁ। পিক্সেলে ঠিক প্রস্থ ও উচ্চতা বা শতাংশ দিয়ে Resize করুন, অথবা তৈরি সাইজ বেছে নিন: Instagram বর্গ ও খাড়া, স্টোরি, Facebook পোস্ট, YouTube থাম্বনেইল, পাসপোর্ট ৩৫×৪৫ মিমি ও ছবি ৫০×৬০ মিমি। এগুলো শুধু মাপ; যেখানে আবেদন করছেন, তাদের নিয়ম দেখে নিন।</p></details><details><summary>HEIC থেকে JPG করা যায়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>হ্যাঁ। SnapSize iPhone-এর HEIC ছবি খোলে আর Android 9 বা নতুন সংস্করণে JPG-তে বদলায়। JPG, PNG ও WEBP-এর মধ্যেও বদলাতে পারেন।</p></details><details><summary>তারিখ, ক্যামেরার তথ্য আর লোকেশনের কী হয়?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>প্রতিটি ফলাফল থেকে GPS লোকেশন মুছে ফেলা হয়। তোলার তারিখ ও ক্যামেরার তথ্য রাখবেন কি না, সেটা আপনি ঠিক করেন। Android আসল নাম দিলে ফাইলের নাম সেটাই থাকে, না দিলে তোলার তারিখ।</p></details><details><summary>কোন ফোনে চলে? iPhone অ্যাপ আছে?<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary><p>SnapSize Android 8.0 বা নতুন সংস্করণের Android ফোন ও ট্যাবলেটে চলে। iPhone সংস্করণ শীঘ্রই আসছে।</p></details></div></div>
+</section>
+<section class="cta" aria-labelledby="cta-t">
+  <div class="wrap cta-in">
+    <img src="/snapsize/assets/icon-192.png" width="72" height="72" alt="" loading="lazy">
+    <h2 id="cta-t">আপনার পরের আপলোড, <mark>সীমার মধ্যে</mark>।</h2><p>SnapSize ফ্রিতে ডাউনলোড করুন আর কয়েক সেকেন্ডে প্রথম ছবিটি সঠিক সাইজে আনুন।</p>
+    <div class="stores"><a class="store store-google" href="https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&amp;hl=bn" aria-label="Google Play থেকে SnapSize ডাউনলোড করুন" data-where="cta"><svg class="logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="#00D7FE" d="M1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087z"/><path fill="#FFCE00" d="m22.018 13.298-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594z"/><path fill="#00F076" d="m13.544 10.989 3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179z"/><path fill="#FF3A44" d="m13.544 13.056-11 10.933c.298.036.612-.016.906-.183l13.324-7.54z"/></svg><span><small>এটি পান</small><b>Google Play</b></span></a><p class="soon">শীঘ্রই iPhone-এর জন্য আসছে</p></div>
+  </div>
+</section>
+</main><footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="/snapsize/bn/"><img src="/snapsize/assets/icon-192.png" width="32" height="32" alt="" loading="lazy"><span>SnapSize</span></a>
+        <p>ছবি Compress ও Resize করার অ্যাপ, যা আপনার ফোনেই চলে।</p>
+      </div>
+      <nav aria-label="অ্যাপ"><h2>অ্যাপ</h2><ul>
+        <li><a href="#tools">ফিচার</a></li><li><a href="#sizes">তৈরি সাইজ</a></li>
+        <li><a href="#pricing">দাম</a></li><li><a href="#faq">প্রশ্নোত্তর</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.durusoft.snapsize.photo.compressor.resizer&amp;hl=bn">Google Play</a></li><li><span class="muted">শীঘ্রই iPhone-এর জন্য আসছে</span></li></ul></nav>
+      <nav aria-label="আইনি"><h2>আইনি</h2><ul>
+        <li><a href="/snapsize_privacy_policy.html" hreflang="en">গোপনীয়তা নীতি</a></li>
+        <li><a href="/snapsize_terms_and_conditions.html" hreflang="en">শর্তাবলি</a></li></ul>
+        <p class="muted small">আইনি নথিগুলো ইংরেজিতে আছে।</p></nav>
+      <nav aria-label="সাহায্য"><h2>সাহায্য</h2><ul>
+        <li><a href="mailto:mehmetpetek28@gmail.com">যোগাযোগ করুন</a></li>
+        <li><span class="muted">mehmetpetek28@gmail.com</span></li></ul></nav>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 Durusoft. সর্বস্বত্ব সংরক্ষিত।</p>
+      <ul class="foot-langs" aria-label="ভাষা"><li><a href="/snapsize/" hreflang="en" lang="en" dir="ltr">English</a></li><li><a href="/snapsize/hi/" hreflang="hi" lang="hi" dir="ltr">हिन्दी</a></li><li><a href="/snapsize/id/" hreflang="id" lang="id" dir="ltr">Bahasa Indonesia</a></li><li><a href="/snapsize/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr">Português (Brasil)</a></li><li><a href="/snapsize/es/" hreflang="es" lang="es" dir="ltr">Español (Latinoamérica)</a></li><li><a href="/snapsize/tr/" hreflang="tr" lang="tr" dir="ltr">Türkçe</a></li><li><a href="/snapsize/ar/" hreflang="ar" lang="ar" dir="rtl">العربية</a></li><li><a href="/snapsize/ru/" hreflang="ru" lang="ru" dir="ltr">Русский</a></li><li><a href="/snapsize/vi/" hreflang="vi" lang="vi" dir="ltr">Tiếng Việt</a></li><li><a href="/snapsize/bn/" hreflang="bn" lang="bn" dir="ltr" aria-current="page">বাংলা</a></li><li><a href="/snapsize/de/" hreflang="de" lang="de" dir="ltr">Deutsch</a></li><li><a href="/snapsize/fr/" hreflang="fr" lang="fr" dir="ltr">Français</a></li></ul>
+    </div>
+  </div>
+</footer>
+<script>var SNAPSIZE={"cur":"bn","langs":{"en":{"url":"/snapsize/","msg":"This page is also available in English.","go":"Switch","close":"Close","dir":"ltr"},"hi":{"url":"/snapsize/hi/","msg":"यह पेज हिन्दी में भी उपलब्ध है।","go":"बदलें","close":"बंद करें","dir":"ltr"},"id":{"url":"/snapsize/id/","msg":"Halaman ini juga tersedia dalam Bahasa Indonesia.","go":"Ganti","close":"Tutup","dir":"ltr"},"pt-BR":{"url":"/snapsize/pt-br/","msg":"Esta página também está em português.","go":"Mudar","close":"Fechar","dir":"ltr"},"es":{"url":"/snapsize/es/","msg":"Esta página también está en español.","go":"Cambiar","close":"Cerrar","dir":"ltr"},"tr":{"url":"/snapsize/tr/","msg":"Bu sayfa Türkçe olarak da var.","go":"Geç","close":"Kapat","dir":"ltr"},"ar":{"url":"/snapsize/ar/","msg":"هذه الصفحة متوفرة أيضًا بالعربية.","go":"انتقل","close":"إغلاق","dir":"rtl"},"ru":{"url":"/snapsize/ru/","msg":"Эта страница есть и на русском языке.","go":"Перейти","close":"Закрыть","dir":"ltr"},"vi":{"url":"/snapsize/vi/","msg":"Trang này cũng có bằng tiếng Việt.","go":"Chuyển","close":"Đóng","dir":"ltr"},"bn":{"url":"/snapsize/bn/","msg":"এই পাতাটি বাংলাতেও আছে।","go":"বদলান","close":"বন্ধ করুন","dir":"ltr"},"de":{"url":"/snapsize/de/","msg":"Diese Seite gibt es auch auf Deutsch.","go":"Wechseln","close":"Schließen","dir":"ltr"},"fr":{"url":"/snapsize/fr/","msg":"Cette page existe aussi en français.","go":"Changer","close":"Fermer","dir":"ltr"}}};(function(){
+  var d=document, root=d.documentElement, S=window.SNAPSIZE, ua=navigator.userAgent||"";
+  if(/android/i.test(ua)) root.classList.add("is-android");
+
+  /* Offer (never force) the visitor's language: no redirects, so every URL stays crawlable */
+  function store(k,v){try{return v===undefined?localStorage.getItem(k):localStorage.setItem(k,v)}catch(e){return null}}
+  function pick(){
+    var want=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||""]);
+    var have=Object.keys(S.langs), low={};
+    have.forEach(function(h){low[h.toLowerCase()]=h});
+    for(var i=0;i<want.length;i++){
+      var w=(want[i]||"").toLowerCase(), base=w.split("-")[0];
+      if(low[w]) return low[w];
+      if(base==="pt") return w==="pt-pt"?null:"pt-BR";
+      if(base==="es") return w==="es-es"?null:"es";
+      if(base==="in") return "id";
+      if(low[base]) return low[base];
+    }
+    return null;
+  }
+  var best=pick(), box=d.getElementById("suggest");
+  if(box&&best&&best!==S.cur&&!store("snapsize-lang-dismissed")){
+    var L=S.langs[best];
+    box.setAttribute("lang",best); box.setAttribute("dir",L.dir);
+    box.innerHTML='<span></span><a></a><button type="button"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>';
+    box.firstChild.textContent=L.msg;
+    var a=box.querySelector("a"); a.textContent=L.go+(L.dir==="rtl"?" ←":" →"); a.href=L.url; a.hreflang=best;
+    var b=box.querySelector("button"); b.setAttribute("aria-label",L.close);
+    b.onclick=function(){box.hidden=true;store("snapsize-lang-dismissed","1")};
+    box.hidden=false;
+  }
+
+  /* Header menus (language, download): one open at a time, close on outside click / Escape */
+  var menus=[].slice.call(d.querySelectorAll(".top details"));
+  menus.forEach(function(m){m.addEventListener("toggle",function(){if(m.open)menus.forEach(function(o){if(o!==m)o.open=false})})});
+  d.addEventListener("click",function(ev){menus.forEach(function(m){if(m.open&&!m.contains(ev.target))m.open=false})});
+  d.addEventListener("keydown",function(ev){if(ev.key!=="Escape")return;menus.forEach(function(m){if(m.open){m.open=false;m.querySelector("summary").focus()}})});
+
+  /* Download: Android phones go straight to Google Play; everyone else gets the panel */
+  var get=d.querySelector(".get summary");
+  if(get&&/android/i.test(ua)){
+    var target=get.getAttribute("data-android");
+    get.addEventListener("click",function(ev){ev.preventDefault();location.href=target});
+  }
+
+  /* Screenshot gallery arrows (scroll direction follows the page direction) */
+  var track=d.querySelector(".gal-track"), prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
+  if(track&&prev&&next){
+    var rtl=root.dir==="rtl", sign=rtl?-1:1;
+    var step=function(){var li=track.querySelector("li");return li?li.getBoundingClientRect().width+20:260};
+    var sync=function(){var x=Math.abs(track.scrollLeft);prev.disabled=x<8;next.disabled=x+track.clientWidth>=track.scrollWidth-8};
+    prev.onclick=function(){track.scrollBy({left:-sign*step()*2,behavior:"smooth"})};
+    next.onclick=function(){track.scrollBy({left:sign*step()*2,behavior:"smooth"})};
+    track.addEventListener("scroll",sync,{passive:true}); window.addEventListener("resize",sync); sync();
+  }
+
+  /* Hero: the size keys change the sentence, as the quick targets do on the app's home screen */
+  var keys=[].slice.call(d.querySelectorAll(".keys .key")), slots=[].slice.call(d.querySelectorAll(".slot, .p-slot"));
+  var pkeys=[].slice.call(d.querySelectorAll(".p-key"));
+  function choose(k){
+    var size=k.getAttribute("data-size");
+    keys.forEach(function(o){var on=o===k;o.classList.toggle("on",on);o.setAttribute("aria-pressed",on?"true":"false")});
+    slots.forEach(function(s){s.textContent=size;s.classList.remove("pop");void s.offsetWidth;s.classList.add("pop")});
+    /* the phone shows the other three sizes as its keys, like the app */
+    var rest=keys.filter(function(o){return o!==k});
+    pkeys.forEach(function(p,i){if(rest[i])p.textContent=rest[i].getAttribute("data-size")});
+  }
+  keys.forEach(function(k){k.addEventListener("click",function(){choose(k)})});
+})();
+</script>
+</body>
+</html>
