@@ -251,6 +251,11 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
 
 /* gallery */
 .gal{position:relative}
+.gal-tabs{display:flex;gap:4px;width:max-content;margin:24px auto 0;padding:4px;border-radius:999px;background:var(--surface);border:1px solid var(--border)}
+.gal-tab{font:inherit;font-weight:700;font-size:15px;min-height:44px;padding:0 22px;border:0;border-radius:999px;background:transparent;color:var(--text-2);cursor:pointer}
+.gal-tab[aria-selected=true]{background:var(--brand);color:var(--on-brand)}
+.gal-tab:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.gal-track[hidden]{display:none}
 .gal-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(20px,calc((100vw - var(--wrap))/2 + 20px)) 24px;scrollbar-width:none;overscroll-behavior-x:contain}
 .gal-track::-webkit-scrollbar{display:none}
 .gal-track li{flex:none;width:240px;scroll-snap-align:center}
@@ -399,10 +404,12 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
   </div>
 </section>
 <section class="sec" aria-labelledby="gallery-t">
-  <div class="wrap"><div class="sh"><p class="kicker">Ein Blick in die App</p><h2 id="gallery-t">Gleiches Foto. Kleinere Datei.</h2></div></div>
+  <div class="wrap"><div class="sh"><p class="kicker">Ein Blick in die App</p><h2 id="gallery-t">Gleiches Foto. Kleinere Datei.</h2></div>
+  <div class="gal-tabs" role="tablist" aria-label="Ein Blick in die App"><button class="gal-tab" type="button" role="tab" id="tab-android" aria-controls="gal-android" aria-selected="true">Android</button><button class="gal-tab" type="button" role="tab" id="tab-iphone" aria-controls="gal-iphone" aria-selected="false" tabindex="-1">iPhone</button></div></div>
   <div class="gal">
     <button class="gal-btn prev" type="button" aria-label="Vorheriger Screenshot"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></button>
-    <ul class="gal-track" tabindex="0" aria-labelledby="gallery-t"><li><img src="/snapsize/assets/shots/de/01.webp" width="540" height="960" alt="Gleiches Foto, kleinere Datei: vorher 5,1 MB, nachher 194 KB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/02.webp" width="540" height="960" alt="Exakte Größe treffen: Schnellziele von 50 KB bis 1 MB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/03.webp" width="540" height="960" alt="Mit Pro bis zu 100 Fotos auf einmal" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/04.webp" width="540" height="960" alt="Fertige Größen für deine Uploads, von Instagram bis Passfoto" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/05.webp" width="540" height="960" alt="Speicher freigeben durch Ersetzen der Originale, mit Rückgängig" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/06.webp" width="540" height="960" alt="Deine Fotos bleiben auf dem Handy: nichts wird hochgeladen" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/07.webp" width="540" height="960" alt="HEIC-Fotos vom iPhone in JPG, PNG oder WEBP umwandeln" loading="lazy" decoding="async"></li></ul>
+    <ul class="gal-track" id="gal-android" role="tabpanel" aria-labelledby="tab-android" tabindex="0"><li><img src="/snapsize/assets/shots/de/01.webp" width="540" height="960" alt="Gleiches Foto, kleinere Datei: vorher 5,1 MB, nachher 194 KB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/02.webp" width="540" height="960" alt="Exakte Größe treffen: Schnellziele von 50 KB bis 1 MB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/03.webp" width="540" height="960" alt="Mit Pro bis zu 100 Fotos auf einmal" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/04.webp" width="540" height="960" alt="Fertige Größen für deine Uploads, von Instagram bis Passfoto" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/05.webp" width="540" height="960" alt="Speicher freigeben durch Ersetzen der Originale, mit Rückgängig" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/06.webp" width="540" height="960" alt="Deine Fotos bleiben auf dem Handy: nichts wird hochgeladen" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/de/07.webp" width="540" height="960" alt="HEIC-Fotos vom iPhone in JPG, PNG oder WEBP umwandeln" loading="lazy" decoding="async"></li></ul>
+    <ul class="gal-track" id="gal-iphone" role="tabpanel" aria-labelledby="tab-iphone" tabindex="0" hidden><li><img src="/snapsize/assets/shots-ios/de/01.webp" width="540" height="1174" alt="Fotos unter 200 KB bringen. Formular, E-Mail, Bewerbung: Limit wählen, fertig." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/de/02.webp" width="540" height="1174" alt="10 Fotos auf einmal verkleinern. Alle erreichen das Ziel und behalten ihre Reihenfolge." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/de/03.webp" width="540" height="1174" alt="Fertige Größen. Nur Maße. Prüfe die Vorgaben der Stelle, bei der du dich bewirbst." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/de/04.webp" width="540" height="1174" alt="Zuschneiden, skalieren, JPEG daraus machen. Alles an einem Ort, in einem Satz." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/de/05.webp" width="540" height="1174" alt="Dein Original bleibt. Fotos verlassen dein Handy nie. Der Standort wird entfernt." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/de/06.webp" width="540" height="1174" alt="Einmal zahlen. Kein Abo, keine Verlängerung." loading="lazy" decoding="async"></li></ul>
     <button class="gal-btn next" type="button" aria-label="Nächster Screenshot"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></svg></button>
   </div>
 </section>
@@ -509,15 +516,33 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
     if(target) get.addEventListener("click",function(ev){ev.preventDefault();location.href=target});
   }
 
-  /* Screenshot gallery arrows (scroll direction follows the page direction) */
-  var track=d.querySelector(".gal-track"), prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
-  if(track&&prev&&next){
+  /* Screenshot gallery: Android / iPhone tabs (iPhone and iPad open on the iPhone set) and arrows for the visible
+     set (scroll direction follows the page direction) */
+  var tracks=[].slice.call(d.querySelectorAll(".gal-track")), tabs=[].slice.call(d.querySelectorAll(".gal-tab"));
+  var prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
+  if(tracks.length&&prev&&next){
     var rtl=root.dir==="rtl", sign=rtl?-1:1;
-    var step=function(){var li=track.querySelector("li");return li?li.getBoundingClientRect().width+20:260};
-    var sync=function(){var x=Math.abs(track.scrollLeft);prev.disabled=x<8;next.disabled=x+track.clientWidth>=track.scrollWidth-8};
-    prev.onclick=function(){track.scrollBy({left:-sign*step()*2,behavior:"smooth"})};
-    next.onclick=function(){track.scrollBy({left:sign*step()*2,behavior:"smooth"})};
-    track.addEventListener("scroll",sync,{passive:true}); window.addEventListener("resize",sync); sync();
+    var shown=function(){return tracks.filter(function(t){return !t.hidden})[0]||tracks[0]};
+    var step=function(){var li=shown().querySelector("li");return li?li.getBoundingClientRect().width+20:260};
+    var sync=function(){var t=shown(),x=Math.abs(t.scrollLeft);prev.disabled=x<8;next.disabled=x+t.clientWidth>=t.scrollWidth-8};
+    prev.onclick=function(){shown().scrollBy({left:-sign*step()*2,behavior:"smooth"})};
+    next.onclick=function(){shown().scrollBy({left:sign*step()*2,behavior:"smooth"})};
+    tracks.forEach(function(t){t.addEventListener("scroll",sync,{passive:true})});
+    window.addEventListener("resize",sync);
+    var pick=function(tab,focus){
+      tabs.forEach(function(b){var on=b===tab;b.setAttribute("aria-selected",on?"true":"false");b.tabIndex=on?0:-1;
+        var panel=d.getElementById(b.getAttribute("aria-controls"));if(panel){panel.hidden=!on;if(on)panel.scrollLeft=0}});
+      if(focus)tab.focus();sync();
+    };
+    tabs.forEach(function(b,i){
+      b.addEventListener("click",function(){pick(b)});
+      b.addEventListener("keydown",function(ev){
+        var k=ev.key,n=tabs.length,j=k==="ArrowRight"?(rtl?i-1:i+1):k==="ArrowLeft"?(rtl?i+1:i-1):k==="Home"?0:k==="End"?n-1:null;
+        if(j===null)return;ev.preventDefault();pick(tabs[(j+n)%n],true);
+      });
+    });
+    var iphone=d.getElementById("tab-iphone");
+    if(ios&&iphone)pick(iphone);else sync();
   }
 
   /* Hero: the size keys change the sentence, as the quick targets do on the app's home screen */

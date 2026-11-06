@@ -251,6 +251,11 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
 
 /* gallery */
 .gal{position:relative}
+.gal-tabs{display:flex;gap:4px;width:max-content;margin:24px auto 0;padding:4px;border-radius:999px;background:var(--surface);border:1px solid var(--border)}
+.gal-tab{font:inherit;font-weight:700;font-size:15px;min-height:44px;padding:0 22px;border:0;border-radius:999px;background:transparent;color:var(--text-2);cursor:pointer}
+.gal-tab[aria-selected=true]{background:var(--brand);color:var(--on-brand)}
+.gal-tab:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.gal-track[hidden]{display:none}
 .gal-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px max(20px,calc((100vw - var(--wrap))/2 + 20px)) 24px;scrollbar-width:none;overscroll-behavior-x:contain}
 .gal-track::-webkit-scrollbar{display:none}
 .gal-track li{flex:none;width:240px;scroll-snap-align:center}
@@ -399,10 +404,12 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
   </div>
 </section>
 <section class="sec" aria-labelledby="gallery-t">
-  <div class="wrap"><div class="sh"><p class="kicker">Lihat sekilas</p><h2 id="gallery-t">Foto yang sama. File lebih kecil.</h2></div></div>
+  <div class="wrap"><div class="sh"><p class="kicker">Lihat sekilas</p><h2 id="gallery-t">Foto yang sama. File lebih kecil.</h2></div>
+  <div class="gal-tabs" role="tablist" aria-label="Lihat sekilas"><button class="gal-tab" type="button" role="tab" id="tab-android" aria-controls="gal-android" aria-selected="true">Android</button><button class="gal-tab" type="button" role="tab" id="tab-iphone" aria-controls="gal-iphone" aria-selected="false" tabindex="-1">iPhone</button></div></div>
   <div class="gal">
     <button class="gal-btn prev" type="button" aria-label="Tangkapan layar sebelumnya"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg></button>
-    <ul class="gal-track" tabindex="0" aria-labelledby="gallery-t"><li><img src="/snapsize/assets/shots/id/01.webp" width="540" height="960" alt="Foto yang sama, file lebih kecil: 5,1 MB sebelum, 194 KB sesudah" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/02.webp" width="540" height="960" alt="Pas di ukuran yang diminta: target cepat dari 50 KB sampai 1 MB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/03.webp" width="540" height="960" alt="Hingga 100 foto sekaligus dengan Pro" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/04.webp" width="540" height="960" alt="Ukuran siap pakai untuk unggahan, dari Instagram sampai pas foto paspor" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/05.webp" width="540" height="960" alt="Kosongkan memori dengan mengganti foto asli, bisa dibatalkan" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/06.webp" width="540" height="960" alt="Foto kamu tetap di HP: tidak ada yang diunggah" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/07.webp" width="540" height="960" alt="Ubah foto HEIC dari iPhone ke JPG, PNG, atau WEBP" loading="lazy" decoding="async"></li></ul>
+    <ul class="gal-track" id="gal-android" role="tabpanel" aria-labelledby="tab-android" tabindex="0"><li><img src="/snapsize/assets/shots/id/01.webp" width="540" height="960" alt="Foto yang sama, file lebih kecil: 5,1 MB sebelum, 194 KB sesudah" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/02.webp" width="540" height="960" alt="Pas di ukuran yang diminta: target cepat dari 50 KB sampai 1 MB" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/03.webp" width="540" height="960" alt="Hingga 100 foto sekaligus dengan Pro" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/04.webp" width="540" height="960" alt="Ukuran siap pakai untuk unggahan, dari Instagram sampai pas foto paspor" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/05.webp" width="540" height="960" alt="Kosongkan memori dengan mengganti foto asli, bisa dibatalkan" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/06.webp" width="540" height="960" alt="Foto kamu tetap di HP: tidak ada yang diunggah" loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots/id/07.webp" width="540" height="960" alt="Ubah foto HEIC dari iPhone ke JPG, PNG, atau WEBP" loading="lazy" decoding="async"></li></ul>
+    <ul class="gal-track" id="gal-iphone" role="tabpanel" aria-labelledby="tab-iphone" tabindex="0" hidden><li><img src="/snapsize/assets/shots-ios/id/01.webp" width="540" height="1174" alt="Kecilkan foto hingga di bawah 200 KB. Formulir, email, lamaran: pilih batasnya, selesai." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/id/02.webp" width="540" height="1174" alt="Kecilkan 10 foto sekaligus. Semua mencapai target dan urutannya tetap." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/id/03.webp" width="540" height="1174" alt="Ukuran siap pakai. Hanya ukuran. Periksa aturan tempat Anda mendaftar." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/id/04.webp" width="540" height="1174" alt="Pangkas, ubah ukuran, jadikan JPEG. Semua di satu tempat, dalam satu kalimat." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/id/05.webp" width="540" height="1174" alt="Foto asli Anda tetap ada. Foto tidak pernah keluar dari ponsel Anda. Lokasi dihapus." loading="lazy" decoding="async"></li><li><img src="/snapsize/assets/shots-ios/id/06.webp" width="540" height="1174" alt="Sekali bayar. Tanpa langganan, tanpa perpanjangan." loading="lazy" decoding="async"></li></ul>
     <button class="gal-btn next" type="button" aria-label="Tangkapan layar berikutnya"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></svg></button>
   </div>
 </section>
@@ -509,15 +516,33 @@ a.store:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.3)}
     if(target) get.addEventListener("click",function(ev){ev.preventDefault();location.href=target});
   }
 
-  /* Screenshot gallery arrows (scroll direction follows the page direction) */
-  var track=d.querySelector(".gal-track"), prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
-  if(track&&prev&&next){
+  /* Screenshot gallery: Android / iPhone tabs (iPhone and iPad open on the iPhone set) and arrows for the visible
+     set (scroll direction follows the page direction) */
+  var tracks=[].slice.call(d.querySelectorAll(".gal-track")), tabs=[].slice.call(d.querySelectorAll(".gal-tab"));
+  var prev=d.querySelector(".gal-btn.prev"), next=d.querySelector(".gal-btn.next");
+  if(tracks.length&&prev&&next){
     var rtl=root.dir==="rtl", sign=rtl?-1:1;
-    var step=function(){var li=track.querySelector("li");return li?li.getBoundingClientRect().width+20:260};
-    var sync=function(){var x=Math.abs(track.scrollLeft);prev.disabled=x<8;next.disabled=x+track.clientWidth>=track.scrollWidth-8};
-    prev.onclick=function(){track.scrollBy({left:-sign*step()*2,behavior:"smooth"})};
-    next.onclick=function(){track.scrollBy({left:sign*step()*2,behavior:"smooth"})};
-    track.addEventListener("scroll",sync,{passive:true}); window.addEventListener("resize",sync); sync();
+    var shown=function(){return tracks.filter(function(t){return !t.hidden})[0]||tracks[0]};
+    var step=function(){var li=shown().querySelector("li");return li?li.getBoundingClientRect().width+20:260};
+    var sync=function(){var t=shown(),x=Math.abs(t.scrollLeft);prev.disabled=x<8;next.disabled=x+t.clientWidth>=t.scrollWidth-8};
+    prev.onclick=function(){shown().scrollBy({left:-sign*step()*2,behavior:"smooth"})};
+    next.onclick=function(){shown().scrollBy({left:sign*step()*2,behavior:"smooth"})};
+    tracks.forEach(function(t){t.addEventListener("scroll",sync,{passive:true})});
+    window.addEventListener("resize",sync);
+    var pick=function(tab,focus){
+      tabs.forEach(function(b){var on=b===tab;b.setAttribute("aria-selected",on?"true":"false");b.tabIndex=on?0:-1;
+        var panel=d.getElementById(b.getAttribute("aria-controls"));if(panel){panel.hidden=!on;if(on)panel.scrollLeft=0}});
+      if(focus)tab.focus();sync();
+    };
+    tabs.forEach(function(b,i){
+      b.addEventListener("click",function(){pick(b)});
+      b.addEventListener("keydown",function(ev){
+        var k=ev.key,n=tabs.length,j=k==="ArrowRight"?(rtl?i-1:i+1):k==="ArrowLeft"?(rtl?i+1:i-1):k==="Home"?0:k==="End"?n-1:null;
+        if(j===null)return;ev.preventDefault();pick(tabs[(j+n)%n],true);
+      });
+    });
+    var iphone=d.getElementById("tab-iphone");
+    if(ios&&iphone)pick(iphone);else sync();
   }
 
   /* Hero: the size keys change the sentence, as the quick targets do on the app's home screen */
