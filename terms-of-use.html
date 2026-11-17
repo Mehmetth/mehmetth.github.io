@@ -1,82 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Terms of Use - Status Saver</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #222;
-    }
-    p {
-      margin-bottom: 1.2rem;
-      color: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #888;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Use · Status Saver</title>
+<meta name="description" content="The terms for using Status Saver 2.0: personal use, respecting other people’s statuses and messages, Premium subscriptions, free trials, renewal and cancellation through Google Play, ads, and your consumer rights.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1210" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mehmetth.github.io/terms-of-use.html">
+<link rel="icon" href="/status-saver/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/status-saver/assets/apple-touch-icon.png">
+<style>
+/* Status Saver legal pages. Self-contained on purpose: no web fonts, scripts or trackers, so opening this page
+   sends the visitor's address to no one but the host. */
+:root{--bg:#F4F7F6;--surface:#FFFFFF;--surface-2:#E9F1EE;--line:#D3DEDA;--text:#10201B;--text-2:#4A5A54;--accent:#0B7A5C;--accent-soft:#CFF5E7;--note:#FFF3E0;--radius:20px;--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1210;--surface:#131C19;--surface-2:#18221F;--line:#26332F;--text:#E3F1EC;--text-2:#A9BBB4;--accent:#3DDBA6;--accent-soft:#123C30;--note:#2A2316}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font);overflow-wrap:break-word}
+a{color:var(--accent);text-underline-offset:2px}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--surface);padding:8px 12px;border-radius:12px;z-index:9}
+.wrap{max-width:800px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+header.top{margin:8px 0 24px}header.top a{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+.logo{width:40px;height:40px;border-radius:11px;flex:none;display:block}
+.brand b{display:block;font-size:17px;line-height:1.3}.brand span{color:var(--text-2);font-size:14px}
+h1{font-size:clamp(28px,7vw,36px);line-height:1.15;margin:0 0 8px}
+.meta{color:var(--text-2);font-size:14px;margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:16px 0}
+.short ul{list-style:none;margin:0;padding:0}.short li{position:relative;padding-left:24px;margin:10px 0}.short li::before{content:"✓";color:var(--accent);font-weight:700;position:absolute;left:0;top:0}
+h2{font-size:20px;line-height:1.3;margin:40px 0 8px;scroll-margin-top:16px}
+h2 .n{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 4px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-size:14px;margin-right:8px;vertical-align:2px}
+h3{font-size:17px;margin:24px 0 4px}
+ul,ol{padding-left:22px}li{margin:6px 0}
+.toc ol{columns:2;column-gap:24px;margin:8px 0 0;padding-left:22px}@media (max-width:600px){.toc ol{columns:1}}
+.note{background:var(--note);border-radius:14px;padding:12px 14px;margin:12px 0}
+code{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface-2);padding:1px 5px;border-radius:6px;overflow-wrap:anywhere}
+footer{margin-top:48px;color:var(--text-2);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
+footer nav a{margin-right:16px;display:inline-block;padding:4px 0}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Terms of Use</h1>
-    <p>Status Saver - Save Download</p>
-  </header>
-  <main>
-    <p><strong>Effective Date:</strong> May 20, 2025</p>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a href="https://mehmetth.github.io/status-saver/"><svg class="logo" viewBox="21 21 66 66" aria-hidden="true"><rect x="21" y="21" width="66" height="66" rx="15" fill="#4FD441"/><path fill="#fff" fill-opacity=".72" d="M46 31h16v3H46zm0 5h16v3H46zm0 5h16v3H46z"/><path fill="#fff" d="M48 46h12v9H48zM38 55h32L54 71z"/><path d="M36 66v8a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand"><b>Status Saver</b><span>Save statuses for WhatsApp · by DuruSoft</span></span></a></header>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By downloading and using the Status Saver - Save Download app, you agree to comply with and be bound by the following terms and conditions. If you do not agree with any part of these terms, please discontinue use of the app immediately.</p>
+<main id="main">
+<h1>Terms of Use</h1>
+<p class="meta">Effective: 17 November 2026 · Version for Status Saver 2.0 · Applies to Status Saver for Android (<code>com.durusoft.statussaver.statusdownloader.downloadstatus.storysaver</code>), version 2.0.0 and later</p>
+<p class="meta">Older versions (1.x) are covered by these terms as far as they apply to them.</p>
 
-    <h2>2. Intended Use</h2>
-    <p>The app is intended solely for personal, non-commercial use. You are responsible for ensuring that your use of the app does not violate any applicable laws, including copyright and privacy regulations.</p>
+<section class="card short" aria-labelledby="short-t"><h2 id="short-t" style="margin-top:0">The short version</h2><ul>
+<li>Status Saver is for your personal, non-commercial use. It is an independent app, not made by WhatsApp or Meta.</li>
+<li>Statuses and messages belong to the people who made them. Save only what you have the right to save, and ask the person before you save or repost their status.</li>
+<li>“Deleted messages” keeps only messages that arrived as notifications while the feature was on. It cannot recover anything else, and we cannot guarantee that every message is kept.</li>
+<li>Premium is sold through Google Play. Subscriptions renew automatically until you cancel, and a free trial becomes a paid yearly plan unless you cancel before it ends.</li>
+<li>The free version shows ads. Your rights under the consumer law of the country where you live always apply.</li>
+</ul></section>
 
-    <h2>3. Content Responsibility</h2>
-    <p>We do not claim ownership or rights over the content you view or download using the app. You are solely responsible for respecting the rights of third parties when saving and sharing statuses from WhatsApp or similar platforms.</p>
+<nav class="card toc" aria-labelledby="toc-t"><b id="toc-t">Contents</b><ol>
+<li><a href="#agreement">Agreement</a></li>
+<li><a href="#app">What the app is</a></li>
+<li><a href="#content">Your content and other people’s rights</a></li>
+<li><a href="#messages">Deleted messages: what it can and cannot do</a></li>
+<li><a href="#files">The vault and your files</a></li>
+<li><a href="#premium">Free version, Premium and Sparks</a></li>
+<li><a href="#ads">Ads</a></li>
+<li><a href="#licence">Your licence</a></li>
+<li><a href="#use">Acceptable use</a></li>
+<li><a href="#third">Third-party services</a></li>
+<li><a href="#availability">Availability and changes to the app</a></li>
+<li><a href="#liability">Disclaimer and liability</a></li>
+<li><a href="#ending">Ending these terms</a></li>
+<li><a href="#law">Governing law and disputes</a></li>
+<li><a href="#changes">Changes to these terms</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol></nav>
 
-    <h2>4. In-App Purchases</h2>
-    <p>Status Saver offers optional in-app purchases, such as an ad-free experience. All transactions are processed through Google Play and subject to its terms. No refund or compensation is guaranteed unless required by law or Google Play policy.</p>
+<h2 id="agreement"><span class="n">1</span>Agreement</h2>
+<p>These terms are an agreement between you and DuruSoft, based in Türkiye (“we”, “us”), for the Status Saver app for Android (“the app”). By installing or using the app you accept them. If you do not agree, please do not use the app. Our <a href="privacy-policy.html">Privacy Policy</a> explains how data is handled. Google Play’s terms also apply to how you get the app and pay for it.</p>
+<p>You must be at least 13 years old, or the higher minimum age in your country, to use the app. If you are under the age of majority where you live, a parent or guardian must agree to these terms and to any purchase.</p>
 
-    <h2>5. Advertisements</h2>
-    <p>The app includes advertisements provided by Google AdMob. We do not control the nature or frequency of these ads and are not liable for their content. Users may remove ads by purchasing the "ad-free" upgrade.</p>
+<h2 id="app"><span class="n">2</span>What the app is</h2>
+<p>Status Saver lets you view and save WhatsApp and WhatsApp Business statuses that are already on your phone, save them automatically, keep files in a locked vault, keep WhatsApp messages that arrive as notifications, make stickers and status images, split videos into status-length parts, sharpen photos and open a chat with a number without saving it. The app’s features run on your phone; ads, purchases and app settings use the internet (see the <a href="https://mehmetth.github.io/privacy-policy.html">Privacy Policy</a>).</p>
+<p><b>Not affiliated with WhatsApp or Meta.</b> Status Saver is an independent app. It is not affiliated with, endorsed by or sponsored by WhatsApp LLC or Meta Platforms, Inc. “WhatsApp” and “WhatsApp Business” are trademarks of WhatsApp LLC; we use these names only to say which apps Status Saver works with. Questions about WhatsApp itself go to WhatsApp, and your use of WhatsApp is governed by its own terms.</p>
 
-    <h2>6. Modifications and Updates</h2>
-    <p>We reserve the right to update or modify the app and these terms at any time, without prior notice. Continued use of the app after changes implies acceptance of the updated terms.</p>
+<h2 id="content"><span class="n">3</span>Your content and other people’s rights</h2>
+<ul>
+<li><b>Statuses belong to the people who post them.</b> Photos, videos, voice notes and text in a status are usually protected by copyright and by the privacy rights of the person who posted it and of anyone shown in it. We do not own them and do not give you any rights to them.</li>
+<li><b>Save only what you have the right to.</b> Before you save, keep, share or repost someone else’s status, ask that person’s permission. Do not repost statuses as your own, sell them or use them commercially.</li>
+<li><b>Respect privacy.</b> Do not use the app to monitor, stalk, harass, embarrass or blackmail anyone, or to share private images or messages without consent. Kept messages contain other people’s names and words: use them only for yourself and with care.</li>
+<li><b>Your own creations.</b> Stickers, Status Studio images, enhanced photos and video parts you make are yours, together with any rights others have in the photos or videos you used. The caption texts included in Status Studio are written by us; you may use them in your own statuses and stickers.</li>
+<li><b>You are responsible</b> for what you save, make and share with the app, and for following the law where you live. We do not see, check or store your content.</li>
+</ul>
 
-    <h2>7. Limitation of Liability</h2>
-    <p>The app is provided “as is,” without any warranties or guarantees. We are not liable for any direct, indirect, or incidental damages arising from the use of the app.</p>
+<h2 id="messages"><span class="n">4</span>Deleted messages: what it can and cannot do</h2>
+<p>The “Deleted messages” feature keeps copies of WhatsApp and WhatsApp Business messages that your phone shows as notifications, so you can still read a message after the sender deletes it.</p>
+<ul>
+<li>It works only after you turn on notification access, and only for messages that arrived as notifications <b>while the feature was on</b>.</li>
+<li>It <b>cannot</b> recover messages from WhatsApp, from before you turned it on, from chats you had open or muted, from notifications that hide the message text, or that arrived while access was off. A deleted message can only be read if its notification arrived first.</li>
+<li>Photo previews are kept only with Premium and only when the notification shows one.</li>
+<li>The free version keeps the last 24 hours. With Premium, messages are kept until you clear them; if Premium ends, messages older than 24 hours are deleted.</li>
+<li>It depends on how WhatsApp and Android show notifications, which they may change at any time. We therefore cannot guarantee that every message is kept, or that the feature keeps working.</li>
+</ul>
 
-    <h2>8. Governing Law</h2>
-    <p>These terms are governed by and construed in accordance with the laws of your jurisdiction. Any disputes arising shall be handled in local courts as permitted by applicable law.</p>
+<h2 id="files"><span class="n">5</span>The vault and your files</h2>
+<ul>
+<li>Files in the vault are kept only on your phone and have no other copy. Deleting them in the vault, clearing the app’s storage or uninstalling the app deletes them for good, and we cannot bring them back.</li>
+<li>If your phone has no screen lock, the vault uses a 4-digit vault PIN. It cannot be recovered: if you forget it, we cannot open the vault for you.</li>
+<li>The app’s own data is not included in Android’s cloud backup. Moving the vault back to the gallery before you change or reset your phone is your responsibility.</li>
+<li>Copies you save go to your gallery (the StatusSaver album). They stay there if you uninstall the app.</li>
+</ul>
 
-    <h2>9. Contact</h2>
-    <p>If you have questions or concerns about these terms, you may contact us via the developer email provided on the Google Play Store.</p>
-  </main>
-  <footer>
-    &copy; 2025 Status Saver - All rights reserved.
-  </footer>
+<h2 id="premium"><span class="n">6</span>Free version, Premium and Sparks</h2>
+<h3>What each version includes</h3>
+<ul>
+<li><b>Free version:</b> viewing and saving statuses, auto-save for photos, Status Studio with free caption packs and your own text, the sticker maker, text tools, Direct chat, the duplicate finder, limited daily uses of the video splitter and Enhance, the last 24 hours of kept messages, and ads.</li>
+<li><b>Premium:</b> no ads, auto-save for videos too, the video splitter and Enhance without daily limits, the vault, the full history of kept messages with photo previews, all Status Studio caption packs, sticker packs added to WhatsApp without Sparks or ads, cleaning all duplicates in one tap and alternative app icons, as shown in the app.</li>
+<li>When a free daily use is spent, you can also use Sparks or watch an optional ad for an extra use, when one is available.</li>
+</ul>
+<h3>Plans and prices</h3>
+<ul>
+<li>Premium is offered as a weekly or yearly subscription, or as a one-time lifetime purchase. Prices are shown in the app and in Google Play before you buy, in your local currency, and may differ by country.</li>
+<li><b>Free trial:</b> where offered, the yearly plan can start with a 3-day free trial for new customers. Google Play decides who is eligible, and a trial is available once per Google account. <b>Unless you cancel before the trial ends, it turns into a paid yearly subscription</b> and the yearly price is charged. If notifications are allowed, the app reminds you about a day before the trial ends.</li>
+<li><b>Introductory price:</b> where offered, the first year of the yearly plan can be 50% off. After the first year it renews at the regular yearly price shown before you buy.</li>
+<li><b>Lifetime:</b> one payment, not a subscription. It gives you Premium for as long as we offer Status Saver on Google Play, with no further payments, on the Google account you bought it with. If you bought “remove ads” in an earlier version, you get Premium for life too.</li>
+</ul>
+<h3>Payment, renewal and cancellation</h3>
+<ul>
+<li>Payment is charged to your Google Play account when you confirm the purchase, or when the free trial ends.</li>
+<li>Weekly and yearly subscriptions <b>renew automatically</b> at the end of each period and are charged again, until you cancel.</li>
+<li><b>How to cancel:</b> in the Google Play Store app, tap your profile picture › <b>Payments &amp; subscriptions</b> › <b>Subscriptions</b> › Status Saver › <b>Cancel subscription</b>. You can also get there from <b>Profile › Manage subscription</b> in the app. Uninstalling the app does not cancel a subscription.</li>
+<li>After you cancel, Premium stays on until the end of the period you have paid for. If you cancel during a free trial, you are not charged.</li>
+<li><b>Price changes:</b> if a subscription price changes, Google Play tells you in advance and, where required, asks for your agreement. You can cancel before the new price applies.</li>
+<li><b>Restore:</b> on a new phone or after reinstalling, use <b>Profile › Restore purchases</b> with the same Google account.</li>
+</ul>
+<h3>Refunds and your right to withdraw</h3>
+<ul>
+<li>Payments are handled by Google Play, and refunds follow <a href="https://support.google.com/googleplay/answer/2479637">Google Play’s refund policy</a>. Shortly after a purchase you can often request a refund yourself on Google Play. If Google Play declines and you think this is wrong, email us and we will help where we can.</li>
+<li>If you are a consumer in the EU, the EEA, the UK, Türkiye or another country with a similar law, you may have the right to withdraw from a purchase within 14 days. For digital content and services that start right away at your request, this right may end or be reduced once Premium has started, where the law allows. To use it, request a refund from Google Play or email us.</li>
+<li>Nothing in these terms limits any right to a refund, to cancel or to withdraw that you have by law.</li>
+</ul>
+<h3>When Premium ends</h3>
+<p>The free version’s limits apply again. You can still open, move back to the gallery and delete files in your vault. Sticker packs already in WhatsApp keep working. Kept messages older than 24 hours are deleted.</p>
+<h3>Sparks</h3>
+<p>Sparks are app credits you earn by saving and using tools on several days, reaching milestones or watching an optional ad, and spend on extra tool uses or on adding a sticker pack to WhatsApp. Sparks have no cash value, cannot be bought, sold, transferred or exchanged for money, and are lost if you clear the app’s storage or uninstall it. We may change how many Sparks are earned or needed.</p>
+<h3>Countries without Google Play billing</h3>
+<p>Where Google Play does not take payments for the app (currently Russia, mainland China, Afghanistan and Iran), every Premium feature is free and no ads are shown.</p>
+
+<h2 id="ads"><span class="n">7</span>Ads</h2>
+<p>The free version shows ads from Google AdMob, with the consent your region requires. They include banners, ads in lists, full-screen ads at some natural breaks and when you come back to the app after a while, and optional video ads you choose to watch for Sparks or two hours without ads. We are not responsible for what advertisers offer; a purchase you make from an ad is between you and the advertiser. Do not click ads you are not interested in or try to generate ad views or clicks artificially. Premium removes all ads.</p>
+
+<h2 id="licence"><span class="n">8</span>Your licence</h2>
+<p>We give you a personal, non-exclusive, non-transferable, revocable licence to use the app on Android devices you own or control, for personal, non-commercial purposes, under these terms and Google Play’s terms. The app, its design, texts, icons and code remain ours or our licensors’. Open-source components in the app are licensed under their own licences, listed in <b>Profile › Third-party licenses</b>.</p>
+
+<h2 id="use"><span class="n">9</span>Acceptable use</h2>
+<p>Do not:</p>
+<ul>
+<li>use the app in a way that breaks the law or anyone’s copyright, privacy or other rights;</li>
+<li>copy, modify, reverse engineer, resell or redistribute the app, except as the law allows;</li>
+<li>tamper with purchases, limits, Sparks, ads or the app’s security, or use the app to get Premium without paying where payment applies;</li>
+<li>use the app or its content to make a product or service that competes with it, or with automated tools.</li>
+</ul>
+
+<h2 id="third"><span class="n">10</span>Third-party services</h2>
+<p>The app works with services run by others under their own terms: WhatsApp and WhatsApp Business (Meta), Google Play (payments, updates and ratings), Google AdMob (ads), Google Firebase (usage statistics, crash reports and app settings), Google ML Kit (the on-device sticker cut-out tool) and RevenueCat (purchase checks). We do not control them. If WhatsApp or Android changes where statuses are stored, how notifications look or what apps may access, some features may stop working until we can adapt them, or at all.</p>
+
+<h2 id="availability"><span class="n">11</span>Availability and changes to the app</h2>
+<p>We work to keep the app available and useful, but we do not promise that it will always be available, work on every phone or be free of errors. We may change, add or remove features to keep the app working, safe, lawful and fair, and we may switch a feature off remotely if it causes problems. We will not take away Premium features you paid for during a paid period without good reason, and if we do, we will offer a fair remedy as your law requires.</p>
+
+<h2 id="liability"><span class="n">12</span>Disclaimer and liability</h2>
+<p>The app is provided “as is” and “as available”. To the extent the law allows, we give no warranties beyond those in these terms, including that the app will be error-free, that every status will be found or saved, or that every message will be kept.</p>
+<p>To the extent the law allows, we are not liable for indirect or consequential loss, or for files or messages lost because they were deleted, because the app’s storage was cleared or the app uninstalled, because a vault PIN was forgotten, or because WhatsApp or Android changed how they work. Our total liability to you for any claim about the app is limited to the greater of the amount you paid for Premium in the 12 months before the claim and USD 10.</p>
+<p class="note">Nothing in these terms limits liability or rights that cannot be limited by law. This includes your rights under the consumer protection law of the country where you live (for example, in the EU your statutory rights for digital content, and in Türkiye the Consumer Protection Law No. 6502), and liability for death or personal injury caused by negligence, for fraud, or for intent or gross negligence.</p>
+
+<h2 id="ending"><span class="n">13</span>Ending these terms</h2>
+<p>You can stop using the app at any time by uninstalling it. If you do not want a subscription to renew, cancel it in Google Play first. We may suspend or end your licence if you seriously or repeatedly break these terms, for example by using the app to violate other people’s rights; where possible we will tell you why. Sections 3, 5, 12 and 14 continue after these terms end.</p>
+
+<h2 id="law"><span class="n">14</span>Governing law and disputes</h2>
+<p>These terms are governed by the law of the country where you live. You can bring a claim in the courts of that country, or before the consumer bodies available to you there. In Türkiye, for example, you can apply to the consumer arbitration committee (Tüketici Hakem Heyeti) or the consumer court (Tüketici Mahkemesi), within the limits set each year. In the EU you can also use your national consumer bodies. Nothing here takes away the protection of the mandatory laws of the country where you live.</p>
+<p>Before going to court, please write to us: most issues can be solved quickly by email.</p>
+
+<h2 id="changes"><span class="n">15</span>Changes to these terms</h2>
+<p>We may update these terms when the app or the law changes, and we will change the effective date at the top of this page. If a change materially affects your rights, we will tell you in the app or in the Google Play release notes before it takes effect. If you do not agree with the change, you can stop using the app and cancel your subscription.</p>
+
+<h2 id="contact"><span class="n">16</span>Contact</h2>
+<p>DuruSoft · <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>. Questions, complaints and support requests about the app come to us, not to Google or WhatsApp. You can also write to us from <b>Profile › Something wrong? Write to us</b> in the app.</p>
+</main>
+
+<footer><nav aria-label="Legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html" aria-current="page">Terms of Use</a><a href="https://mehmetth.github.io/status-saver/">Status Saver</a></nav><p>© 2026 DuruSoft · <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a></p></footer>
+</div>
 </body>
 </html>

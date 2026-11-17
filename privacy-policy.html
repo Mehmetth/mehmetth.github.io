@@ -1,88 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy - Status Saver</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #2196F3;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    h1, h2 {
-      color: #222;
-    }
-    p {
-      margin-bottom: 1.2rem;
-      color: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.85rem;
-      color: #888;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Status Saver</title>
+<meta name="description" content="How Status Saver 2.0 handles your data: statuses, saved copies, the vault and kept messages stay on your phone. What Google AdMob, Google Play, RevenueCat, Google Firebase and Google ML Kit receive, and the choices you have.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1210" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mehmetth.github.io/privacy-policy.html">
+<link rel="icon" href="/status-saver/assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/status-saver/assets/apple-touch-icon.png">
+<style>
+/* Status Saver legal pages. Self-contained on purpose: no web fonts, scripts or trackers, so opening this page
+   sends the visitor's address to no one but the host. */
+:root{--bg:#F4F7F6;--surface:#FFFFFF;--surface-2:#E9F1EE;--line:#D3DEDA;--text:#10201B;--text-2:#4A5A54;--accent:#0B7A5C;--accent-soft:#CFF5E7;--note:#FFF3E0;--radius:20px;--font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1210;--surface:#131C19;--surface-2:#18221F;--line:#26332F;--text:#E3F1EC;--text-2:#A9BBB4;--accent:#3DDBA6;--accent-soft:#123C30;--note:#2A2316}}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--font);overflow-wrap:break-word}
+a{color:var(--accent);text-underline-offset:2px}a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--surface);padding:8px 12px;border-radius:12px;z-index:9}
+.wrap{max-width:800px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+header.top{margin:8px 0 24px}header.top a{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none}
+.logo{width:40px;height:40px;border-radius:11px;flex:none;display:block}
+.brand b{display:block;font-size:17px;line-height:1.3}.brand span{color:var(--text-2);font-size:14px}
+h1{font-size:clamp(28px,7vw,36px);line-height:1.15;margin:0 0 8px}
+.meta{color:var(--text-2);font-size:14px;margin:0 0 24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:16px 0}
+.short ul{list-style:none;margin:0;padding:0}.short li{position:relative;padding-left:24px;margin:10px 0}.short li::before{content:"✓";color:var(--accent);font-weight:700;position:absolute;left:0;top:0}
+h2{font-size:20px;line-height:1.3;margin:40px 0 8px;scroll-margin-top:16px}
+h2 .n{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 4px;border-radius:9px;background:var(--accent-soft);color:var(--accent);font-size:14px;margin-right:8px;vertical-align:2px}
+h3{font-size:17px;margin:24px 0 4px}
+ul,ol{padding-left:22px}li{margin:4px 0}
+.muted{color:var(--text-2)}
+.toc ol{columns:2;column-gap:24px;margin:8px 0 0;padding-left:22px}@media (max-width:600px){.toc ol{columns:1}}
+.note{background:var(--note);border-radius:14px;padding:12px 14px;margin:12px 0}
+code{font:14px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface-2);padding:1px 5px;border-radius:6px;overflow-wrap:anywhere}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0}
+caption{text-align:left;font-weight:700;padding:0 0 8px}
+th,td{text-align:left;vertical-align:top;padding:10px;border-bottom:1px solid var(--line)}
+thead th{background:var(--surface-2)}
+@media (max-width:640px){
+  table.stack thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  table.stack caption{display:block;width:auto}
+  table.stack,table.stack tbody,table.stack tr,table.stack th,table.stack td{display:block;width:100%}
+  table.stack tr{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:0 0 12px;padding:4px 0}
+  table.stack th,table.stack td{border:0;padding:6px 14px}
+  table.stack td::before{content:attr(data-label);display:block;font-size:13px;font-weight:700;color:var(--text-2)}
+}
+footer{margin-top:48px;color:var(--text-2);font-size:14px;border-top:1px solid var(--line);padding-top:16px}
+footer nav a{margin-right:16px;display:inline-block;padding:4px 0}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Privacy Policy</h1>
-    <p>Status Saver - Save Download</p>
-  </header>
-  <main>
-    <p><strong>Effective Date:</strong> May 20, 2025</p>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+<header class="top"><a href="https://mehmetth.github.io/status-saver/"><svg class="logo" viewBox="21 21 66 66" aria-hidden="true"><rect x="21" y="21" width="66" height="66" rx="15" fill="#4FD441"/><path fill="#fff" fill-opacity=".72" d="M46 31h16v3H46zm0 5h16v3H46zm0 5h16v3H46z"/><path fill="#fff" d="M48 46h12v9H48zM38 55h32L54 71z"/><path d="M36 66v8a4 4 0 0 0 4 4h28a4 4 0 0 0 4-4v-8" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand"><b>Status Saver</b><span>Save statuses for WhatsApp · by DuruSoft</span></span></a></header>
 
-    <h2>1. Introduction</h2>
-    <p>This Privacy Policy explains how the Status Saver - Save Download app (“we,” “our,” or “the app”) handles user information and protects your privacy. We understand the importance of your personal data and are fully committed to maintaining transparency, integrity, and security.</p>
+<main id="main">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective: 17 November 2026 · Version for Status Saver 2.0 · Applies to Status Saver for Android (<code>com.durusoft.statussaver.statusdownloader.downloadstatus.storysaver</code>), version 2.0.0 and later</p>
+<p class="meta">Older versions (1.x) use only part of what this policy describes: they show ads through Google AdMob and sell an ad-free upgrade through Google Play.</p>
 
-    <h2>2. Information Collection</h2>
-    <p>We do <strong>not collect</strong> or transmit any personally identifiable information (PII) from users of the app. All features of the app—including viewing, downloading, or managing WhatsApp status files—are handled locally on your device.</p>
+<section class="card short" aria-labelledby="short-t"><h2 id="short-t" style="margin-top:0">The short version</h2><ul>
+<li>The statuses you view, the copies you save, your vault, kept messages, stickers and the images and videos you make stay on your phone. We have no server that receives them, and we cannot see them.</li>
+<li>Some data does leave your phone, for ads, purchases, usage statistics, crash reports and app settings. Section 2 lists all of it, who receives it and how to turn it off.</li>
+<li>“Deleted messages” works only if you turn on notification access yourself. It reads only WhatsApp and WhatsApp Business notifications and keeps them on your phone.</li>
+<li>You can turn off usage statistics in <b>Profile › Share usage statistics</b>, change your ad choices in <b>Profile › Ad privacy choices</b> (shown where the law requires it), and remove all ads with Premium.</li>
+<li>There is no account and no sign-in. We do not sell your personal data for money.</li>
+<li>Status Saver is an independent app. It is not affiliated with, endorsed by or sponsored by WhatsApp LLC or Meta Platforms, Inc.</li>
+</ul></section>
 
-    <h2>3. Third-Party Services</h2>
-    <p>The app integrates Google AdMob to serve advertisements. While we do not share any data ourselves, AdMob may collect information (e.g., device information, ad interactions) to personalize ads in accordance with their own privacy policy. We do not have control over their data handling mechanisms.</p>
+<nav class="card toc" aria-labelledby="toc-t"><b id="toc-t">Contents</b><ol>
+<li><a href="#who">Who we are</a></li>
+<li><a href="#leaves">What leaves your device</a></li>
+<li><a href="#device">What stays on your phone</a></li>
+<li><a href="#messages">Deleted messages and notification access</a></li>
+<li><a href="#perms">Permissions and why</a></li>
+<li><a href="#ads">Advertising and your consent</a></li>
+<li><a href="#buy">Purchases</a></li>
+<li><a href="#stats">Usage statistics, crash reports and app settings</a></li>
+<li><a href="#mlkit">Stickers and Google ML Kit</a></li>
+<li><a href="#contact-us">When you write to us</a></li>
+<li><a href="#selling">Sharing and selling</a></li>
+<li><a href="#bases">Legal bases</a></li>
+<li><a href="#transfers">International transfers</a></li>
+<li><a href="#retention">How long data is kept</a></li>
+<li><a href="#rights">Your rights and how to use them</a></li>
+<li><a href="#children">Children</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#countries">Countries without Google Play billing or ads</a></li>
+<li><a href="#changes">Changes to this policy</a></li>
+<li><a href="#contact">Contact</a></li>
+</ol></nav>
 
-    <p>You can learn more about AdMob’s data practices here:  
-    <a href="https://policies.google.com/technologies/ads" target="_blank">https://policies.google.com/technologies/ads</a></p>
+<h2 id="who"><span class="n">1</span>Who we are</h2>
+<p>Status Saver (“the app”) is an Android app published on Google Play by DuruSoft, based in Türkiye (“we”, “us”). For the limited personal data described in this policy that we decide about, we are the data controller (under Türkiye’s Personal Data Protection Law No. 6698, “KVKK”, the <i>veri sorumlusu</i>). You can reach us at <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>.</p>
+<p>Google and RevenueCat provide services described below. Google acts as a separate controller for advertising and for some Google Play features, and as our processor for Firebase. RevenueCat acts as our processor for purchases.</p>
+<p>Status Saver is an independent app. It is not affiliated with, endorsed by or sponsored by WhatsApp LLC or Meta Platforms, Inc. “WhatsApp” is a trademark of WhatsApp LLC, used here only to say which app Status Saver works with.</p>
 
-    <h2>4. Permissions</h2>
-    <p>To deliver its core functionality, the app may request the following permissions:</p>
-    <ul>
-      <li><strong>Storage Access</strong> – To read and save media files from your WhatsApp statuses.</li>
-      <li><strong>Network Access</strong> – To serve advertisements and check connectivity.</li>
-      <li><strong>Notification Access</strong> – To alert users about saved statuses (optional).</li>
-    </ul>
-    <p>These permissions are used solely to provide a seamless user experience and are not abused or accessed beyond their intended purpose.</p>
+<h2 id="leaves"><span class="n">2</span>What leaves your device</h2>
+<p>This is everything the app sends, or lets a built-in service send, off your phone. Connections are encrypted (HTTPS). Our Google Play “Data safety” section is based on the same list.</p>
+<table class="stack">
+<caption>What leaves your device</caption>
+<thead><tr><th scope="col">Data</th><th scope="col">Recipient</th><th scope="col">Purpose</th><th scope="col">Can you turn it off?</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-label="Data">Free version only: advertising ID, app set ID, IP address (which reveals your approximate location), device and app information, how you interact with ads, diagnostic data of the ads software, and your consent choices</th><td data-label="Recipient">Google (AdMob and User Messaging Platform)</td><td data-label="Purpose">Showing and measuring ads, limiting how often they appear, preventing fraud, asking for and storing your consent (section 6)</td><td data-label="Can you turn it off?">Yes. Premium removes all ads: no ad is requested and the ads software is not initialized. Where the law requires it, you choose before any ad is requested and can change your mind in <b>Profile › Ad privacy choices</b>. You can also reset or delete your advertising ID in Android settings.</td></tr>
+<tr><th scope="row" data-label="Data">Your consent status (whether a consent form is needed in your region)</th><td data-label="Recipient">Google (User Messaging Platform)</td><td data-label="Purpose">Checking, when the app starts, whether the law requires a consent form for ads</td><td data-label="Can you turn it off?">No. This check happens at start, also with Premium; it contains no content of yours.</td></tr>
+<tr><th scope="row" data-label="Data">A random app user ID, your purchases (product, purchase token, order number, dates, status), device model, Android and app version, store country, IP address</th><td data-label="Recipient">Google Play and RevenueCat</td><td data-label="Purpose">Selling, checking and restoring Premium; telling the app which plan you have (section 7)</td><td data-label="Can you turn it off?">No, while you use the app: it checks your plan with RevenueCat when it starts, using only the random ID. Payment details go only to Google Play.</td></tr>
+<tr><th scope="row" data-label="Data">Usage statistics: which screens and features are used, events such as a save, a purchase step or an ad shown (with its value and currency), an app instance ID, device model, Android and app version, language, and approximate location (country or region) derived from your IP address</th><td data-label="Recipient">Google (Firebase Analytics)</td><td data-label="Purpose">Understanding which features work and improving the app (section 8)</td><td data-label="Can you turn it off?">Yes: <b>Profile › Share usage statistics</b>. When it is off, nothing is recorded or sent.</td></tr>
+<tr><th scope="row" data-label="Data">Crash reports: what went wrong in the code, device model, Android and app version, device state such as free memory, a Crashlytics installation ID</th><td data-label="Recipient">Google (Firebase Crashlytics)</td><td data-label="Purpose">Finding and fixing crashes</td><td data-label="Can you turn it off?">Yes, with the same switch: <b>Profile › Share usage statistics</b>.</td></tr>
+<tr><th scope="row" data-label="Data">A Firebase installation ID, app version, device language and country</th><td data-label="Recipient">Google (Firebase Remote Config)</td><td data-label="Purpose">Downloading the app’s settings, for example which features are on, how often ads may appear and which offers are shown</td><td data-label="Can you turn it off?">No. It is needed to run the app and contains no content of yours.</td></tr>
+<tr><th scope="row" data-label="Data">Device information, app name and version, per-installation identifiers, performance and error data of the cut-out tool. Never your photo.</th><td data-label="Recipient">Google (ML Kit, through Google Play services)</td><td data-label="Purpose">Downloading the on-device cut-out tool for stickers, and Google’s diagnostics for it (section 9)</td><td data-label="Can you turn it off?">Yes: it happens only when you use the sticker maker.</td></tr>
+<tr><th scope="row" data-label="Data">Requests for a rating prompt or an app update</th><td data-label="Recipient">Google Play</td><td data-label="Purpose">Showing Google Play’s own rating and update windows</td><td data-label="Can you turn it off?">You can dismiss them. Google Play handles them under its own policy.</td></tr>
+<tr><th scope="row" data-label="Data">Your email address, what you write and a short technical note (app and Android version, phone model, language, plan)</th><td data-label="Recipient">Us, by email</td><td data-label="Purpose">Answering you (section 10)</td><td data-label="Can you turn it off?">Yes: it is sent only if you write to us, and you see everything before sending.</td></tr>
+</tbody>
+</table>
+<p><b>Things you send yourself.</b> When you share a file, post to your status, add a sticker pack to WhatsApp or open a chat with Direct chat, the content goes to the app you chose (for example WhatsApp), under that app’s own terms. That is your action, not ours.</p>
+<p>The app does not ask for your contacts, your precise location, your camera or microphone, or access to all your photos and files (on Android 8 and 9 only, it asks for the storage permission to save copies; see section 5). It has no sign-in.</p>
 
-    <h2>5. Children’s Privacy</h2>
-    <p>This app is not directed to individuals under the age of 13. We do not knowingly collect personal information from children. If we become aware of any such data being inadvertently collected, we will delete it immediately.</p>
+<h2 id="device"><span class="n">3</span>What stays on your phone</h2>
+<p>The following is processed and stored only on your phone. We have no server that receives it, and we cannot see it.</p>
+<ul>
+<li><b>Statuses you view.</b> The app reads statuses from the WhatsApp or WhatsApp Business status folder that you choose in Android’s own folder picker. It gets read-only access to that folder; on Android 10 and later it reads no other folder. It also keeps a small record of which statuses it has already shown or saved, so that auto-save copies each status only once.</li>
+<li><b>Copies you save, and auto-save.</b> Saved copies go to your gallery: <b>Pictures/StatusSaver</b>, <b>Movies/StatusSaver</b> (when separate folders are on) and <b>Music/StatusSaver</b> for voice statuses. Auto-save, if you turn it on, copies new statuses there about every 15 minutes and when you open the app. These copies are in your phone’s shared storage, so your gallery, other apps you allowed to see your photos, and any photo backup you use (for example Google Photos) can see them. Uninstalling the app does not delete them.</li>
+<li><b>The vault.</b> Files you move to the vault are kept in the app’s private storage and hidden from the gallery. The vault opens with your phone’s screen lock, fingerprint or face (Android checks it; the app only learns whether it succeeded), or with a 4-digit vault PIN if your phone has no screen lock. The PIN is stored only as a salted, derived value, never in plain form, and it cannot be recovered. The vault locks when you leave it, and screenshots of it are blocked. Vault files have no other copy.</li>
+<li><b>Kept messages</b> from WhatsApp notifications, only if you turn the feature on. See section 4.</li>
+<li><b>Stickers.</b> The photos you pick, the cut-outs and the sticker packs you make are kept in the app’s private storage. When you add a pack to WhatsApp, WhatsApp reads that pack from the app. Only apps holding WhatsApp’s sticker permission can read packs, and only packs you have sent.</li>
+<li><b>Status Studio, Enhance and the Video splitter.</b> The images you design, the photos you sharpen and brighten, and the parts the splitter cuts are made on your phone and saved to the StatusSaver album in your gallery. Photos and videos you pick come through Android’s photo picker, and the app receives only what you picked.</li>
+<li><b>Direct chat.</b> The last five numbers you opened are kept on your phone so you can open them again. The app does not read your contacts. When you tap “Open chat”, the number and the optional message are passed to WhatsApp or WhatsApp Business as a <code>wa.me</code> link.</li>
+<li><b>Settings and progress:</b> your choices in Profile, your streak, milestones and Sparks, daily free-use counters, and your last known plan so Premium works offline.</li>
+<li><b>Widget and Quick Settings tile.</b> If you add the widget, it shows your new statuses on your home screen, where anyone holding your phone can see them. The Quick Settings tile turns auto-save on or off.</li>
+</ul>
+<h3>Backups and new phones</h3>
+<p>The app’s own data is never included in Android’s cloud backup. On Android 12 and later, if you move to a new phone with a direct phone-to-phone transfer, vault files, sticker packs, recent Direct chat numbers, settings and other app data can be moved; kept messages, their photos and the vault PIN are never moved. On the new phone you open the vault with its screen lock or a new PIN.</p>
+<h3>Deleting what is on your phone</h3>
+<p>You can delete saved copies, vault files, sticker packs and kept messages in the app. Clearing the app’s storage in Android settings, or uninstalling the app, deletes everything in its private storage (vault, kept messages, stickers, recent numbers and settings). Copies in your gallery stay until you delete them there.</p>
 
-    <h2>6. Data Security</h2>
-    <p>While no app can guarantee complete security, we make every effort to ensure that your usage remains local, anonymous, and private. No external database or cloud is used to store user data.</p>
+<h2 id="messages"><span class="n">4</span>Deleted messages and notification access</h2>
+<p>The “Deleted messages” feature keeps a copy of WhatsApp messages that your phone shows as notifications, so you can still read one if the sender deletes it later. It cannot bring back messages from WhatsApp itself.</p>
+<ul>
+<li><b>Off until you turn it on.</b> Before anything is read, the app explains what it reads, where it is kept and how to stop. You then turn on notification access for Status Saver in Android’s settings.</li>
+<li><b>What is read.</b> Android gives an app with notification access the notifications of all apps. Status Saver ignores every notification that does not come from WhatsApp or WhatsApp Business; those are not read or stored. From WhatsApp and WhatsApp Business notifications it keeps the sender’s name, the message text and the time. With Premium, it also keeps a photo preview (at most 1080 pixels) when the notification shows one. Group summaries, calls and service notifications are skipped.</li>
+<li><b>Where it is kept.</b> Only in the app’s private database on your phone. Kept messages are never sent over the network, never included in usage statistics, and never moved to a new phone or into a cloud backup.</li>
+<li><b>How long.</b> Free version: the last 24 hours; older messages are deleted automatically. Premium: until you clear them. If Premium ends, messages older than 24 hours are deleted at the next cleanup.</li>
+<li><b>How to stop.</b> Use “Turn off access” in the feature’s menu, or turn off notification access in Android’s settings, at any time. Messages kept before stay readable until you delete them (on the free version, for up to 24 hours). “Clear all” deletes every kept message and photo preview; this cannot be undone.</li>
+</ul>
+<p class="note">Kept messages contain other people’s names and words. Please treat them with care and respect the privacy of the people who write to you.</p>
 
-    <h2>7. Changes to This Policy</h2>
-    <p>This Privacy Policy may be updated from time to time to reflect changes in legal or operational requirements. Any such changes will be posted on this page with an updated "Effective Date."</p>
+<h2 id="perms"><span class="n">5</span>Permissions and why</h2>
+<p>Permissions that need your OK are asked for only when you use the feature that needs them. You can refuse or withdraw them in Android settings; the rest of the app keeps working.</p>
+<ul>
+<li><b>Folder access (Android’s folder picker):</b> read-only access to the WhatsApp or WhatsApp Business status folder you choose. This is not a storage permission, and you can choose the folder again or remove access at any time.</li>
+<li><b>Storage, only on Android 8 and 9:</b> “read and write external storage”, to save copies to your gallery on these older versions. On Android 10 and later no storage permission is requested.</li>
+<li><b>Notification access (optional):</b> only for “Deleted messages”, as described in section 4.</li>
+<li><b>Notifications (Android 13 and later, optional):</b> a reminder before a free trial ends, and, if you turn it on, at most one quiet auto-save summary a day.</li>
+<li><b>Fingerprint or face unlock (optional):</b> to open the vault. Android checks your fingerprint, face or screen lock; the app only learns whether the check succeeded.</li>
+<li><b>Internet and network state:</b> for ads, purchases, usage statistics, crash reports, app settings and downloading the sticker cut-out tool. Viewing and saving statuses work offline.</li>
+<li><b>Google Play billing:</b> to buy Premium.</li>
+<li><b>Advertising ID and Android’s ad services</b> (advertising ID, ad attribution and ad topics, where your Android version supports them): used by Google’s ads software on the free version, subject to your consent choices.</li>
+<li><b>Keep the phone awake (wake lock):</b> lets background work such as auto-save finish.</li>
+<li><b>Seeing whether WhatsApp is installed:</b> the app checks only for WhatsApp and WhatsApp Business, to find their status folders, open Direct chat and add sticker packs. It does not list the other apps on your phone.</li>
+</ul>
+<p>Status Saver does not request permission to read your contacts, your location, your camera or microphone, or all your photos and videos. On Android 8 and 9 only, it asks for the storage permission to save copies to your gallery.</p>
 
-    <h2>8. Contact</h2>
-    <p>If you have any questions or concerns regarding this Privacy Policy, you can contact us through our GitHub Page or Play Store developer email.</p>
-  </main>
-  <footer>
-    &copy; 2025 Status Saver - All rights reserved.
-  </footer>
+<h2 id="ads"><span class="n">6</span>Advertising and your consent</h2>
+<p>The free version shows ads from Google AdMob: banners, ads in lists, a full-screen ad at some natural breaks, an ad when you come back to the app after a while, and, only if you choose it, a short video ad that gives you Sparks or two hours without ads. We ask Google to show only ads rated for a general audience with parental guidance (“PG”) or lower. Ads never use your statuses, saved files or messages.</p>
+<p>In the European Economic Area, the United Kingdom and Switzerland, and wherever else the law requires it, Google’s consent form (User Messaging Platform) asks for your choice before ads are requested. Refusing is a valid answer; the app keeps working, and Google may then show non-personalized or limited ads. Where the rules apply to you, you can change your choice at any time in <b>Profile › Ad privacy choices</b>. In US states with privacy laws, the same place lets you opt out of the “sale” or “sharing” of your data for personalized ads, where the law gives you that right.</p>
+<p>With Premium, no ad is requested and the ads software is not initialized. Google’s consent tool still runs at start and, where the law requires it and you have not answered yet, may show its form. To limit ads tracking on any app, you can reset or delete your advertising ID in Android settings (on most phones <b>Settings › Privacy › Ads</b>, or <b>Settings › Google › Ads</b>).</p>
+<p>Google uses the data listed in section 2 under its own policies. See <a href="https://policies.google.com/technologies/partner-sites">how Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2 id="buy"><span class="n">7</span>Purchases</h2>
+<p>Premium (weekly or yearly subscription, or a one-time lifetime purchase) is sold through Google Play. Google handles the payment and your payment details; we never see them. RevenueCat checks with Google Play what you bought and tells the app which plan you have. It uses a random app user ID that is not linked to your name or email, and receives the purchase information listed in section 2.</p>
+<p>If you bought “remove ads” in an earlier version of the app, the app asks Google Play for that purchase once, through RevenueCat, so that it becomes Premium for life without you doing anything.</p>
+<p>So that a purchase can come back after you reinstall the app or move to a new phone, RevenueCat may store its random ID with Google Play services on your phone, which can include it in your Google device backup. It contains no name, email or file. See <a href="https://www.revenuecat.com/privacy">RevenueCat’s privacy policy</a>.</p>
+<p>The free-trial reminder is a notification scheduled on your phone; nothing is sent to us for it.</p>
+
+<h2 id="stats"><span class="n">8</span>Usage statistics, crash reports and app settings</h2>
+<p><b>Usage statistics (Google Firebase Analytics).</b> To learn which features help people and where the app gets in the way, the app records events linked only to a random app instance ID (not to your name, phone number or account), such as opening a screen, saving a status, using a tool, a step in a purchase or an ad being shown. The app is built so that these events can never contain a file name, folder, link, phone number, email, message, caption, contact or other free text.</p>
+<p><b>Crash reports (Google Firebase Crashlytics).</b> If the app crashes, a report of what went wrong in the code is sent with the technical details listed in section 2.</p>
+<p><b>Your switch.</b> Both are on by default and both stop when you turn off <b>Profile › Share usage statistics</b>. When it is off, nothing is recorded or sent. You can turn it back on at any time.</p>
+<p><b>App settings (Google Firebase Remote Config).</b> The app downloads its settings from Google, for example which features are on, how often ads may appear and which offers are shown. This uses a Firebase installation ID and basic device information, and it is needed for the app to run.</p>
+<p>If you allow your phone to share usage and diagnostics data with app developers, Google Play may also send us crash and performance reports that do not identify you. See the <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+
+<h2 id="mlkit"><span class="n">9</span>Stickers and Google ML Kit</h2>
+<p>The sticker maker cuts the subject out of a photo with Google ML Kit’s subject segmentation. It runs on your phone: the photo is never sent to Google or to us. Google Play services downloads the cut-out tool once; after that it works without a connection. If the tool is not available, you can use the whole photo instead.</p>
+<p>To provide the tool, Google receives the diagnostic data listed in section 2. According to Google, ML Kit uses it for diagnostics and usage analytics. See Google’s <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</p>
+
+<h2 id="contact-us"><span class="n">10</span>When you write to us</h2>
+<p>If you write to us, for example from <b>Profile › Something wrong? Write to us</b>, your email app sends us your email address and what you write. The app adds a short technical note (app and Android version, phone model, language and plan), which you see and can edit before sending. We use this only to answer you and fix the issue you report, and we delete it when it is no longer needed, at the latest two years after our last exchange.</p>
+
+<h2 id="selling"><span class="n">11</span>Sharing and selling</h2>
+<p>We do not sell or rent your personal data for money. Data reaches only the services named in this policy, for the purposes stated. We may disclose information if the law requires it, or to protect our rights or the safety of others.</p>
+<p><b>US state privacy laws</b> (for example California’s CCPA as amended by the CPRA). In the last 12 months, the categories of personal information that left your device were: identifiers (advertising ID, app set ID, app instance and installation IDs, the random purchase ID, IP address), commercial information (purchase history), internet or other electronic activity (interactions with the app and with ads), approximate geolocation derived from your IP address, and, if you write to us, your email address. Sources: your device and your use of the app. Purposes: those in section 2. Letting Google use your advertising ID for personalized ads may count as “selling” or “sharing” for cross-context behavioral advertising under these laws. You can opt out in <b>Profile › Ad privacy choices</b> where it is shown, by deleting your advertising ID in Android settings, or with Premium. We do not knowingly sell or share the personal information of people under 16, and we do not use or disclose sensitive personal information to infer characteristics about you.</p>
+
+<h2 id="bases"><span class="n">12</span>Legal bases</h2>
+<p>Where the EU or UK GDPR applies, we rely on these legal bases:</p>
+<ul>
+<li><b>Ads:</b> your consent (Article 6(1)(a)) where the law requires it, for example in the EEA, the UK and Switzerland; elsewhere our legitimate interest in funding the free version (Article 6(1)(f)).</li>
+<li><b>Purchases and Premium:</b> performing our contract with you (Article 6(1)(b)).</li>
+<li><b>Usage statistics and crash reports:</b> our legitimate interest in keeping the app working and improving it (Article 6(1)(f)). You can object at any time with <b>Profile › Share usage statistics</b>.</li>
+<li><b>App settings and the sticker tool’s diagnostics:</b> our legitimate interest in running the app’s features reliably (Article 6(1)(f)).</li>
+<li><b>Messages you send us:</b> answering your request (Article 6(1)(b) or (f)).</li>
+<li><b>Legal duties:</b> where the law requires us to keep or disclose information (Article 6(1)(c)).</li>
+</ul>
+<p>Data that only stays on your phone (section 3 and 4) is not sent to us; you control it.</p>
+<p><b>Türkiye (KVKK).</b> The same uses rely on Article 5(2)(c) (the contract with you), 5(2)(f) (our legitimate interest, without harming your fundamental rights) and 5(2)(ç) (legal obligations). Where KVKK requires your explicit consent (Article 5(1)), for example for personalized ads or for transfers abroad, you can refuse personalized ads at any time by deleting or resetting your advertising ID in Android settings (section 6); ads are then not personalized. You can also contact us to object (section 20).</p>
+
+<h2 id="transfers"><span class="n">13</span>International transfers</h2>
+<p>Google and RevenueCat may process data in countries other than yours, including the United States. Where the EU or UK GDPR applies, such transfers rely on an adequacy decision (for example the EU-U.S. Data Privacy Framework, for providers certified under it) or on standard contractual clauses. For users in Türkiye, transfers abroad rely on the safeguards KVKK Article 9 allows, such as standard contracts.</p>
+
+<h2 id="retention"><span class="n">14</span>How long data is kept</h2>
+<ul>
+<li><b>On your phone:</b> until you delete it, clear the app’s storage or uninstall the app. Kept messages on the free version: 24 hours.</li>
+<li><b>Usage statistics:</b> event data is kept by Google Firebase for the period set in our Analytics settings, at most 14 months, then deleted.</li>
+<li><b>Crash reports:</b> Google keeps them for up to 90 days.</li>
+<li><b>Purchase records (RevenueCat, Google Play):</b> as long as needed to provide Premium and as long as tax, accounting or consumer laws require; you can ask us to delete RevenueCat’s record (section 15).</li>
+<li><b>Advertising data:</b> Google keeps it under its own policies.</li>
+<li><b>Emails to us:</b> at the latest two years after our last exchange.</li>
+</ul>
+
+<h2 id="rights"><span class="n">15</span>Your rights and how to use them</h2>
+<p>Depending on where you live, you may have the right to know what personal data we hold, to get a copy, to correct or delete it, to restrict or object to its use, to receive it in a portable form, to withdraw consent at any time (without affecting what happened before), and to opt out of the sale or sharing of personal data or of personalized ads. In Türkiye you have the rights in KVKK Article 11. We will not treat you differently for using these rights.</p>
+<h3>How to use them</h3>
+<ul>
+<li><b>Data on your phone:</b> delete it in the app, clear the app’s storage, or uninstall the app (section 3).</li>
+<li><b>Ads:</b> <b>Profile › Ad privacy choices</b> (where shown), delete or reset your advertising ID in Android settings, or choose Premium.</li>
+<li><b>Usage statistics and crash reports:</b> turn off <b>Profile › Share usage statistics</b>.</li>
+<li><b>Kept messages:</b> “Turn off access” and “Clear all” in “Deleted messages”.</li>
+<li><b>Data held by RevenueCat or Google Firebase:</b> email <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>. These records use random IDs, not your name, so we may ask for something that helps us find them, such as your Google Play order number (it starts with “GPA.”) or the approximate date of a purchase. We ask only for what we need.</li>
+</ul>
+<p>We answer within one month (GDPR), 30 days (KVKK) or 45 days (US state laws), and tell you if we need more time where the law allows. If you are in a US state that gives you the right to appeal our decision, reply to our answer and we will review it. You may also use an authorized agent where your law allows. You can complain to your data protection authority; in Türkiye, after applying to us, to the Personal Data Protection Board (Kişisel Verileri Koruma Kurulu).</p>
+
+<h2 id="children"><span class="n">16</span>Children</h2>
+<p>Status Saver is not directed to children under 13, or the higher minimum age that applies in your country. We do not knowingly collect personal data from children. If you believe a child has used the app and data about them reached RevenueCat or Firebase, write to us and we will delete it.</p>
+
+<h2 id="security"><span class="n">17</span>Security</h2>
+<p>Your statuses, files, vault and kept messages are processed on your phone. The vault and kept messages live in the app’s private storage, which other apps cannot read; the vault is locked with your screen lock or a PIN stored only as a salted, derived value; screenshots of the vault are blocked; and the app’s data is left out of cloud backups. Connections to Google and RevenueCat are encrypted in transit. No method is perfect, so we keep what leaves your phone to the minimum.</p>
+
+<h2 id="countries"><span class="n">18</span>Countries without Google Play billing or ads</h2>
+<p>Where Google Play does not take payments for the app or Google does not serve ads (currently Russia, mainland China, Afghanistan and Iran), every Premium feature is free and no ad is requested. The app decides this on your phone from your SIM card’s country, or your phone’s region if there is no SIM.</p>
+
+<h2 id="changes"><span class="n">19</span>Changes to this policy</h2>
+<p>If this policy changes, we update the effective date at the top of this page. For important changes, we tell you in the app or in the Google Play release notes before they apply.</p>
+
+<h2 id="contact"><span class="n">20</span>Contact</h2>
+<p>DuruSoft · <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a>. Questions, requests about your data and complaints come to us. See also our <a href="terms-of-use.html">Terms of Use</a>.</p>
+</main>
+
+<footer><nav aria-label="Legal"><a href="privacy-policy.html" aria-current="page">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a><a href="https://mehmetth.github.io/status-saver/">Status Saver</a></nav><p>© 2026 DuruSoft · <a href="mailto:duru.sofft@gmail.com">duru.sofft@gmail.com</a></p></footer>
+</div>
 </body>
 </html>
