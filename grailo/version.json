@@ -1,0 +1,34 @@
+{
+  "$schema": "./version.schema.json",
+  "schemaVersion": 1,
+  "android": {
+    "latestVersionCode": 1,
+    "latestVersionName": "1.0.0",
+    "minSupportedVersionCode": 1,
+    "softUpdate": {
+      "enabled": true,
+      "remindAfterHours": 72
+    },
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.durusoft.grailo",
+    "releaseNotes": {
+      "tr": "İlk sürüm: tarama, çevrimdışı katalog, satılmış emsal bağlantıları ve Kasa.",
+      "en": "First release: scanning, offline catalog, sold-comps links and your Vault."
+    }
+  },
+  "featureFlags": {
+    "bulkScan": true,
+    "marketTrends": true,
+    "adsEnabled": true,
+    "inAppReview": true,
+    "paywallVariant": "default",
+    "interstitialEveryNScans": 4,
+    "minSecondsBetweenInterstitials": 90
+  },
+  "maintenance": {
+    "enabled": false,
+    "message": {
+      "tr": "Kısa bir bakım yapıyoruz. Tarama ve Kasa çevrimdışı çalışmaya devam eder.",
+      "en": "We're doing brief maintenance. Scanning and your Vault keep working offline."
+    }
+  }
+}

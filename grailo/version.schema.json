@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mehmetth.github.io/grailo/version.schema.json",
+  "title": "Grailo remote version & feature flags",
+  "type": "object",
+  "required": ["schemaVersion", "android"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "android": {
+      "type": "object",
+      "required": ["latestVersionCode", "latestVersionName", "minSupportedVersionCode"],
+      "properties": {
+        "latestVersionCode": { "type": "integer", "minimum": 1, "description": "Newest versionCode on Play. Installed < this → soft update." },
+        "latestVersionName": { "type": "string" },
+        "minSupportedVersionCode": { "type": "integer", "minimum": 1, "description": "Installed < this → blocking force update. Must be ≤ latestVersionCode." },
+        "softUpdate": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean", "default": true },
+            "remindAfterHours": { "type": "integer", "minimum": 0, "default": 72, "description": "'Later' hides this version for N hours." }
+          },
+          "additionalProperties": false
+        },
+        "storeUrl": { "type": "string", "format": "uri" },
+        "releaseNotes": { "$ref": "#/$defs/localized" }
+      },
+      "additionalProperties": true
+    },
+    "featureFlags": {
+      "type": "object",
+      "properties": {
+        "bulkScan": { "type": "boolean" },
+        "marketTrends": { "type": "boolean" },
+        "adsEnabled": { "type": "boolean", "description": "Kill switch for all ads." },
+        "inAppReview": { "type": "boolean" },
+        "paywallVariant": { "type": "string" },
+        "interstitialEveryNScans": { "type": "integer", "minimum": 0, "default": 4, "description": "At most one interstitial per N successful scans; 0 turns interstitials off. Never in the first session or the first 2 scans." },
+        "minSecondsBetweenInterstitials": { "type": "integer", "minimum": 60, "default": 90, "description": "Minimum gap between two interstitials. The app never goes below 60." }
+      },
+      "additionalProperties": true
+    },
+    "maintenance": {
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "message": { "$ref": "#/$defs/localized" }
+      }
+    }
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "description": "BCP-47 language tag → text. Lookup: full tag, language, 'en', first.",
+      "additionalProperties": { "type": "string", "maxLength": 400 }
+    }
+  }
+}
